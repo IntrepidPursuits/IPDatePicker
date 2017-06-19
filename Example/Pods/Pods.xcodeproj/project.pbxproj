@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		051A816D6DD0CAE13496DDCFE0829167 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD9D8ACBAB52ADE0F78B5DBD892E632 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		05969D511EC8B6FC18A2F1C563A766E6 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F183E2993EA6B05A760B5E269D036696 /* NSArray+PureLayout.m */; };
+		083FE85792B0106F3195881F85D487C9 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B3E5FC3716E4B6A304E6EC7D8650F9E /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08AB462DF86D361EB50937285CFA4FF6 /* UITableView+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD22B4376021A35B8C2CE0AC6A93FD4 /* UITableView+Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08E603980D8CCDFE2320528FF52331B5 /* BasicVerticalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51B4C4C77FCBC7BF23CAC3E539DF9E /* BasicVerticalGradientLayer.swift */; };
 		094973D2D2F1E3B2E772F93C8147C6B9 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F39D87E2CA1E1C14A92478E8C57334 /* UIApplication+StrictKeyWindow.m */; };
@@ -16,10 +16,8 @@
 		0A6D01A2C89C54F807919C95C254AB31 /* String+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D8D98D5D7838CCB08DA32282701B51 /* String+Data.swift */; };
 		0D5CACC6FF84907668FFDEABD92BC76A /* DirectoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8323B86B270F541765D63DF6CEF0A /* DirectoryManager.swift */; };
 		0D731DFDDA093D75189757B39D482158 /* UIImage+ColorMaskedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAFA5619E18E985A4C7C13657B5D837 /* UIImage+ColorMaskedImage.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0EB01C15C3AB09E467B57275AE1C3761 /* IPDatePickerComponentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79127E1DE53D5542A42366DA3117ED /* IPDatePickerComponentViewModel.swift */; };
 		0F6F00FB46051088BE08CECE2848E4D2 /* Dictionary+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C31FCEEAFB6165761A4A09D12936338 /* Dictionary+Utilities.swift */; };
 		16BB1ED054887335D5D03DA91655D8AC /* Intrepid-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F09F0F20B5F65936863336DFA1A7D1F /* Intrepid-dummy.m */; };
-		16EE14D860332A68529E4C4BC17E572B /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F32CCA4B6C2DE8F54F1B39A022819B9 /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		16EFBE262DB11CAD46D553EE496113D0 /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7F9A535A070D0EE995006C93B50A0 /* String+Validation.swift */; };
 		17B7FB966B20DE1365CF3CAE1F63CBC6 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB29385CD239FF0B8B86E806782719B0 /* String+Localization.swift */; };
 		1AB7934C16CE49DE196FFC7BE7278287 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B23F8887F0AD5321921F0A35F8412C /* SwiftSupport.swift */; };
@@ -27,6 +25,7 @@
 		24387AC4A33FFD5B175B61C8EC0BA932 /* DataConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D3093109C5F61A11F77844DDE375D2 /* DataConvertible.swift */; };
 		24AC575574214713D5295A0503DA3879 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5897B8DDEDA0F172F2DB6177681B6A5 /* Data+Extensions.swift */; };
 		276522638C9D3A55690380BCA9E544D2 /* UIView+NibInitable.h in Headers */ = {isa = PBXBuildFile; fileRef = 6853F43D52F4DCE29D5B29586E7E0D87 /* UIView+NibInitable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28654738FC145A25073F69882E06F10B /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FDD20D9CCB878E13490CF3F44ADA3F8 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29DE47F2E38730D1333004436DC64C40 /* Pods-IPDatePicker_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94D87BA5795AC3CAB4A203B1AFB79D9C /* Pods-IPDatePicker_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BBEC8D020F35E2B02D27037AE5F34C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3BE1B7EFFC751520097011597E7BD5 /* Foundation.framework */; };
 		2BE61070024BF02F8E8C5BE07BEC3DF9 /* Multicast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32F7E8F9E40FB2CB6C4F22D445F89FA /* Multicast.swift */; };
@@ -35,51 +34,49 @@
 		30F5D6C16C1C4FA93F6165066B51F0C8 /* UIImage+ColorImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60FBAD1964825A6B4D5ED4A728447B4 /* UIImage+ColorImage.swift */; };
 		31DF4F7AC3A57588F61E0E941004255E /* Qu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B7EAA950B7C1FF677AF33DAF22AD71 /* Qu.swift */; };
 		32853BDF34C67DA77CB4BF2BCD2E53EA /* Synchronize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0D4DC297395975C34489C2E4A6031 /* Synchronize.swift */; };
-		3382A25C0D9CD268B06642760374F9A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3BE1B7EFFC751520097011597E7BD5 /* Foundation.framework */; };
 		35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C845EAE0294C87A423F875B71B129B /* UIImage+Diff.m */; };
 		377786956C408FBF0ED4ECD9BD1BF929 /* Pods-IPDatePicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFA4FC031677C50D86D05553355487F /* Pods-IPDatePicker_Example-dummy.m */; };
-		3B2F98574BA382D582CAD7C162721893 /* IPDatePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E1B878257065BD11321317B055A6BB /* IPDatePickerViewModel.swift */; };
+		39DE6E8903FF9E27D8FFCC3C2D4D8792 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBBC0A041A6DA63FEBC1AA4209FBE46 /* NSLayoutConstraint+PureLayout.m */; };
 		3B95851C59CBE6ED9DF49BD581BE388A /* UIButton+IPUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 37E2F812B4036F5E1E4DA59A1EC9A014 /* UIButton+IPUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C474DDA6CF10EB8BD259440AF8B5CE5 /* Intrepid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40722EE6992F1A8EF253F4CBC3411E3 /* Intrepid.framework */; };
 		421CDD701AEE0F2458A84200366CDD0F /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 008D90A1A296B4C6331D885F2E9D516A /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		43F003B2F3426EEE766728B84DD08AE8 /* Mathable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42C62833BF77CE9EF1D1565B74E7880 /* Mathable.swift */; };
-		467817223722ABD9FA318E05CD2AC739 /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB7F5F098520B2864CEBE2C3FA4B0CC /* PureLayout.framework */; };
+		44CD1D82D05BFD0659598AE61F510BB5 /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BAC3933071B054F3CCAC680D913473 /* PureLayout-dummy.m */; };
 		4826DB94E37015002A1D3922642C2227 /* UnsignedInteger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69D3B2471E4E691AD2DE44325D4CC3 /* UnsignedInteger+Extensions.swift */; };
-		4B951825E91588F23168F29FB211C783 /* IPDatePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222B13E719FC04A3381CDC01F0FDCBC /* IPDatePickerDelegate.swift */; };
 		4BA66E1AF5C4662A39D83D5F90528079 /* RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B6C4ECB748044A2FEC1F6691B187DF /* RawRepresentable.swift */; };
 		4CB19B3F4A0D51C3F65BE3D382185DEB /* UIImage+ColorMaskedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 6499A29E4CE8C17C32ED13B74B8DFF4A /* UIImage+ColorMaskedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F8C9BF1DA6AB9A93AB176180FBCFC57 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5954B2CF33A1BB28555530EF6BB2F8F9 /* Version.swift */; };
 		506D761F91EC3583789A837C559972FE /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A4D8B3D97C80E8F119AC2611B9DB86 /* FBSnapshotTestCase-dummy.m */; };
-		5083ACB5F6A6DFC640258239A13E8BE4 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E981EF0961F71D4636E64F2CD65D719 /* ALView+PureLayout.m */; };
 		50E600E6C512C4876664D486EB029CD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3BE1B7EFFC751520097011597E7BD5 /* Foundation.framework */; };
-		529D235DC2240898A24DE045AA817B9C /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B3E5FC3716E4B6A304E6EC7D8650F9E /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		57FA5B9AF0E8F06B88CE50054452E4CA /* NSMutableAttributedString+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7CD59E4767153FE455E4B561E32E8D /* NSMutableAttributedString+Format.swift */; };
 		58DDB6762398CF476D18AED1D5D2C8E6 /* Set+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61DC133FB22516FEBE790CACD52381B /* Set+Utilities.swift */; };
+		5A6BAD5927B0ECC44467848511165963 /* IPDatePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993FD561D2A5C76A646B3A8C21ACA17A /* IPDatePickerDelegate.swift */; };
 		5D043140D47FE15DAC578471934477B7 /* UIColor+IPRandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A6D9CBEE7E0E292198129DDC509E00 /* UIColor+IPRandomColor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		5F05294819C24DE7C3E959C1DDB25976 /* UIView+IPFrameUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B08F715658B0EE3A6E28D67C6D2A2D6E /* UIView+IPFrameUtils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		6025AEA51D13779B788F34EA96EB711E /* String+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C044125F25E12BC7F3A63D4A42BD629A /* String+Empty.swift */; };
 		622CAE5A0A6C0D92568109684C440D60 /* Pods-IPDatePicker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2216C495A33A522B50493941CCD0DEBA /* Pods-IPDatePicker_Tests-dummy.m */; };
+		64D33487AB656651ED35B5AB2641BF6A /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F32CCA4B6C2DE8F54F1B39A022819B9 /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		653468A7017A89CC25A365193DC919B5 /* Not.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AAE5FA0C0E72D653D6732412D63573 /* Not.swift */; };
 		665975FE59541EEFCAF3501943C9F19E /* Integer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D438D568005C6B9A2D6BF6D2AB192A28 /* Integer+Extensions.swift */; };
-		66C0B4153CF47EBCB03FEA5C75236E79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3BE1B7EFFC751520097011597E7BD5 /* Foundation.framework */; };
 		69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = C86B718624FDFA879F7E6FD7A9E158FD /* UIImage+Compare.m */; };
 		6A014A36AC9F2276BA5AD10CAA854676 /* CellConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD198B0A217061D8878960B558BA676 /* CellConfiguring.swift */; };
+		6A1EB54CB01CEC8CE2A63429865B7E8A /* IPDatePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE0A744966FB1B830CC29DA0B3773ADE /* IPDatePicker-dummy.m */; };
 		6A363337D628F94FFE4E9AC41F57D553 /* UIView+Constraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A4D6734DAC65F6B1F553F57B594B14 /* UIView+Constraints.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		6AF837EB262E298C1362ABE440D7E84F /* After.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1A621F36118130D3CA27C6F319D5B /* After.swift */; };
 		6E3E9AE73615755AF7E0821DDC3746AA /* UIButton+IPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BC774430EC91D336A45B884D4A51265A /* UIButton+IPUtils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		725D132B22843F816AF7841FF06732B9 /* Pods-IPDatePicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7F5B4DEFAECBC461D01B4D4490533D0 /* Pods-IPDatePicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		73A160F650E2B9EE13D3A98905758F4C /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAACB18BA8C75DE5AB84D599B6BF942 /* UIColor+Hex.swift */; };
 		756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B1CB5D806920BFA10DD636C551F0FA /* UIImage+Snapshot.m */; };
-		7A4C98BCBECE0712D8C8292731D44F5F /* IPDatePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE0A744966FB1B830CC29DA0B3773ADE /* IPDatePicker-dummy.m */; };
+		7906D9729D0BF44B84A1A6BB9FE13C52 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E75A896BBBE21DF03EB1ED3A48B76BF /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7CD87102C09AC3392C22FE5F32927D94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3BE1B7EFFC751520097011597E7BD5 /* Foundation.framework */; };
+		7DA78D9292E7AFB8E38DAFEDDD0DB650 /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB7F5F098520B2864CEBE2C3FA4B0CC /* PureLayout.framework */; };
 		7E9B14D5F8842A86CA86F2AF45230725 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672D0175707C8DF690BBC49942D37080 /* XCTest.framework */; };
-		814E5D2BA7C020AB523D0888E3FA6AE2 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E75A896BBBE21DF03EB1ED3A48B76BF /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		833BB954FBC4ABFA3BD60A33391420E0 /* UIView+IPFrameUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 73504C0C0C39ACCC5047AC556D5C2AA0 /* UIView+IPFrameUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		841734AC0DCA9B1E1C1309A912F64F74 /* Array+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E014A4FC28844BD49B8DF8AC3FA19929 /* Array+Utilities.swift */; };
 		841FF232C33C7D49C58CEFDBE7EEB92B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47EF9C963C7594133619DEBA5AA64ADE /* UIKit.framework */; };
 		8518B7B6C57B826BF52E76056973A04A /* UIImage+Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F8C2D05B19B31C51997B6D492816 /* UIImage+Overlay.swift */; };
 		8A895497705F8FDD4F9E75010E27129B /* Sequence+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BB4A6350934100426FBDCF95CBEF82 /* Sequence+Utilities.swift */; };
 		8E4FC789F3C52A8BAB42650D59671D84 /* UIView+GetConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D89B438C1A71AE77DEA455B87B5DF83 /* UIView+GetConstraints.swift */; };
+		911B5DECBAFAA6450FC6C9AEE0C65CBE /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F183E2993EA6B05A760B5E269D036696 /* NSArray+PureLayout.m */; };
 		91D0138ACFAD733E4061F12E450C336C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3BE1B7EFFC751520097011597E7BD5 /* Foundation.framework */; };
 		94AF443EC2A89A0EE95F67D24427BB0A /* Comparables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6C16377D23E751B29EA14450E36057 /* Comparables.swift */; };
 		9673CF780F48C8E4EC2A331717B1F67C /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A23588C4BED5DF91BDECAE0FBE4742 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -88,56 +85,60 @@
 		9CA42B5B02D39F31822762C94E0FC7FD /* ColorDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7F6CC69306EC4A5D3378D995BE044E /* ColorDescriptor.swift */; };
 		9DC01393D3A6E5E8BCF8882DA0024E39 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB21E0E8A796DE4B820039F2A4450A3 /* Geometry.swift */; };
 		A0001B0E199FA7E54472FD76F20CD428 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6105470D041D327025FBF0F3AE1CED /* Result.swift */; };
-		A2107DD2A884D01D5A65EC5E0D83ADBB /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = BEFBB89D47C63B806F0FC1C8E55A0072 /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A45BEE2C543AD5F57019DEDD19EED024 /* IP-UIKit-Wisdom-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC38262106174E983F38F3FAE1639AA /* IP-UIKit-Wisdom-dummy.m */; };
 		A4F69F3477A935285620AC3031C5C848 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC84F81877EAF52845CCF837599DE6 /* FBSnapshotTestController.m */; };
+		A8A274EBC046FC7F0D34458D84EF5C94 /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 27E03BD8BD4350D13DB68A2318F113F1 /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9BBAF34BB2658F3AB49F8623EDDB04B /* IPDatePickerViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E1AE8099C64072735AEBD6B6630D7D /* IPDatePickerViewProtocol.swift */; };
 		ABB05876737996B7F5BFD0E7184C0198 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3BE1B7EFFC751520097011597E7BD5 /* Foundation.framework */; };
 		AE181ED4B5104176F187A98F3C0009D4 /* String+Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5DDF5B9D51D4EB3E4B092D252AFE0C /* String+Numbers.swift */; };
 		AEA6D743324EF7242BA63EC055A79FCA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47EF9C963C7594133619DEBA5AA64ADE /* UIKit.framework */; };
 		B27DFD6025D94758785918F1D6F6C060 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC9A449307D1D0940332CBC2EF70FF7 /* QuartzCore.framework */; };
+		B3348E4D8841C79C3EAA1A22EE4445F1 /* Intrepid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40722EE6992F1A8EF253F4CBC3411E3 /* Intrepid.framework */; };
 		B33BA66264039E0303D3BE38F4C3989F /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349FD8D0DE2E1C948ABDDFCD3558BCB9 /* UIView+Nib.swift */; };
+		B3C5734E6872D8919B2F9AD1E4E75F67 /* IPDatePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76A2420FF28F96B5EB8C87F3C62CFB15 /* IPDatePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B43FF03CB8848668CEB53A8A303FDC0A /* TimeOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC831D764A85888259BEB6F89509C292 /* TimeOfDay.swift */; };
 		B758FB09FE2C06C1B8E36A71A9D76D41 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F655B7BFBC7288AACDD4E66ADCFE49F9 /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB4BB300ECE627C7AF3FD2346F05A869 /* UIView+Constraints.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5E11CF48C14508C33341D57C45AC62 /* UIView+Constraints.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC92D12D38B51481EF3B4DA19547FED6 /* UIViewController+Containment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD22426CE4B668A949B51DEE4605E1E /* UIViewController+Containment.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		BC952FC04FC963C1294DCD619C9B6B3B /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 644661149F6BF9747EB03AE660C6355A /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BD481354325E630E108386FC2527F2B9 /* IPDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2900A7ADD36F6405B1FB7B916BC38B4 /* IPDatePicker.swift */; };
 		BE14F2198CDB0DAD98A567981D21C7A1 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FC43BCF9B073495AF19ECB731D700E /* FBSnapshotTestCase.m */; };
 		BFCE460CC33E8872B7156D4166340178 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E4045CE0D8A2277BB9AEE762A43C9FE /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2A5F70881A6B2D3A0A47CA7C90EDB36 /* IP-UIKit-Wisdom-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BBAB1489F4BEB358D6D519457C4EA2F /* IP-UIKit-Wisdom-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C407FDC2BD1597A8742D1E5D2E99A863 /* IPDatePickerFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE65AFDDE2184C2DDF58543BE5ACD387 /* IPDatePickerFormat.swift */; };
 		C6038E98B0272B1C20BDAD5816742B29 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E29A778F9573AAAAC83816F84AFD9 /* VideoPlayer.swift */; };
+		C6F3E0E4A645D3DAF28E0DFBBE67FA04 /* PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3457D84C648FD90456FF0B450DB5B185 /* PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C730B1DD1352ECE9AAA34D63F621D70F /* UITableView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A74B0A57DD0B66338A9E824354F9B5 /* UITableView+Utils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C8700D4914304173EE8114C2F1707BB6 /* IPDatePickerComponentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB917190CD15916188A379CF5EE7295D /* IPDatePickerComponentViewModel.swift */; };
 		CAFA5E486BCE117A7D8C0FBF9DA6666B /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AC2446EDD578B37776D6F5ABD4A6CD0 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		CC41BB75596F2BF4791C060BBED83E6D /* UIView+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076AF58B27FF7E3A4FBA2C34A4CC64F4 /* UIView+Geometry.swift */; };
+		CD58E4BB38930F7D39F132C7EF80CC2A /* IPDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A98715A3F8B6C9B9024B0CFC202AA6 /* IPDatePicker.swift */; };
 		CF38B2681B5344833806070B1F4B082A /* UIViewController+Containment.h in Headers */ = {isa = PBXBuildFile; fileRef = 6172514A00A77D4FB59549A08CC6DE78 /* UIViewController+Containment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CFFC4E68A5CE4821936D988EB382700A /* UIColor+IPRandomColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7481E70D0BE5CF50CC6E99547D7468 /* UIColor+IPRandomColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0E553CFE9EC1FA1C1A67D41E32ECB73 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51D586F30B83D7444973957D26BE2F /* Double+Extensions.swift */; };
 		D32F3E02AC003A32C5F72269743D5F6C /* SoundFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26070A8399DADA80AF443A5A75F3AB7F /* SoundFile.swift */; };
-		D4D320C2B8A8B3E747530B58B069C72F /* IPDatePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76A2420FF28F96B5EB8C87F3C62CFB15 /* IPDatePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB7A106243AC974FC7EBEB00B506C786 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = EF06999FA92B7CE1EF5FE79E6286C9F6 /* FBSnapshotTestCasePlatform.m */; };
-		DC86082A4AAC3252D0C3AFABA07A59AC /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BAC3933071B054F3CCAC680D913473 /* PureLayout-dummy.m */; };
+		DC4E6F0D3ABED1BC12E721AB95F2C540 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3BE1B7EFFC751520097011597E7BD5 /* Foundation.framework */; };
+		DD2B4C7CA3D6EEC2AA4C02B69141F9B2 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E981EF0961F71D4636E64F2CD65D719 /* ALView+PureLayout.m */; };
 		DEDF42A9CD7A1D94D1A182D27E4B400F /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83028ACF162E65745BDCDA23CE24DFD8 /* UIApplication+Extensions.swift */; };
 		E006545CBD8D0A662720097F813ACAFF /* TimeoutOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9DFF584C00C54A83150A9BD4975B26 /* TimeoutOperation.swift */; };
 		E05060DAA0577EEFC97F57A8D5BA4D2D /* UICollectionView+FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D14F59B442244425002C535CE1D4C2 /* UICollectionView+FlowLayout.swift */; };
 		E17DCC728266F4D0E9204D044036352D /* UIViewController+Nibs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7330644FD9ED992B893D6E66254FF689 /* UIViewController+Nibs.swift */; };
 		E1A2F27513B4F7B7C6CC95C5C41E7703 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63369B6576E1EA5BD6DE4C512D1E91D /* Defaults.swift */; };
+		E274E4B846C4E1530B88BFB39303D84C /* IPDatePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E464902A468269DBA13E3CA8B04A54FF /* IPDatePickerViewModel.swift */; };
 		E3A5BDD27751946F56DC0CB8E0B5B434 /* UIView+IPAncestry.h in Headers */ = {isa = PBXBuildFile; fileRef = 49F34B6ADA4A69AAF0F4F51D465A18F0 /* UIView+IPAncestry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E46997C0F9184B31C851B4127C4DB5BC /* UILabel+Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = C491D81591D58218E33CEC74263B86F6 /* UILabel+Typography.swift */; };
-		E786596C65DB38987D0F9BE8C1B8B386 /* PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3457D84C648FD90456FF0B450DB5B185 /* PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E99023A58F27B39C426CC26DD9D186AC /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A74FA79C06B80BDAE25787055CBE89 /* Downloader.swift */; };
-		EBA467DE12BF336DB4CCF813679DE767 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBBC0A041A6DA63FEBC1AA4209FBE46 /* NSLayoutConstraint+PureLayout.m */; };
 		EC2B2D00455BFB701CCACA3DED0D3CE0 /* NSDate+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5264B9E398FF457B55CE01E17D70709 /* NSDate+Comparable.swift */; };
+		ECD132BF49620F3328290328D0D9CED9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3BE1B7EFFC751520097011597E7BD5 /* Foundation.framework */; };
 		EFED8471BDD6EB1BB4C7F17986853A81 /* CAGradientLayer+IPGradients.m in Sources */ = {isa = PBXBuildFile; fileRef = C99CAF01B0C1D839E9B957DABCF35CF2 /* CAGradientLayer+IPGradients.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		F0027FBC987AE116B811A3C4C90EEB81 /* Intrepid-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 968069B6DD9F7A13C6251388FA77AD44 /* Intrepid-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0987F29BB8A30AF88ED62DFE20B9B6D /* CAGradientLayer+IPGradients.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A98D811BA7C7BA6E11571475CC95D6 /* CAGradientLayer+IPGradients.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F722506BA8777C00BABED2E7E626893E /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 27E03BD8BD4350D13DB68A2318F113F1 /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0A34016E4105AF96A8C09F344D18C6F /* IPDatePickerFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E6EDADB6EB8573F3F736FA41CE9B2 /* IPDatePickerFormat.swift */; };
+		F6DD4595AAE11DA2195F4DBAD7FDF449 /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = BEFBB89D47C63B806F0FC1C8E55A0072 /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8994E88C31C8185F4DC0A90F65AAD8F /* UIView+IPAncestry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9AA28C456D6A0CF6905A67237AA3F /* UIView+IPAncestry.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F9176A3BE2BD9CA7B925697330B5DA66 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FDD20D9CCB878E13490CF3F44ADA3F8 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		05C3FAEF17130C311FC69656B0394484 /* PBXContainerItemProxy */ = {
+		10AA58CCDFD3E46DFCCD2E4E4E6F9125 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -155,21 +156,21 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 67D46ED1D04D5E6D9EB1123F3DC192DE;
+			remoteGlobalIDString = F00EA0EF1D1EA4C1432C96D0E74372B3;
 			remoteInfo = PureLayout;
 		};
 		5B5485A53B8418AAC80F9B6A8F5433A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D7FD22076312B160BEC1922BA37DE6A8;
+			remoteGlobalIDString = E87E3984572B81722CCB7EE822086F22;
 			remoteInfo = IPDatePicker;
 		};
-		5C4AF3DEE6CC8AB9C07A99AE90F27E7F /* PBXContainerItemProxy */ = {
+		B5B3FB64FC6EABA19BD95E90D13E7CDC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 67D46ED1D04D5E6D9EB1123F3DC192DE;
+			remoteGlobalIDString = F00EA0EF1D1EA4C1432C96D0E74372B3;
 			remoteInfo = PureLayout;
 		};
 		B5C7D01473E9F8BDCFACA7D75B1EABD6 /* PBXContainerItemProxy */ = {
@@ -205,27 +206,24 @@
 		0A9DFF584C00C54A83150A9BD4975B26 /* TimeoutOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeoutOperation.swift; path = SwiftWisdom/Core/Timeout/TimeoutOperation.swift; sourceTree = "<group>"; };
 		0AD22B4376021A35B8C2CE0AC6A93FD4 /* UITableView+Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+Utils.h"; path = "src/UITableView/UITableView+Utils.h"; sourceTree = "<group>"; };
 		0BBAB1489F4BEB358D6D519457C4EA2F /* IP-UIKit-Wisdom-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IP-UIKit-Wisdom-umbrella.h"; sourceTree = "<group>"; };
-		0E79127E1DE53D5542A42366DA3117ED /* IPDatePickerComponentViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IPDatePickerComponentViewModel.swift; sourceTree = "<group>"; };
 		10B23F8887F0AD5321921F0A35F8412C /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
-		13660C47C166247A08D538E505E948FB /* IP_UIKit_Wisdom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IP_UIKit_Wisdom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13660C47C166247A08D538E505E948FB /* IP_UIKit_Wisdom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IP_UIKit_Wisdom.framework; path = "IP-UIKit-Wisdom.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EE62507D1AD33A173D418BA62A741D /* IP-UIKit-Wisdom.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "IP-UIKit-Wisdom.xcconfig"; sourceTree = "<group>"; };
 		18C845EAE0294C87A423F875B71B129B /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
-		1BBEAB7C04BBA60EF729C4731DD72DA7 /* IPDatePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IPDatePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BBEAB7C04BBA60EF729C4731DD72DA7 /* IPDatePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IPDatePicker.framework; path = IPDatePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CC9A449307D1D0940332CBC2EF70FF7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		1DE9AA28C456D6A0CF6905A67237AA3F /* UIView+IPAncestry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+IPAncestry.m"; path = "src/UIView/UIView+IPAncestry.m"; sourceTree = "<group>"; };
 		1E981EF0961F71D4636E64F2CD65D719 /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
 		1F7481E70D0BE5CF50CC6E99547D7468 /* UIColor+IPRandomColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+IPRandomColor.h"; path = "src/UIColor/UIColor+IPRandomColor.h"; sourceTree = "<group>"; };
 		2216C495A33A522B50493941CCD0DEBA /* Pods-IPDatePicker_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IPDatePicker_Tests-dummy.m"; sourceTree = "<group>"; };
-		2222B13E719FC04A3381CDC01F0FDCBC /* IPDatePickerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IPDatePickerDelegate.swift; sourceTree = "<group>"; };
 		25D14F59B442244425002C535CE1D4C2 /* UICollectionView+FlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+FlowLayout.swift"; path = "SwiftWisdom/Core/UIKit/UICollectionView+FlowLayout.swift"; sourceTree = "<group>"; };
 		26070A8399DADA80AF443A5A75F3AB7F /* SoundFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoundFile.swift; path = SwiftWisdom/Core/Sounds/SoundFile.swift; sourceTree = "<group>"; };
 		27E03BD8BD4350D13DB68A2318F113F1 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
 		29AAE5FA0C0E72D653D6732412D63573 /* Not.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Not.swift; path = SwiftWisdom/Core/Foundation/Not.swift; sourceTree = "<group>"; };
 		29B6C4ECB748044A2FEC1F6691B187DF /* RawRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RawRepresentable.swift; path = SwiftWisdom/Core/StandardLibrary/RawRepresentable/RawRepresentable.swift; sourceTree = "<group>"; };
-		29E1B878257065BD11321317B055A6BB /* IPDatePickerViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IPDatePickerViewModel.swift; sourceTree = "<group>"; };
 		2BC38262106174E983F38F3FAE1639AA /* IP-UIKit-Wisdom-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IP-UIKit-Wisdom-dummy.m"; sourceTree = "<group>"; };
 		2F09F0F20B5F65936863336DFA1A7D1F /* Intrepid-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Intrepid-dummy.m"; sourceTree = "<group>"; };
-		33C0E9A38CEF93DDDF69362EC87A4517 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C0E9A38CEF93DDDF69362EC87A4517 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PureLayout.framework; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3457D84C648FD90456FF0B450DB5B185 /* PureLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-umbrella.h"; sourceTree = "<group>"; };
 		349FD8D0DE2E1C948ABDDFCD3558BCB9 /* UIView+Nib.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Nib.swift"; path = "SwiftWisdom/Core/UIKit/UIView+Nib.swift"; sourceTree = "<group>"; };
 		37E2F812B4036F5E1E4DA59A1EC9A014 /* UIButton+IPUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+IPUtils.h"; path = "src/UIButton/UIButton+IPUtils.h"; sourceTree = "<group>"; };
@@ -244,7 +242,7 @@
 		49F34B6ADA4A69AAF0F4F51D465A18F0 /* UIView+IPAncestry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+IPAncestry.h"; path = "src/UIView/UIView+IPAncestry.h"; sourceTree = "<group>"; };
 		4A7CD59E4767153FE455E4B561E32E8D /* NSMutableAttributedString+Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSMutableAttributedString+Format.swift"; path = "SwiftWisdom/Core/Foundation/NSAttributedString/NSMutableAttributedString+Format.swift"; sourceTree = "<group>"; };
 		4F32CCA4B6C2DE8F54F1B39A022819B9 /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
-		539245262720EDCB831873A773F09881 /* IPDatePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = IPDatePicker.modulemap; sourceTree = "<group>"; };
+		539245262720EDCB831873A773F09881 /* IPDatePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = IPDatePicker.modulemap; sourceTree = "<group>"; };
 		53F7F9A535A070D0EE995006C93B50A0 /* String+Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Validation.swift"; path = "SwiftWisdom/Core/StandardLibrary/String/String+Validation.swift"; sourceTree = "<group>"; };
 		54A23588C4BED5DF91BDECAE0FBE4742 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 		56BA4739F2BB6C8C886D5E211BEC0C84 /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
@@ -263,21 +261,23 @@
 		6AC2D72B66F0811C18C6A6F6ED774D17 /* Pods-IPDatePicker_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IPDatePicker_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		6B6D39744850E08865C41BE283FD086F /* IP_UIKit_Wisdom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IP_UIKit_Wisdom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BD198B0A217061D8878960B558BA676 /* CellConfiguring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CellConfiguring.swift; path = SwiftWisdom/Core/UIKit/CellConfiguring.swift; sourceTree = "<group>"; };
-		6D963A32F44E251E28DD75878DF83B75 /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PureLayout.modulemap; sourceTree = "<group>"; };
+		6D963A32F44E251E28DD75878DF83B75 /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PureLayout.modulemap; sourceTree = "<group>"; };
 		6F3BE1B7EFFC751520097011597E7BD5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7327D7FB20890A0FFF89E79644751D50 /* Pods_IPDatePicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IPDatePicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7327D7FB20890A0FFF89E79644751D50 /* Pods_IPDatePicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IPDatePicker_Example.framework; path = "Pods-IPDatePicker_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7330644FD9ED992B893D6E66254FF689 /* UIViewController+Nibs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Nibs.swift"; path = "SwiftWisdom/Core/UIKit/UIViewController+Nibs.swift"; sourceTree = "<group>"; };
 		73504C0C0C39ACCC5047AC556D5C2AA0 /* UIView+IPFrameUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+IPFrameUtils.h"; path = "src/UIView/UIView+IPFrameUtils.h"; sourceTree = "<group>"; };
 		76A2420FF28F96B5EB8C87F3C62CFB15 /* IPDatePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IPDatePicker-umbrella.h"; sourceTree = "<group>"; };
+		76E1AE8099C64072735AEBD6B6630D7D /* IPDatePickerViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IPDatePickerViewProtocol.swift; sourceTree = "<group>"; };
 		78E15438CCCA6E00C1CE5E5404234248 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C5DDF5B9D51D4EB3E4B092D252AFE0C /* String+Numbers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Numbers.swift"; path = "SwiftWisdom/Core/StandardLibrary/String/String+Numbers.swift"; sourceTree = "<group>"; };
 		7D26115335F86B80C7B36ECB4E81E843 /* Pods-IPDatePicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IPDatePicker_Example-frameworks.sh"; sourceTree = "<group>"; };
+		7E4E6EDADB6EB8573F3F736FA41CE9B2 /* IPDatePickerFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IPDatePickerFormat.swift; sourceTree = "<group>"; };
 		7FBBC0A041A6DA63FEBC1AA4209FBE46 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
 		7FD22426CE4B668A949B51DEE4605E1E /* UIViewController+Containment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Containment.m"; path = "src/UIViewController/UIViewController+Containment.m"; sourceTree = "<group>"; };
 		7FDD20D9CCB878E13490CF3F44ADA3F8 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
 		80B1CB5D806920BFA10DD636C551F0FA /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		81680699E19BA211BABD7CE78627A809 /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
-		82308198DACDCDB4FD8C6FA62261EFE3 /* Pods-IPDatePicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-IPDatePicker_Tests.modulemap"; sourceTree = "<group>"; };
+		82308198DACDCDB4FD8C6FA62261EFE3 /* Pods-IPDatePicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-IPDatePicker_Tests.modulemap"; sourceTree = "<group>"; };
 		83028ACF162E65745BDCDA23CE24DFD8 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Extensions.swift"; path = "SwiftWisdom/Core/UIKit/UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		83F8323B86B270F541765D63DF6CEF0A /* DirectoryManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DirectoryManager.swift; path = SwiftWisdom/Core/DirectoryManager/DirectoryManager.swift; sourceTree = "<group>"; };
 		8A6572535593C067192FC64ABF966B68 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -287,26 +287,27 @@
 		8EE1A621F36118130D3CA27C6F319D5B /* After.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = After.swift; path = SwiftWisdom/Core/Async/After/After.swift; sourceTree = "<group>"; };
 		916E29A778F9573AAAAC83816F84AFD9 /* VideoPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoPlayer.swift; path = SwiftWisdom/Core/Controls/VideoPlayer.swift; sourceTree = "<group>"; };
 		923B39F2F44574BEC3C1BE629BBF1DC8 /* Pods-IPDatePicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IPDatePicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94D87BA5795AC3CAB4A203B1AFB79D9C /* Pods-IPDatePicker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IPDatePicker_Tests-umbrella.h"; sourceTree = "<group>"; };
-		95434A73F58D97948EBEEF7C4C1F5C5B /* Pods-IPDatePicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-IPDatePicker_Example.modulemap"; sourceTree = "<group>"; };
+		95434A73F58D97948EBEEF7C4C1F5C5B /* Pods-IPDatePicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-IPDatePicker_Example.modulemap"; sourceTree = "<group>"; };
 		968069B6DD9F7A13C6251388FA77AD44 /* Intrepid-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Intrepid-umbrella.h"; sourceTree = "<group>"; };
+		993FD561D2A5C76A646B3A8C21ACA17A /* IPDatePickerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IPDatePickerDelegate.swift; sourceTree = "<group>"; };
 		9B51B4C4C77FCBC7BF23CAC3E539DF9E /* BasicVerticalGradientLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BasicVerticalGradientLayer.swift; path = SwiftWisdom/Core/UIKit/CoreAnimation/BasicVerticalGradientLayer.swift; sourceTree = "<group>"; };
-		9BD855D6D049BB36C104B21897CC5CED /* Pods_IPDatePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IPDatePicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A03D1291E0110D1889EC5BACFF42B78C /* Intrepid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Intrepid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD855D6D049BB36C104B21897CC5CED /* Pods_IPDatePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IPDatePicker_Tests.framework; path = "Pods-IPDatePicker_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A03D1291E0110D1889EC5BACFF42B78C /* Intrepid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Intrepid.framework; path = Intrepid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A132957EEF14D9CACDAA87F2E9CA8397 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A38509176E8186F0A0E2B2A2981392FD /* IP-UIKit-Wisdom-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IP-UIKit-Wisdom-prefix.pch"; sourceTree = "<group>"; };
 		A42C62833BF77CE9EF1D1565B74E7880 /* Mathable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mathable.swift; path = SwiftWisdom/Core/StandardLibrary/Numbers/Mathable.swift; sourceTree = "<group>"; };
 		A4A0D4DC297395975C34489C2E4A6031 /* Synchronize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Synchronize.swift; path = SwiftWisdom/Core/Foundation/Synchronize.swift; sourceTree = "<group>"; };
 		A7F5B4DEFAECBC461D01B4D4490533D0 /* Pods-IPDatePicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IPDatePicker_Example-umbrella.h"; sourceTree = "<group>"; };
+		A9A98715A3F8B6C9B9024B0CFC202AA6 /* IPDatePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IPDatePicker.swift; sourceTree = "<group>"; };
 		AA20DE7E5DEE9A28267FB20E7DACE1CE /* NSLock+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSLock+Extensions.swift"; path = "SwiftWisdom/Core/Async/NSLock/NSLock+Extensions.swift"; sourceTree = "<group>"; };
-		AA5749BD16058796144A22BF51E50D8D /* Intrepid.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Intrepid.modulemap; sourceTree = "<group>"; };
+		AA5749BD16058796144A22BF51E50D8D /* Intrepid.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Intrepid.modulemap; sourceTree = "<group>"; };
 		AA6C16377D23E751B29EA14450E36057 /* Comparables.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Comparables.swift; path = SwiftWisdom/Core/Foundation/Comparables.swift; sourceTree = "<group>"; };
 		AB288E97FEA5F4598425976FD6380435 /* Pods-IPDatePicker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IPDatePicker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		AB29385CD239FF0B8B86E806782719B0 /* String+Localization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Localization.swift"; path = "SwiftWisdom/Core/StandardLibrary/String/String+Localization.swift"; sourceTree = "<group>"; };
 		AC69D3B2471E4E691AD2DE44325D4CC3 /* UnsignedInteger+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UnsignedInteger+Extensions.swift"; path = "SwiftWisdom/Core/StandardLibrary/Numbers/UnsignedInteger+Extensions.swift"; sourceTree = "<group>"; };
 		AE0A744966FB1B830CC29DA0B3773ADE /* IPDatePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IPDatePicker-dummy.m"; sourceTree = "<group>"; };
-		AE65AFDDE2184C2DDF58543BE5ACD387 /* IPDatePickerFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IPDatePickerFormat.swift; sourceTree = "<group>"; };
 		B08F715658B0EE3A6E28D67C6D2A2D6E /* UIView+IPFrameUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+IPFrameUtils.m"; path = "src/UIView/UIView+IPFrameUtils.m"; sourceTree = "<group>"; };
 		B1A6D9CBEE7E0E292198129DDC509E00 /* UIColor+IPRandomColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+IPRandomColor.m"; path = "src/UIColor/UIColor+IPRandomColor.m"; sourceTree = "<group>"; };
 		B1F886C13B6203A97B9695ED55B5AF3E /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
@@ -322,17 +323,17 @@
 		BEFBB89D47C63B806F0FC1C8E55A0072 /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
 		C044125F25E12BC7F3A63D4A42BD629A /* String+Empty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Empty.swift"; path = "SwiftWisdom/Core/StandardLibrary/String/String+Empty.swift"; sourceTree = "<group>"; };
 		C38FD6E209CEE60864FB7C22289447A3 /* String+Indexing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Indexing.swift"; path = "SwiftWisdom/Core/StandardLibrary/String/String+Indexing.swift"; sourceTree = "<group>"; };
-		C3AEA77E1ADDF23C0F14437C347A59B2 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3AEA77E1ADDF23C0F14437C347A59B2 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F16D4C349FE9C90407009A9D2BC513 /* IPDatePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IPDatePicker-prefix.pch"; sourceTree = "<group>"; };
 		C491D81591D58218E33CEC74263B86F6 /* UILabel+Typography.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Typography.swift"; path = "SwiftWisdom/Core/UIKit/UILabel+Typography.swift"; sourceTree = "<group>"; };
 		C63369B6576E1EA5BD6DE4C512D1E91D /* Defaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Defaults.swift; path = SwiftWisdom/Core/Foundation/Defaults.swift; sourceTree = "<group>"; };
-		C848B098E47B1B50E36E8AAD8EE33FBA /* IP-UIKit-Wisdom.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "IP-UIKit-Wisdom.modulemap"; sourceTree = "<group>"; };
+		C848B098E47B1B50E36E8AAD8EE33FBA /* IP-UIKit-Wisdom.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "IP-UIKit-Wisdom.modulemap"; sourceTree = "<group>"; };
 		C86B718624FDFA879F7E6FD7A9E158FD /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
 		C99CAF01B0C1D839E9B957DABCF35CF2 /* CAGradientLayer+IPGradients.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CAGradientLayer+IPGradients.m"; path = "src/CAGradientLayer/CAGradientLayer+IPGradients.m"; sourceTree = "<group>"; };
 		C9A74FA79C06B80BDAE25787055CBE89 /* Downloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Downloader.swift; path = SwiftWisdom/Core/Downloader/Downloader.swift; sourceTree = "<group>"; };
 		CC51D586F30B83D7444973957D26BE2F /* Double+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Double+Extensions.swift"; path = "SwiftWisdom/Core/StandardLibrary/Numbers/Double+Extensions.swift"; sourceTree = "<group>"; };
 		CC6105470D041D327025FBF0F3AE1CED /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = SwiftWisdom/Core/CommonTypes/Result.swift; sourceTree = "<group>"; };
-		CFDE11CD66BEE503620CD0721C06B316 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
+		CFDE11CD66BEE503620CD0721C06B316 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		D438D568005C6B9A2D6BF6D2AB192A28 /* Integer+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Integer+Extensions.swift"; path = "SwiftWisdom/Core/StandardLibrary/Numbers/Integer+Extensions.swift"; sourceTree = "<group>"; };
 		D4AC02D26E07B4500C44FEC703560472 /* IPDatePicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IPDatePicker.xcconfig; sourceTree = "<group>"; };
 		D7B1BDC49294C448052BCE1E30641B4F /* PercentAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PercentAnimator.swift; path = SwiftWisdom/Core/UIKit/PercentAnimator/PercentAnimator.swift; sourceTree = "<group>"; };
@@ -341,11 +342,11 @@
 		DBD9D8ACBAB52ADE0F78B5DBD892E632 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		E014A4FC28844BD49B8DF8AC3FA19929 /* Array+Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Utilities.swift"; path = "SwiftWisdom/Core/StandardLibrary/Array/Array+Utilities.swift"; sourceTree = "<group>"; };
 		E0B7EAA950B7C1FF677AF33DAF22AD71 /* Qu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Qu.swift; path = SwiftWisdom/Core/Async/Qu/Qu.swift; sourceTree = "<group>"; };
-		E2900A7ADD36F6405B1FB7B916BC38B4 /* IPDatePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IPDatePicker.swift; sourceTree = "<group>"; };
 		E2A4D8B3D97C80E8F119AC2611B9DB86 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		E2BAC3933071B054F3CCAC680D913473 /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
 		E2CACF342DD93853B9A17A91EC2D621E /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
 		E40722EE6992F1A8EF253F4CBC3411E3 /* Intrepid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Intrepid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E464902A468269DBA13E3CA8B04A54FF /* IPDatePickerViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IPDatePickerViewModel.swift; sourceTree = "<group>"; };
 		E5E332850011905BA9910858809F83B4 /* Pods-IPDatePicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IPDatePicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E9D3093109C5F61A11F77844DDE375D2 /* DataConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataConvertible.swift; path = SwiftWisdom/Core/Foundation/Data/DataConvertible.swift; sourceTree = "<group>"; };
 		EB7F6CC69306EC4A5D3378D995BE044E /* ColorDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorDescriptor.swift; path = SwiftWisdom/Core/Colors/ColorDescriptor.swift; sourceTree = "<group>"; };
@@ -359,6 +360,7 @@
 		F60FBAD1964825A6B4D5ED4A728447B4 /* UIImage+ColorImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+ColorImage.swift"; path = "SwiftWisdom/Core/UIKit/UIImage+ColorImage.swift"; sourceTree = "<group>"; };
 		F655B7BFBC7288AACDD4E66ADCFE49F9 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		F8A98D811BA7C7BA6E11571475CC95D6 /* CAGradientLayer+IPGradients.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CAGradientLayer+IPGradients.h"; path = "src/CAGradientLayer/CAGradientLayer+IPGradients.h"; sourceTree = "<group>"; };
+		FB917190CD15916188A379CF5EE7295D /* IPDatePickerComponentViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IPDatePickerComponentViewModel.swift; sourceTree = "<group>"; };
 		FEFA4FC031677C50D86D05553355487F /* Pods-IPDatePicker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IPDatePicker_Example-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -371,6 +373,16 @@
 				B27DFD6025D94758785918F1D6F6C060 /* QuartzCore.framework in Frameworks */,
 				841FF232C33C7D49C58CEFDBE7EEB92B /* UIKit.framework in Frameworks */,
 				7E9B14D5F8842A86CA86F2AF45230725 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BCAA9AA3C4CC1848C961267F1E7FCA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECD132BF49620F3328290328D0D9CED9 /* Foundation.framework in Frameworks */,
+				B3348E4D8841C79C3EAA1A22EE4445F1 /* Intrepid.framework in Frameworks */,
+				7DA78D9292E7AFB8E38DAFEDDD0DB650 /* PureLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,24 +402,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		702E5F23090F72B2E308AA6A68B99310 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3382A25C0D9CD268B06642760374F9A7 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94D90531761451984DB793EC50860DE8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				66C0B4153CF47EBCB03FEA5C75236E79 /* Foundation.framework in Frameworks */,
-				3C474DDA6CF10EB8BD259440AF8B5CE5 /* Intrepid.framework in Frameworks */,
-				467817223722ABD9FA318E05CD2AC739 /* PureLayout.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9830922ECAD5BDE355FA468BC56337CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,6 +417,14 @@
 			files = (
 				2BBEC8D020F35E2B02D27037AE5F34C7 /* Foundation.framework in Frameworks */,
 				AEA6D743324EF7242BA63EC055A79FCA /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB5A9A390B4695F69DF9493DC90DF0A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC4E6F0D3ABED1BC12E721AB95F2C540 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +448,7 @@
 				A47C75784C2E970987D7D9C92C2D347E /* Core */,
 				18D6C3AE2D79244422262D6D8248CFCA /* Support Files */,
 			);
+			name = Intrepid;
 			path = Intrepid;
 			sourceTree = "<group>";
 		};
@@ -496,10 +499,19 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
+		5EAF52D65357D90431B2FC3AE4087892 /* IPDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				E6109EC2E71DE29326E98F7F4E22B568 /* Classes */,
+			);
+			name = IPDatePicker;
+			path = IPDatePicker;
+			sourceTree = "<group>";
+		};
 		61D6C1D1E418FDE93E1B1DEFE99A6395 /* IPDatePicker */ = {
 			isa = PBXGroup;
 			children = (
-				F9E7C9C9DC9EF3A0DEAF1E1262757284 /* IPDatePicker */,
+				5EAF52D65357D90431B2FC3AE4087892 /* IPDatePicker */,
 				D3F9CD023333F0EF9EB84445E874F100 /* Support Files */,
 			);
 			name = IPDatePicker;
@@ -550,18 +562,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		85A653F658EEFB826D5FEF2EBB1CE940 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				E2900A7ADD36F6405B1FB7B916BC38B4 /* IPDatePicker.swift */,
-				0E79127E1DE53D5542A42366DA3117ED /* IPDatePickerComponentViewModel.swift */,
-				2222B13E719FC04A3381CDC01F0FDCBC /* IPDatePickerDelegate.swift */,
-				AE65AFDDE2184C2DDF58543BE5ACD387 /* IPDatePickerFormat.swift */,
-				29E1B878257065BD11321317B055A6BB /* IPDatePickerViewModel.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		8FC969AF4FC118965812BD020D38F172 /* Pods-IPDatePicker_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,6 +594,7 @@
 				BEFBB89D47C63B806F0FC1C8E55A0072 /* PureLayoutDefines.h */,
 				FDBC9CB08BEF7417570E2DB756C2DD86 /* Support Files */,
 			);
+			name = PureLayout;
 			path = PureLayout;
 			sourceTree = "<group>";
 		};
@@ -622,6 +623,7 @@
 				7FD22426CE4B668A949B51DEE4605E1E /* UIViewController+Containment.m */,
 				B66401D4332C6984CA230971E279DF66 /* Support Files */,
 			);
+			name = "IP-UIKit-Wisdom";
 			path = "IP-UIKit-Wisdom";
 			sourceTree = "<group>";
 		};
@@ -700,6 +702,7 @@
 				2210F4304830411A7DC820BC7ABD9A8A /* Support Files */,
 				DF491EC6204BC1D94C926F379BA7098E /* SwiftSupport */,
 			);
+			name = FBSnapshotTestCase;
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
@@ -769,12 +772,18 @@
 			name = SwiftSupport;
 			sourceTree = "<group>";
 		};
-		F9E7C9C9DC9EF3A0DEAF1E1262757284 /* IPDatePicker */ = {
+		E6109EC2E71DE29326E98F7F4E22B568 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				85A653F658EEFB826D5FEF2EBB1CE940 /* Classes */,
+				A9A98715A3F8B6C9B9024B0CFC202AA6 /* IPDatePicker.swift */,
+				FB917190CD15916188A379CF5EE7295D /* IPDatePickerComponentViewModel.swift */,
+				993FD561D2A5C76A646B3A8C21ACA17A /* IPDatePickerDelegate.swift */,
+				7E4E6EDADB6EB8573F3F736FA41CE9B2 /* IPDatePickerFormat.swift */,
+				E464902A468269DBA13E3CA8B04A54FF /* IPDatePickerViewModel.swift */,
+				76E1AE8099C64072735AEBD6B6630D7D /* IPDatePickerViewProtocol.swift */,
 			);
-			path = IPDatePicker;
+			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		FDBC9CB08BEF7417570E2DB756C2DD86 /* Support Files */ = {
@@ -802,25 +811,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FB591B86324F7CC6A761D1C1EBAF944 /* Headers */ = {
+		94177B89DED09B631B63378B18BDEAE2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				814E5D2BA7C020AB523D0888E3FA6AE2 /* ALView+PureLayout.h in Headers */,
-				F9176A3BE2BD9CA7B925697330B5DA66 /* NSArray+PureLayout.h in Headers */,
-				F722506BA8777C00BABED2E7E626893E /* NSLayoutConstraint+PureLayout.h in Headers */,
-				16EE14D860332A68529E4C4BC17E572B /* PureLayout+Internal.h in Headers */,
-				E786596C65DB38987D0F9BE8C1B8B386 /* PureLayout-umbrella.h in Headers */,
-				529D235DC2240898A24DE045AA817B9C /* PureLayout.h in Headers */,
-				A2107DD2A884D01D5A65EC5E0D83ADBB /* PureLayoutDefines.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		653CEB6CE9038B26689CA5FD36CCB93B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4D320C2B8A8B3E747530B58B069C72F /* IPDatePicker-umbrella.h in Headers */,
+				7906D9729D0BF44B84A1A6BB9FE13C52 /* ALView+PureLayout.h in Headers */,
+				28654738FC145A25073F69882E06F10B /* NSArray+PureLayout.h in Headers */,
+				A8A274EBC046FC7F0D34458D84EF5C94 /* NSLayoutConstraint+PureLayout.h in Headers */,
+				64D33487AB656651ED35B5AB2641BF6A /* PureLayout+Internal.h in Headers */,
+				C6F3E0E4A645D3DAF28E0DFBBE67FA04 /* PureLayout-umbrella.h in Headers */,
+				083FE85792B0106F3195881F85D487C9 /* PureLayout.h in Headers */,
+				F6DD4595AAE11DA2195F4DBAD7FDF449 /* PureLayoutDefines.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,6 +863,14 @@
 				833BB954FBC4ABFA3BD60A33391420E0 /* UIView+IPFrameUtils.h in Headers */,
 				276522638C9D3A55690380BCA9E544D2 /* UIView+NibInitable.h in Headers */,
 				CF38B2681B5344833806070B1F4B082A /* UIViewController+Containment.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEF4279FB5FEC7964F2C5550C105C213 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C5734E6872D8919B2F9AD1E4E75F67 /* IPDatePicker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -931,23 +940,6 @@
 			productReference = 13660C47C166247A08D538E505E948FB /* IP_UIKit_Wisdom.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		67D46ED1D04D5E6D9EB1123F3DC192DE /* PureLayout */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1F6A55187373C2031A7E1EE6D49C85A8 /* Build configuration list for PBXNativeTarget "PureLayout" */;
-			buildPhases = (
-				1F97AD96F7FE9103293673BDA78907F3 /* Sources */,
-				702E5F23090F72B2E308AA6A68B99310 /* Frameworks */,
-				3FB591B86324F7CC6A761D1C1EBAF944 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PureLayout;
-			productName = PureLayout;
-			productReference = 33C0E9A38CEF93DDDF69362EC87A4517 /* PureLayout.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		6966615324ED1BF9F381B0FB6B61A060 /* Pods-IPDatePicker_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1B3C232DEE42D303847D43DCEE50DC1 /* Build configuration list for PBXNativeTarget "Pods-IPDatePicker_Tests" */;
@@ -984,23 +976,40 @@
 			productReference = A03D1291E0110D1889EC5BACFF42B78C /* Intrepid.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D7FD22076312B160BEC1922BA37DE6A8 /* IPDatePicker */ = {
+		E87E3984572B81722CCB7EE822086F22 /* IPDatePicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D8D766B07E1607A65B91778D541BD133 /* Build configuration list for PBXNativeTarget "IPDatePicker" */;
+			buildConfigurationList = 25BB93792D8F10858F5B18192BE8094D /* Build configuration list for PBXNativeTarget "IPDatePicker" */;
 			buildPhases = (
-				835FC0ECA1EC80762EBDDCA24EADE57A /* Sources */,
-				94D90531761451984DB793EC50860DE8 /* Frameworks */,
-				653CEB6CE9038B26689CA5FD36CCB93B /* Headers */,
+				0EF68CB831217582A20617ABB7EAF791 /* Sources */,
+				2BCAA9AA3C4CC1848C961267F1E7FCA6 /* Frameworks */,
+				CEF4279FB5FEC7964F2C5550C105C213 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DE0908479DDFAA8CB3F27612C43BEF1F /* PBXTargetDependency */,
-				B27F5E9375F067FE14A9EA4983F246E1 /* PBXTargetDependency */,
+				4F71C2E8BBFD99A946811AE531524A4B /* PBXTargetDependency */,
+				82F89943674AE4F2A9ED330968900188 /* PBXTargetDependency */,
 			);
 			name = IPDatePicker;
 			productName = IPDatePicker;
 			productReference = 1BBEAB7C04BBA60EF729C4731DD72DA7 /* IPDatePicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F00EA0EF1D1EA4C1432C96D0E74372B3 /* PureLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 660385C1D42EF81B5EE5DEB5579B52BD /* Build configuration list for PBXNativeTarget "PureLayout" */;
+			buildPhases = (
+				F9BFF895E25BA7D469D39D771E4797AB /* Sources */,
+				FB5A9A390B4695F69DF9493DC90DF0A9 /* Frameworks */,
+				94177B89DED09B631B63378B18BDEAE2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PureLayout;
+			productName = PureLayout;
+			productReference = 33C0E9A38CEF93DDDF69362EC87A4517 /* PureLayout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1027,10 +1036,10 @@
 				34CD2E3428AB802BACA62286FF5074B1 /* FBSnapshotTestCase */,
 				7DB344AD1F13A47DB10BA884ECDAD0B1 /* Intrepid */,
 				4E44EE9A4DC4BE43687D5E148E33F463 /* IP-UIKit-Wisdom */,
-				D7FD22076312B160BEC1922BA37DE6A8 /* IPDatePicker */,
+				E87E3984572B81722CCB7EE822086F22 /* IPDatePicker */,
 				083B1D3C09AF1C0580073F497521789D /* Pods-IPDatePicker_Example */,
 				6966615324ED1BF9F381B0FB6B61A060 /* Pods-IPDatePicker_Tests */,
-				67D46ED1D04D5E6D9EB1123F3DC192DE /* PureLayout */,
+				F00EA0EF1D1EA4C1432C96D0E74372B3 /* PureLayout */,
 			);
 		};
 /* End PBXProject section */
@@ -1044,14 +1053,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1F97AD96F7FE9103293673BDA78907F3 /* Sources */ = {
+		0EF68CB831217582A20617ABB7EAF791 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5083ACB5F6A6DFC640258239A13E8BE4 /* ALView+PureLayout.m in Sources */,
-				05969D511EC8B6FC18A2F1C563A766E6 /* NSArray+PureLayout.m in Sources */,
-				EBA467DE12BF336DB4CCF813679DE767 /* NSLayoutConstraint+PureLayout.m in Sources */,
-				DC86082A4AAC3252D0C3AFABA07A59AC /* PureLayout-dummy.m in Sources */,
+				6A1EB54CB01CEC8CE2A63429865B7E8A /* IPDatePicker-dummy.m in Sources */,
+				CD58E4BB38930F7D39F132C7EF80CC2A /* IPDatePicker.swift in Sources */,
+				C8700D4914304173EE8114C2F1707BB6 /* IPDatePickerComponentViewModel.swift in Sources */,
+				5A6BAD5927B0ECC44467848511165963 /* IPDatePickerDelegate.swift in Sources */,
+				F0A34016E4105AF96A8C09F344D18C6F /* IPDatePickerFormat.swift in Sources */,
+				E274E4B846C4E1530B88BFB39303D84C /* IPDatePickerViewModel.swift in Sources */,
+				A9BBAF34BB2658F3AB49F8623EDDB04B /* IPDatePickerViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1131,19 +1143,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		835FC0ECA1EC80762EBDDCA24EADE57A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BD481354325E630E108386FC2527F2B9 /* IPDatePicker.swift in Sources */,
-				0EB01C15C3AB09E467B57275AE1C3761 /* IPDatePickerComponentViewModel.swift in Sources */,
-				4B951825E91588F23168F29FB211C783 /* IPDatePickerDelegate.swift in Sources */,
-				C407FDC2BD1597A8742D1E5D2E99A863 /* IPDatePickerFormat.swift in Sources */,
-				3B2F98574BA382D582CAD7C162721893 /* IPDatePickerViewModel.swift in Sources */,
-				7A4C98BCBECE0712D8C8292731D44F5F /* IPDatePicker-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AE20C53096E953C300981D4C8B6CC870 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1168,6 +1167,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F9BFF895E25BA7D469D39D771E4797AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD2B4C7CA3D6EEC2AA4C02B69141F9B2 /* ALView+PureLayout.m in Sources */,
+				911B5DECBAFAA6450FC6C9AEE0C65CBE /* NSArray+PureLayout.m in Sources */,
+				39DE6E8903FF9E27D8FFCC3C2D4D8792 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				44CD1D82D05BFD0659598AE61F510BB5 /* PureLayout-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1177,11 +1187,23 @@
 			target = 4E44EE9A4DC4BE43687D5E148E33F463 /* IP-UIKit-Wisdom */;
 			targetProxy = BFED336F926E9713D8E078DEB71A6D40 /* PBXContainerItemProxy */;
 		};
+		4F71C2E8BBFD99A946811AE531524A4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Intrepid;
+			target = 7DB344AD1F13A47DB10BA884ECDAD0B1 /* Intrepid */;
+			targetProxy = 10AA58CCDFD3E46DFCCD2E4E4E6F9125 /* PBXContainerItemProxy */;
+		};
 		57D6BF1E9CDB928DC05CE4F05B5657E8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IPDatePicker;
-			target = D7FD22076312B160BEC1922BA37DE6A8 /* IPDatePicker */;
+			target = E87E3984572B81722CCB7EE822086F22 /* IPDatePicker */;
 			targetProxy = 5B5485A53B8418AAC80F9B6A8F5433A6 /* PBXContainerItemProxy */;
+		};
+		82F89943674AE4F2A9ED330968900188 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PureLayout;
+			target = F00EA0EF1D1EA4C1432C96D0E74372B3 /* PureLayout */;
+			targetProxy = B5B3FB64FC6EABA19BD95E90D13E7CDC /* PBXContainerItemProxy */;
 		};
 		92D07B38DD3B1EBF010371C09F9CD888 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1195,18 +1217,6 @@
 			target = 7DB344AD1F13A47DB10BA884ECDAD0B1 /* Intrepid */;
 			targetProxy = 4B8107EC4BFA9D379E8FA1E5AF2D43A0 /* PBXContainerItemProxy */;
 		};
-		B27F5E9375F067FE14A9EA4983F246E1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PureLayout;
-			target = 67D46ED1D04D5E6D9EB1123F3DC192DE /* PureLayout */;
-			targetProxy = 5C4AF3DEE6CC8AB9C07A99AE90F27E7F /* PBXContainerItemProxy */;
-		};
-		DE0908479DDFAA8CB3F27612C43BEF1F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Intrepid;
-			target = 7DB344AD1F13A47DB10BA884ECDAD0B1 /* Intrepid */;
-			targetProxy = 05C3FAEF17130C311FC69656B0394484 /* PBXContainerItemProxy */;
-		};
 		F8B4B92A923D34CA29009D8758B8F9B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "IP-UIKit-Wisdom";
@@ -1216,7 +1226,7 @@
 		FAF7B4BC103ADA025B1C0BE08766EBF5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PureLayout;
-			target = 67D46ED1D04D5E6D9EB1123F3DC192DE /* PureLayout */;
+			target = F00EA0EF1D1EA4C1432C96D0E74372B3 /* PureLayout */;
 			targetProxy = 50F8F0276E5BBC713B9E77D572662D6B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1290,40 +1300,6 @@
 			};
 			name = Release;
 		};
-		117A87E6FF25339B5C1759D7CD24F3B8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4AC02D26E07B4500C44FEC703560472 /* IPDatePicker.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/IPDatePicker/IPDatePicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/IPDatePicker/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/IPDatePicker/IPDatePicker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = IPDatePicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		180C9E608453A262EB6322D6C218A0CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E5E332850011905BA9910858809F83B4 /* Pods-IPDatePicker_Example.debug.xcconfig */;
@@ -1362,6 +1338,73 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		2ADF38153845E9402CFE0AF7F38C298C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5828EF88F533DADBB58A57E73C9E6BE7 /* PureLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PureLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		331AE9DF3DCC57E732F9D49C38B8DC33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4AC02D26E07B4500C44FEC703560472 /* IPDatePicker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/IPDatePicker/IPDatePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IPDatePicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/IPDatePicker/IPDatePicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = IPDatePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1410,39 +1453,6 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
-		};
-		429C8D9C4C1F471D216F600B142AC8EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5828EF88F533DADBB58A57E73C9E6BE7 /* PureLayout.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = PureLayout;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		5B81A5D9D088F3B88D618BD442E2F23A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1521,6 +1531,41 @@
 			};
 			name = Release;
 		};
+		6999C6DC08F78B9C8E7033AAB93EA9B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4AC02D26E07B4500C44FEC703560472 /* IPDatePicker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/IPDatePicker/IPDatePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IPDatePicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/IPDatePicker/IPDatePicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = IPDatePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1565,7 +1610,7 @@
 			};
 			name = Release;
 		};
-		9947C16C30B61986642E950C0C003846 /* Debug */ = {
+		92B0D25D71628861C6D867F4A3E90C12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5828EF88F533DADBB58A57E73C9E6BE7 /* PureLayout.xcconfig */;
 			buildSettings = {
@@ -1704,41 +1749,6 @@
 			};
 			name = Debug;
 		};
-		E527B1DBCAF9FB1E5C11D53C5DE07864 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4AC02D26E07B4500C44FEC703560472 /* IPDatePicker.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/IPDatePicker/IPDatePicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/IPDatePicker/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/IPDatePicker/IPDatePicker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = IPDatePicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		F15F9C0341643F7963BD216FCC890EBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BAD2C28EBF7A0029139A7FFF43162340 /* Intrepid.xcconfig */;
@@ -1819,11 +1829,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1F6A55187373C2031A7E1EE6D49C85A8 /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
+		25BB93792D8F10858F5B18192BE8094D /* Build configuration list for PBXNativeTarget "IPDatePicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9947C16C30B61986642E950C0C003846 /* Debug */,
-				429C8D9C4C1F471D216F600B142AC8EF /* Release */,
+				6999C6DC08F78B9C8E7033AAB93EA9B3 /* Debug */,
+				331AE9DF3DCC57E732F9D49C38B8DC33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1833,6 +1843,15 @@
 			buildConfigurations = (
 				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
 				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		660385C1D42EF81B5EE5DEB5579B52BD /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92B0D25D71628861C6D867F4A3E90C12 /* Debug */,
+				2ADF38153845E9402CFE0AF7F38C298C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1860,15 +1879,6 @@
 			buildConfigurations = (
 				5B81A5D9D088F3B88D618BD442E2F23A /* Debug */,
 				613C59E9F5E7B38EFE9AD4D3AE544EA9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D8D766B07E1607A65B91778D541BD133 /* Build configuration list for PBXNativeTarget "IPDatePicker" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E527B1DBCAF9FB1E5C11D53C5DE07864 /* Debug */,
-				117A87E6FF25339B5C1759D7CD24F3B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

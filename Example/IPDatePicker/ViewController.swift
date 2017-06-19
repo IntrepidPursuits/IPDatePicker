@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.addSubview(picker)
-        picker.autoCenterInSuperview()
+        view.addSubview(picker.view)
+        picker.view.autoCenterInSuperview()
     }
 }
