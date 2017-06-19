@@ -23,11 +23,11 @@ extension Date {
     }
 }
 
-class DatePicker: UIView {
+public class DatePicker: UIView {
     private let picker = UIPickerView()
     private let viewModel: DatePickerViewModel
 
-    weak var delegate: DatePickerDelegate? {
+    public weak var delegate: DatePickerDelegate? {
         get {
             return viewModel.delegate
         }
@@ -36,7 +36,7 @@ class DatePicker: UIView {
         }
     }
 
-    init(date: Date = Date(), format: DatePickerFormat) {
+    public init(date: Date = Date(), format: DatePickerFormat) {
         viewModel = DatePickerViewModel(date: date, format: format)
 
         super.init(frame: .zero)
@@ -44,7 +44,7 @@ class DatePicker: UIView {
         setup()
     }
 
-    init(date: Date = Date(), locale: Locale = Locale.current, formatString: String = "hh:mm") {
+    public init(date: Date = Date(), locale: Locale = Locale.current, formatString: String = "hh:mm") {
         viewModel = DatePickerViewModel(date: date, locale: locale, formatString: formatString)
 
         super.init(frame: .zero)
@@ -52,7 +52,7 @@ class DatePicker: UIView {
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -69,7 +69,7 @@ class DatePicker: UIView {
 
     // MARK: - Date getter/setter
 
-    var date: Date {
+    public var date: Date {
         get {
             return viewModel.date
         }
@@ -78,7 +78,7 @@ class DatePicker: UIView {
         }
     }
 
-    func setDate(_ date: Date, animated: Bool) {
+    public func setDate(_ date: Date, animated: Bool) {
         viewModel.date = date
 
         viewModel.selectedRows().enumerated().forEach { (component, row) in
@@ -88,12 +88,12 @@ class DatePicker: UIView {
 
     // MARK: - Intrinsic content size
 
-    override func invalidateIntrinsicContentSize() {
+    override public func invalidateIntrinsicContentSize() {
         picker.invalidateIntrinsicContentSize()
         super.invalidateIntrinsicContentSize()
     }
 
-    override var intrinsicContentSize: CGSize {
+    override public var intrinsicContentSize: CGSize {
         return picker.intrinsicContentSize
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ClockHourFormat {
+public enum ClockHourFormat {
     case twelve
     case twentyFour
 
@@ -22,7 +22,7 @@ enum ClockHourFormat {
     }
 }
 
-struct DatePickerFormat {
+public struct DatePickerFormat {
     let hourFormat: ClockHourFormat
     let locale: Locale
 

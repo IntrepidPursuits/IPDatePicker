@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum DatePickerComponent: String {
+public enum DatePickerComponent: String {
     case hour12 = "h"
     case hour24 = "H"
     case minute = "m"

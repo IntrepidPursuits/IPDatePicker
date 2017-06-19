@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Intrepid
 
 final class DatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
     private(set) var locale: Locale

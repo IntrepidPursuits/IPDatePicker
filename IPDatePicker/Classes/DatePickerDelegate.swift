@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol DatePickerDelegate: class {
+public protocol DatePickerDelegate: class {
     func datePicker(_ datePicker: DatePicker, viewForItemForComponent: DatePickerComponent, row: Int, suggestedSymbol: String, reusing view: UIView?) -> UIView?
     func datePicker(_ datePicker: DatePicker, attributedSymbolForComponent: DatePickerComponent, row: Int, suggestedSymbol: String) -> NSAttributedString?
     func datePicker(_ datePicker: DatePicker, symbolForComponent: DatePickerComponent, row: Int, suggestedSymbol: String) -> String?
