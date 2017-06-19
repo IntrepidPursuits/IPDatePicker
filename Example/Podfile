@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'IPDatePicker_Example' do
+  pod 'IPDatePicker', :path => '../'
+
+  target 'IPDatePicker_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
