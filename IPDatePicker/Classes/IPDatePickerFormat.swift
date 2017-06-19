@@ -1,5 +1,5 @@
 //
-//  DatePickerFormat.swift
+//  IPDatePickerFormat.swift
 //  IPDatePicker
 //
 //  Created by Andrew Dolce on 6/14/17.
@@ -22,7 +22,7 @@ public enum ClockHourFormat {
     }
 }
 
-public struct DatePickerFormat {
+public struct IPDatePickerFormat {
     let hourFormat: ClockHourFormat
     let locale: Locale
 

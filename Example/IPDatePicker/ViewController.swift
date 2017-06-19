@@ -11,7 +11,7 @@ import IPDatePicker
 import PureLayout
 
 class ViewController: UIViewController {
-    let picker = DatePicker()
+    let picker = IPDatePicker()
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,5 +1,5 @@
 //
-//  DatePickerViewModel.swift
+//  IPDatePickerViewModel.swift
 //  IPDatePicker
 //
 //  Created by Andrew Dolce on 6/14/17.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-final class DatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
+final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
     private(set) var locale: Locale
     private(set) var formatString: String
 
-    weak var picker: DatePicker?
+    weak var picker: IPDatePicker?
 
     var date: Date {
         get {
@@ -23,9 +23,9 @@ final class DatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerViewD
         }
     }
 
-    private var componentViewModels = [DatePickerComponentViewModel]()
+    private var componentViewModels = [IPDatePickerComponentViewModel]()
 
-    weak var delegate: DatePickerDelegate?
+    weak var delegate: IPDatePickerDelegate?
 
     private var calendarComponents: Set<Calendar.Component> {
         return Set(componentViewModels.flatMap { $0.calendarComponent() })
@@ -44,7 +44,7 @@ final class DatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerViewD
         return componentViewModels.map { $0.selection }
     }
 
-    convenience init(date: Date = Date(), format: DatePickerFormat) {
+    convenience init(date: Date = Date(), format: IPDatePickerFormat) {
         let formatString = format.localizedFormatString() ?? "hh:mm"
         self.init(date: date, locale: format.locale, formatString: formatString)
     }
@@ -61,14 +61,14 @@ final class DatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerViewD
     }
 
     func setupPickerComponentsFromDateComponents(_ dateComponents: DateComponents) {
-        let possibleComponents: [DatePickerComponentViewModel] = [
+        let possibleComponents: [IPDatePickerComponentViewModel] = [
             TwelveHourComponentViewModel(dateComponents: dateComponents, locale: locale),
             TwentyFourHourComponentViewModel(dateComponents: dateComponents, locale: locale),
             MinutesComponentViewModel(dateComponents: dateComponents, locale: locale),
             AmPmComponentViewModel(dateComponents: dateComponents, locale: locale)
         ]
 
-        componentViewModels = possibleComponents.flatMap { (component: DatePickerComponentViewModel) -> (component: DatePickerComponentViewModel, position: String.Index)? in
+        componentViewModels = possibleComponents.flatMap { (component: IPDatePickerComponentViewModel) -> (component: IPDatePickerComponentViewModel, position: String.Index)? in
             guard let position = formatString.range(of: component.formatSymbol())?.lowerBound else {
                 return nil
             }

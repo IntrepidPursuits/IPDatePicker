@@ -1,5 +1,5 @@
 //
-//  DatePicker.swift
+//  IPDatePicker.swift
 //  IPDatePicker
 //
 //  Created by Andrew Dolce on 6/11/17.
@@ -23,11 +23,11 @@ extension Date {
     }
 }
 
-public class DatePicker: UIView {
+public class IPDatePicker: UIView {
     private let picker = UIPickerView()
-    private let viewModel: DatePickerViewModel
+    private let viewModel: IPDatePickerViewModel
 
-    public weak var delegate: DatePickerDelegate? {
+    public weak var delegate: IPDatePickerDelegate? {
         get {
             return viewModel.delegate
         }
@@ -36,8 +36,8 @@ public class DatePicker: UIView {
         }
     }
 
-    public init(date: Date = Date(), format: DatePickerFormat) {
-        viewModel = DatePickerViewModel(date: date, format: format)
+    public init(date: Date = Date(), format: IPDatePickerFormat) {
+        viewModel = IPDatePickerViewModel(date: date, format: format)
 
         super.init(frame: .zero)
 
@@ -45,7 +45,7 @@ public class DatePicker: UIView {
     }
 
     public init(date: Date = Date(), locale: Locale = Locale.current, formatString: String = "hh:mm") {
-        viewModel = DatePickerViewModel(date: date, locale: locale, formatString: formatString)
+        viewModel = IPDatePickerViewModel(date: date, locale: locale, formatString: formatString)
 
         super.init(frame: .zero)
 

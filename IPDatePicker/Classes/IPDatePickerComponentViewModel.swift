@@ -1,5 +1,5 @@
 //
-//  DatePickerComponentViewModel.swift
+//  IPDatePickerComponentViewModel.swift
 //  IPDatePicker
 //
 //  Created by Andrew Dolce on 6/14/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum DatePickerComponent: String {
+public enum IPDatePickerComponent: String {
     case hour12 = "h"
     case hour24 = "H"
     case minute = "m"
@@ -30,7 +30,7 @@ public enum DatePickerComponent: String {
     }
 }
 
-class DatePickerComponentViewModel {
+class IPDatePickerComponentViewModel {
     var titles = [String]()
 
     var selection: Int = 0
@@ -40,7 +40,7 @@ class DatePickerComponentViewModel {
         setSelectionFromDateComponents(dateComponents)
     }
 
-    func component() -> DatePickerComponent {
+    func component() -> IPDatePickerComponent {
         preconditionFailure("Function unimplemented")
     }
 
@@ -65,8 +65,8 @@ class DatePickerComponentViewModel {
     }
 }
 
-final class TwelveHourComponentViewModel: DatePickerComponentViewModel {
-    override func component() -> DatePickerComponent {
+final class TwelveHourComponentViewModel: IPDatePickerComponentViewModel {
+    override func component() -> IPDatePickerComponent {
         return .hour12
     }
 
@@ -85,8 +85,8 @@ final class TwelveHourComponentViewModel: DatePickerComponentViewModel {
     }
 }
 
-final class TwentyFourHourComponentViewModel: DatePickerComponentViewModel {
-    override func component() -> DatePickerComponent {
+final class TwentyFourHourComponentViewModel: IPDatePickerComponentViewModel {
+    override func component() -> IPDatePickerComponent {
         return .hour24
     }
 
@@ -103,8 +103,8 @@ final class TwentyFourHourComponentViewModel: DatePickerComponentViewModel {
     }
 }
 
-final class AmPmComponentViewModel: DatePickerComponentViewModel {
-    override func component() -> DatePickerComponent {
+final class AmPmComponentViewModel: IPDatePickerComponentViewModel {
+    override func component() -> IPDatePickerComponent {
         return .amPm
     }
 
@@ -123,8 +123,8 @@ final class AmPmComponentViewModel: DatePickerComponentViewModel {
     }
 }
 
-final class MinutesComponentViewModel: DatePickerComponentViewModel {
-    override func component() -> DatePickerComponent {
+final class MinutesComponentViewModel: IPDatePickerComponentViewModel {
+    override func component() -> IPDatePickerComponent {
         return .minute
     }
 
