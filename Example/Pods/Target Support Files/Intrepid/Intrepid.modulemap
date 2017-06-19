@@ -1,0 +1,6 @@
+framework module Intrepid {
+  umbrella header "Intrepid-umbrella.h"
+
+  export *
+  module * { export * }
+}

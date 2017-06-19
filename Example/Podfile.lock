@@ -4,7 +4,15 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - IPDatePicker (0.1.0)
+  - Intrepid (0.7.10):
+    - Intrepid/Core (= 0.7.10)
+  - Intrepid/Core (0.7.10):
+    - IP-UIKit-Wisdom (= 0.0.10)
+  - IP-UIKit-Wisdom (0.0.10)
+  - IPDatePicker (0.1.0):
+    - Intrepid
+    - PureLayout
+  - PureLayout (3.0.2)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -16,7 +24,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  IPDatePicker: 89c4af64cf1b4b34417d90337bdb2c19e0c69ef3
+  Intrepid: 6387b01be08a8c22fa9df6f00dbce55099c1a2e8
+  IP-UIKit-Wisdom: b395a065344071b33659e5f6b918043a97c48a44
+  IPDatePicker: 3d9ef7e0561eb7cce72b2fde0b1a589966e1d0ae
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
 
 PODFILE CHECKSUM: d9cb7ace9256a1b18df9d9c5b388f4be97719177
 
