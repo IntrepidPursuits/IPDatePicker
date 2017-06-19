@@ -1,0 +1,23 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - IPDatePicker (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - IPDatePicker (from `../`)
+
+EXTERNAL SOURCES:
+  IPDatePicker:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  IPDatePicker: 89c4af64cf1b4b34417d90337bdb2c19e0c69ef3
+
+PODFILE CHECKSUM: d9cb7ace9256a1b18df9d9c5b388f4be97719177
+
+COCOAPODS: 1.2.0
