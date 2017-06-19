@@ -9,20 +9,6 @@
 import PureLayout
 import Intrepid
 
-extension Date {
-    var timeComponents: DateComponents {
-        get {
-            return Calendar.current.dateComponents([.hour, .minute], from: self)
-        }
-        set {
-            guard let newDate = Calendar.current.date(from: newValue) else {
-                return
-            }
-            self = newDate
-        }
-    }
-}
-
 public class IPDatePicker {
     public var view: UIView
 
