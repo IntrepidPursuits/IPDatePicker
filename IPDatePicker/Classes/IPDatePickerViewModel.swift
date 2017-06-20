@@ -152,6 +152,7 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
         }
 
         let label = UILabel()
+        label.textAlignment = .center
 
         if let attributedSymbol = delegate?.datePicker(
             picker,
@@ -163,8 +164,6 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
 
             return label
         }
-
-        label.textAlignment = .center
 
         label.text = delegate?.datePicker(
             picker,
