@@ -44,12 +44,7 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
         return componentViewModels.map { $0.selection }
     }
 
-    convenience init(date: Date = Date(), format: IPDatePickerFormat) {
-        let formatString = format.localizedFormatString() ?? "hh:mm"
-        self.init(date: date, locale: format.locale, formatString: formatString)
-    }
-
-    init(date: Date = Date(), locale: Locale = Locale.current, formatString: String = "hh:mm") {
+    init(date: Date = Date(), locale: Locale = Locale.current, formatString: String) {
         self.locale = locale
         self.formatString = formatString
 

@@ -30,13 +30,12 @@ public class IPDatePicker {
         }
     }
 
-    public init(view: UIView = UIPickerView(), date: Date = Date(), format: IPDatePickerFormat) {
-        self.view = view
-        viewModel = IPDatePickerViewModel(date: date, format: format)
-        setup()
-    }
-
-    public init(view: UIView = UIPickerView(), date: Date = Date(), locale: Locale = Locale.current, formatString: String = "hh:mm") {
+    public init(
+        view: UIView = UIPickerView(),
+        date: Date = Date(),
+        locale: Locale = Locale.current,
+        formatString: String = "h:mm a"
+    ) {
         self.view = view
         viewModel = IPDatePickerViewModel(date: date, locale: locale, formatString: formatString)
         setup()
