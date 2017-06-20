@@ -91,7 +91,7 @@ final class TwentyFourHourComponentViewModel: IPDatePickerComponentViewModel {
     }
 
     override func setupTitlesFromLocale(_ locale: Locale) {
-        titles = (0...23).map { "\($0)" }
+        titles = (0...23).map { String(format: "%02d", $0) }
     }
 
     override func setSelectionFromDateComponents(_ dateComponents: DateComponents) {
@@ -129,7 +129,7 @@ final class MinutesComponentViewModel: IPDatePickerComponentViewModel {
     }
 
     override func setupTitlesFromLocale(_ locale: Locale) {
-        titles = (0...59).map { "\($0)" }
+        titles = (0...59).map { String(format: "%02d", $0) }
     }
 
     override func setSelectionFromDateComponents(_ dateComponents: DateComponents) {
