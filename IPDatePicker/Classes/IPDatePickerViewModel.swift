@@ -46,7 +46,7 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
 
     init(date: Date = Date(), locale: Locale = Locale.current, formatString: String) {
         self.locale = locale
-        self.formatString = formatString
+        self.formatString = DateFormatter.dateFormat(fromTemplate: formatString, options: 0, locale: locale) ?? formatString
 
         super.init()
 
