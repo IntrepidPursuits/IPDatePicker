@@ -46,6 +46,9 @@ public class IPDatePicker {
 
         pickerView.dataSource = viewModel
         pickerView.delegate = viewModel
+
+
+        setDate(date, animated: false)
     }
 
     // MARK: - Date getter/setter
