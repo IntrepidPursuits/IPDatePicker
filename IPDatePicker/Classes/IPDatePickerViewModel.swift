@@ -264,4 +264,26 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
     func ipPickerView(_ pickerView: IPPickerView, didSelectRow row: Int, forComponent component: Int) {
         didSelectRow(row, inComponent: component)
     }
+
+    func ipPickerView(_ pickerView: IPPickerView, viewForSpacingBetweenComponent leftComponent: Int, and rightComponent: Int) -> UIView? {
+        guard
+            let picker = picker,
+            let leftDateComponent = componentViewModels[ip_safe: leftComponent]?.component(),
+            let rightDateComponent = componentViewModels[ip_safe: rightComponent]?.component()
+        else {
+            return nil
+        }
+        return delegate?.datePicker(picker, viewForSpacingBetweenComponent: leftDateComponent, and: rightDateComponent)
+    }
+
+    func ipPickerView(_ pickerView: IPPickerView, widthOfViewForSpacingBetweenComponent leftComponent: Int, and rightComponent: Int) -> CGFloat? {
+        guard
+            let picker = picker,
+            let leftDateComponent = componentViewModels[ip_safe: leftComponent]?.component(),
+            let rightDateComponent = componentViewModels[ip_safe: rightComponent]?.component()
+            else {
+                return nil
+        }
+        return delegate?.datePicker(picker, widthOfViewForSpacingBetweenComponent: leftDateComponent, and: rightDateComponent)
+    }
 }

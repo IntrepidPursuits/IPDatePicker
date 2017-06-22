@@ -74,4 +74,31 @@ class ViewController: UIViewController, IPDatePickerDelegate {
         ]
         return NSAttributedString(string: suggestedSymbol, attributes: attributes)
     }
+
+    func datePicker(_ datePicker: IPDatePicker, viewForSpacingBetweenComponent leftComponent: IPDatePickerComponent, and rightComponent: IPDatePickerComponent) -> UIView? {
+        switch (leftComponent, rightComponent) {
+        case (.hour12, .minute), (.hour24, .minute), (.minute, .hour12), (.minute, .hour24):
+            return hourMinuteSpacer()
+        default:
+            return nil
+        }
+    }
+
+    func datePicker(_ datePicker: IPDatePicker, widthOfViewForSpacingBetweenComponent leftComponent: IPDatePickerComponent, and rightComponent: IPDatePickerComponent) -> CGFloat? {
+        switch (leftComponent, rightComponent) {
+        case (.hour12, .minute), (.hour24, .minute), (.minute, .hour12), (.minute, .hour24):
+            return 20.0
+        default:
+            return nil
+        }
+    }
+
+    private func hourMinuteSpacer() -> UIView {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 40.0)
+        label.text = ":"
+
+        return label
+    }
 }

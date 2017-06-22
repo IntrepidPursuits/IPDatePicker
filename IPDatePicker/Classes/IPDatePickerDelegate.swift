@@ -18,6 +18,9 @@ public protocol IPDatePickerDelegate: class {
 
     func datePicker(_ datePicker: IPDatePicker, didSelectDate date: Date)
     func datePicker(_ datePicker: IPDatePicker, didSelectRow row: Int, inComponent: IPDatePickerComponent)
+
+    func datePicker(_ datePicker: IPDatePicker, viewForSpacingBetweenComponent leftComponent: IPDatePickerComponent, and rightComponent: IPDatePickerComponent) -> UIView?
+    func datePicker(_ datePicker: IPDatePicker, widthOfViewForSpacingBetweenComponent leftComponent: IPDatePickerComponent, and rightComponent: IPDatePickerComponent) -> CGFloat?
 }
 
 public extension IPDatePickerDelegate {
@@ -44,4 +47,12 @@ public extension IPDatePickerDelegate {
     func datePicker(_ datePicker: IPDatePicker, didSelectDate date: Date) {}
 
     func datePicker(_ datePicker: IPDatePicker, didSelectRow row: Int, inComponent: IPDatePickerComponent) {}
+
+    func datePicker(_ datePicker: IPDatePicker, viewForSpacingBetweenComponent leftComponent: IPDatePickerComponent, and rightComponent: IPDatePickerComponent) -> UIView? {
+        return nil
+    }
+
+    func datePicker(_ datePicker: IPDatePicker, widthOfViewForSpacingBetweenComponent leftComponent: IPDatePickerComponent, and rightComponent: IPDatePickerComponent) -> CGFloat? {
+        return nil
+    }
 }

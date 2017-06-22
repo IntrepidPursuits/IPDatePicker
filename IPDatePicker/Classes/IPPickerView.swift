@@ -102,6 +102,14 @@ open class IPPickerView: UIView, IPPickerViewProtocol, IPPickerComponentViewDele
                 componentView.setSelectedRow(selectedRow, animated: false)
             }
 
+            if component < numberOfComponents - 1 {
+                if let spacerView = delegate.ipPickerView(self, viewForSpacingBetweenComponent: component, and: component + 1) {
+                    let spacerWidth = delegate.ipPickerView(self, widthOfViewForSpacingBetweenComponent: component, and: component + 1) ?? 10.0
+                    spacerView.autoSetDimension(.width, toSize: spacerWidth)
+                    stack.addArrangedSubview(spacerView)
+                }
+            }
+
             return componentView
         }
 
