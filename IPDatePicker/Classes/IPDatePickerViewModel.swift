@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
+final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerViewDelegate, IPPickerViewDelegate {
     private(set) var locale: Locale
     private(set) var formatString: String
 
@@ -21,6 +21,11 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
         set {
             dateComponents = Calendar.current.dateComponents(calendarComponents, from: date)
         }
+    }
+
+    func setSelectionsFromDate(_ date: Date) -> [(component: Int, row: Int)] {
+        let dateComponents = Calendar.current.dateComponents(calendarComponents, from: date)
+        return setSelectionsFromDateComponents(dateComponents: dateComponents)
     }
 
     private var componentViewModels = [IPDatePickerComponentViewModel]()
@@ -36,7 +41,7 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
             return dateComponentsFromSelections()
         }
         set {
-            setSelectionsFromDateComponents(dateComponents: newValue)
+            _ = setSelectionsFromDateComponents(dateComponents: newValue)
         }
     }
 
@@ -69,17 +74,33 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
             }
 
             return (component: component, position: position)
-            }.sorted {
-                return $0.position < $1.position
-            }.map {
-                return $0.component
+        }.sorted {
+            return $0.position < $1.position
+        }.map {
+            return $0.component
         }
     }
 
-    func setSelectionsFromDateComponents(dateComponents: DateComponents) {
-        componentViewModels.forEach { viewModel in
-            viewModel.setSelectionFromDateComponents(dateComponents)
+    func selections() -> [(component: Int, row: Int)] {
+        return componentViewModels.enumerated().map { (index, viewModel) in
+            return (component: index, row: viewModel.selection)
         }
+    }
+
+    // Returns the selections that have changed
+    func setSelectionsFromDateComponents(dateComponents: DateComponents) -> [(component: Int, row: Int)] {
+        var changes = [(component: Int, row: Int)]()
+
+        componentViewModels.enumerated().forEach { (component, viewModel) in
+            let oldSelection = viewModel.selection
+            viewModel.setSelectionFromDateComponents(dateComponents)
+            let newSelection = viewModel.selection
+            if oldSelection != newSelection {
+                changes.append((component: component, row: newSelection))
+            }
+        }
+
+        return changes
     }
 
     func dateComponentsFromSelections() -> DateComponents {
@@ -96,41 +117,41 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
         return selectedTime
     }
 
-    // MARK: UIPickerViewDataSource
+    // MARK: Data Source and Delegate Helpers
 
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    private func numberOfComponents() -> Int {
         return componentViewModels.count
     }
 
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    private func numberOfRowsInComponent(_ component: Int) -> Int {
         return componentViewModels[ip_safe: component]?.titles.count ?? 0
     }
 
-    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+    private func widthForComponent(_ component: Int) -> CGFloat {
         guard
             let componentViewModel = componentViewModels[ip_safe: component],
             let picker = picker,
             let width = delegate?.datePicker(picker, widthForComponent: componentViewModel.component())
-        else {
-            return 80.0
+            else {
+                return 80.0
         }
 
         return width
     }
 
-    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+    private func rowHeightForComponent(_ component: Int) -> CGFloat {
         guard
             let componentViewModel = componentViewModels[ip_safe: component],
             let picker = picker,
             let height = delegate?.datePicker(picker, rowHeightForComponent: componentViewModel.component())
-        else {
-            return 44.0
+            else {
+                return 44.0
         }
 
         return height
     }
 
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+    private func viewForRow(_ row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         guard
             let picker = picker,
             let componentViewModel = componentViewModels[ip_safe: component]
@@ -171,13 +192,11 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
             row: row,
             suggestedSymbol: suggestedSymbol
         ) ?? suggestedSymbol
-
+        
         return label
     }
 
-    // MARK: UIPickerViewDelegate
-
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    private func didSelectRow(_ row: Int, inComponent component: Int) {
         guard let componentViewModel = componentViewModels[ip_safe: component] else {
             return
         }
@@ -190,5 +209,59 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
 
         delegate.datePicker(picker, didSelectRow: row, inComponent: componentViewModel.component())
         delegate.datePicker(picker, didSelectDate: date)
+    }
+
+    // MARK: UIPickerViewDataSource
+
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return numberOfComponents()
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return numberOfRowsInComponent(component)
+    }
+
+    // MARK: UIPickerViewDelegate
+
+    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+        return widthForComponent(component)
+    }
+
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return rowHeightForComponent(component)
+    }
+
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        return viewForRow(row, forComponent: component, reusing: view)
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        didSelectRow(row, inComponent: component)
+    }
+
+    // MARK: - IPPickerViewDelegate
+
+    func numberOfComponentsInIPPickerView(_ pickerView: IPPickerView) -> Int {
+        return numberOfComponents()
+    }
+
+    func ipPickerView(_ pickerView: IPPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return numberOfRowsInComponent(component)
+    }
+
+    func ipPickerView(_ pickerView: IPPickerView, widthForComponent component: Int) -> CGFloat? {
+        return widthForComponent(component)
+    }
+
+    func ipPickerView(_ pickerView: IPPickerView, rowHeightForComponent component: Int) -> CGFloat? {
+        return rowHeightForComponent(component)
+    }
+
+    func ipPickerView(_ pickerView: IPPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView? {
+        return viewForRow(row, forComponent: component, reusing: view)
+    }
+
+    func ipPickerView(_ pickerView: IPPickerView, didSelectRow row: Int, forComponent component: Int) {
+        didSelectRow(row, inComponent: component)
     }
 }

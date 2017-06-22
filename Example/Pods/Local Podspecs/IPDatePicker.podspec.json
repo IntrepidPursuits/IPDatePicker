@@ -1,8 +1,8 @@
 {
   "name": "IPDatePicker",
   "version": "0.1.0",
-  "summary": "A short description of IPDatePicker.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "A customizable alternative to UIDatePicker.",
+  "description": "IPDatePicker is an alternative to Apple's UIDatePicker control. It aims to provide the same level of out-of-the-box localization as UIDatePicker, but while also allowing for complete customization of the UI.",
   "homepage": "https://github.com/andrewdolce/IPDatePicker",
   "license": {
     "type": "MIT",
@@ -16,7 +16,7 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source_files": "IPDatePicker/Classes/**/*",
   "dependencies": {

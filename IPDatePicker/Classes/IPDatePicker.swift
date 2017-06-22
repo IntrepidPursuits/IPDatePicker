@@ -12,11 +12,12 @@ import Intrepid
 public class IPDatePicker {
     public var view: UIView
 
-    private var pickerView: IPDatePickerViewProtocol {
-        guard let pickerView = view as? IPDatePickerViewProtocol else {
-            fatalError("IPDatePickerController must have a view that confirms to IPDatePickerProtocol")
-        }
-        return pickerView
+    private var pickerView: UIPickerView? {
+        return view as? UIPickerView
+    }
+
+    private var ipPickerView: IPPickerViewProtocol? {
+        return view as? IPPickerViewProtocol
     }
 
     private let viewModel: IPDatePickerViewModel
@@ -27,6 +28,7 @@ public class IPDatePicker {
         }
         set {
             viewModel.delegate = newValue
+            didSetDelegate()
         }
     }
 
@@ -36,6 +38,10 @@ public class IPDatePicker {
         locale: Locale = Locale.current,
         formatString: String = "h:mm a"
     ) {
+        guard (view as? UIPickerView) != nil || (view as? IPPickerViewProtocol) != nil else {
+            fatalError("IPDatePicker view must either be a UIPickerView or conform to IPPickerViewProtocol")
+        }
+
         self.view = view
         viewModel = IPDatePickerViewModel(date: date, locale: locale, formatString: formatString)
         setup()
@@ -44,9 +50,22 @@ public class IPDatePicker {
     private func setup() {
         viewModel.picker = self
 
-        pickerView.dataSource = viewModel
-        pickerView.delegate = viewModel
+        if let pickerView = pickerView {
+            pickerView.dataSource = viewModel
+            pickerView.delegate = viewModel
+        } else {
+            ipPickerView?.delegate = viewModel
+        }
 
+        setViewSelections(viewModel.selections(), animated: false)
+    }
+
+    private func didSetDelegate() {
+        if let pickerView = pickerView {
+            pickerView.reloadAllComponents()
+        } else {
+            ipPickerView?.reloadAllComponents()
+        }
 
         setDate(date, animated: false)
     }
@@ -63,10 +82,17 @@ public class IPDatePicker {
     }
 
     public func setDate(_ date: Date, animated: Bool) {
-        viewModel.date = date
+        let changedSelections = viewModel.setSelectionsFromDate(date)
+        setViewSelections(changedSelections, animated: animated)
+    }
 
-        viewModel.selectedRows().enumerated().forEach { (component, row) in
-            pickerView.selectRow(row, inComponent: component, animated: animated)
+    private func setViewSelections(_ selections: [(component: Int, row: Int)], animated: Bool) {
+        selections.forEach { (component: Int, row: Int) in
+            if let pickerView = pickerView {
+                pickerView.selectRow(row, inComponent: component, animated: animated)
+            } else {
+                ipPickerView?.selectRow(row, inComponent: component, animated: animated)
+            }
         }
     }
 }

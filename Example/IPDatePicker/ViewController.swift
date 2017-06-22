@@ -11,7 +11,7 @@ import IPDatePicker
 import PureLayout
 
 class ViewController: UIViewController, IPDatePickerDelegate {
-    private var picker = IPDatePicker()
+    private var picker = IPDatePicker(view: IPPickerView())
 
     let englishButton = UIButton(type: .system)
     let simplifiedChineseButton = UIButton(type: .system)
@@ -27,7 +27,7 @@ class ViewController: UIViewController, IPDatePickerDelegate {
         let date = picker.date
         picker.view.removeFromSuperview()
 
-        picker = IPDatePicker(date: date, locale: locale)
+        picker = IPDatePicker(view: IPPickerView(), date: date, locale: locale)
         picker.delegate = self
 
         view.addSubview(picker.view)
