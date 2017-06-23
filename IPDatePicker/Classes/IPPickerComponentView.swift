@@ -106,6 +106,13 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
         return cell
     }
 
+    // MARK: - UITableViewDelegate
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        setSelectedRow(indexPath.row, animated: true)
+        delegate?.didSelectRow(indexPath.row, component: component)
+    }
+
     // MARK: - Table Inset
 
     override var bounds: CGRect {
