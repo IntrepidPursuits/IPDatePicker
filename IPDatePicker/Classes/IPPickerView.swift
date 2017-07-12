@@ -64,14 +64,6 @@ open class IPPickerView: UIView, IPPickerViewProtocol, IPPickerComponentViewDele
         addSubview(stack)
 
         stack.autoPinEdgesToSuperviewEdges()
-
-        let line = UIView()
-        line.backgroundColor = UIColor.red
-        addSubview(line)
-        line.autoSetDimension(.height, toSize: 1.0)
-        line.autoPinEdge(toSuperviewEdge: .leading)
-        line.autoPinEdge(toSuperviewEdge: .trailing)
-        line.autoAlignAxis(toSuperviewAxis: .horizontal)
     }
 
     private func setupComponentViews() {
