@@ -82,7 +82,7 @@ open class IPPickerView: UIView, IPPickerViewProtocol, IPPickerComponentViewDele
         let numberOfComponents = delegate.numberOfComponentsInIPPickerView(self)
 
         stack.arrangedSubviews.forEach {
-            stack.removeArrangedSubview($0)
+            $0.removeFromSuperview()
         }
 
         componentViews = (0..<numberOfComponents).flatMap { component in
