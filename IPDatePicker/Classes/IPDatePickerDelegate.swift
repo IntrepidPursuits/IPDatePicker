@@ -21,6 +21,12 @@ public protocol IPDatePickerDelegate: class {
 
     func datePicker(_ datePicker: IPDatePicker, viewForSpacingBetweenComponent leftComponent: IPDatePickerComponent, and rightComponent: IPDatePickerComponent) -> UIView?
     func datePicker(_ datePicker: IPDatePicker, widthOfViewForSpacingBetweenComponent leftComponent: IPDatePickerComponent, and rightComponent: IPDatePickerComponent) -> CGFloat?
+
+    func datePicker(
+        _ datePicker: IPDatePicker,
+        componentViewForDatePickerComponent datePickerComponent: IPDatePickerComponent,
+        component: Int
+    ) -> UIView?
 }
 
 public extension IPDatePickerDelegate {
@@ -53,6 +59,14 @@ public extension IPDatePickerDelegate {
     }
 
     func datePicker(_ datePicker: IPDatePicker, widthOfViewForSpacingBetweenComponent leftComponent: IPDatePickerComponent, and rightComponent: IPDatePickerComponent) -> CGFloat? {
+        return nil
+    }
+
+    func datePicker(
+        _ datePicker: IPDatePicker,
+        componentViewForDatePickerComponent datePickerComponent: IPDatePickerComponent,
+        component: Int
+    ) -> UIView? {
         return nil
     }
 }

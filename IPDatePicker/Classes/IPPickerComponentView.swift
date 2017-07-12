@@ -9,7 +9,7 @@
 import UIKit
 import PureLayout
 
-protocol IPPickerComponentViewDelegate: class {
+public protocol IPPickerComponentViewDelegate: class {
     func numberOfItemsForComponent(_ component: Int) -> Int
     func viewForRow(_ row: Int, component: Int, reusing view: UIView?) -> UIView?
     func titleForRow(_ row: Int, component: Int) -> String?
@@ -20,11 +20,11 @@ protocol IPPickerComponentViewDelegate: class {
     func didSelectRow(_ row: Int, component: Int)
 }
 
-protocol IPPickerComponentView {
-    init(component: Int, delegate: IPPickerComponentViewDelegate)
+public protocol IPPickerComponentView: class {
+    init(component: Int)
 
     var component: Int { get }
-    var delegate: IPPickerComponentViewDelegate? { get }
+    var delegate: IPPickerComponentViewDelegate? { get set }
 
     var selectedRow: Int { get }
     func setSelectedRow(_ row: Int, animated: Bool)
@@ -36,11 +36,15 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
     private(set) var component: Int
     private(set) var selectedRow: Int = 0
 
-    weak private(set) var delegate: IPPickerComponentViewDelegate?
+    weak var delegate: IPPickerComponentViewDelegate? {
+        didSet {
+            tableView.rowHeight = delegate?.rowHeightForComponent(component) ?? 44.0
+            tableView.reloadData()
+        }
+    }
 
-    init(component: Int, delegate: IPPickerComponentViewDelegate) {
+    init(component: Int) {
         self.component = component
-        self.delegate = delegate
 
         super.init(frame: .zero)
 

@@ -322,4 +322,19 @@ extension IPDatePickerViewModel: IPPickerViewDelegate {
         }
         return delegate?.datePicker(picker, widthOfViewForSpacingBetweenComponent: leftDateComponent, and: rightDateComponent)
     }
+
+    func ipPickerView(_ pickerView: IPPickerView, componentViewForComponent component: Int) -> UIView? {
+        guard
+            let componentViewModel = componentViewModels[ip_safe: component],
+            let delegate = delegate,
+            let picker = picker
+        else {
+            return nil
+        }
+
+        return delegate.datePicker(picker,
+            componentViewForDatePickerComponent: componentViewModel.component(),
+            component: component
+        )
+    }
 }

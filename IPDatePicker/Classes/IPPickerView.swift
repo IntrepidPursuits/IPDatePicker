@@ -88,12 +88,14 @@ open class IPPickerView: UIView, IPPickerViewProtocol, IPPickerComponentViewDele
         componentViews = (0..<numberOfComponents).flatMap { component in
 
             let componentWidth = delegate.ipPickerView(self, widthForComponent: component) ?? 80.0
-            let view = viewForComponent(component)
+            let view = delegate.ipPickerView(self, componentViewForComponent: component) ?? viewForComponent(component)
 
             guard let componentView = view as? IPPickerComponentView else {
                 // TODO: Log this
                 return nil
             }
+
+            componentView.delegate = self
 
             stack.addArrangedSubview(view)
             view.autoSetDimension(.width, toSize: componentWidth)
@@ -117,7 +119,7 @@ open class IPPickerView: UIView, IPPickerViewProtocol, IPPickerComponentViewDele
     }
 
     open func viewForComponent(_ component: Int) -> UIView {
-        return IPTablePickerComponentView(component: component, delegate: self)
+        return IPTablePickerComponentView(component: component)
     }
 
     open override var intrinsicContentSize: CGSize {
@@ -128,27 +130,27 @@ open class IPPickerView: UIView, IPPickerViewProtocol, IPPickerComponentViewDele
 
     // MARK: - IPDatePickerComponentViewDelegate
 
-    func numberOfItemsForComponent(_ component: Int) -> Int {
+    public func numberOfItemsForComponent(_ component: Int) -> Int {
         return delegate?.ipPickerView(self, numberOfRowsInComponent: component) ?? 0
     }
 
-    func viewForRow(_ row: Int, component: Int, reusing view: UIView?) -> UIView? {
+    public func viewForRow(_ row: Int, component: Int, reusing view: UIView?) -> UIView? {
         return delegate?.ipPickerView(self, viewForRow: row, forComponent: component, reusing: view)
     }
 
-    func titleForRow(_ row: Int, component: Int) -> String? {
+    public func titleForRow(_ row: Int, component: Int) -> String? {
         return delegate?.ipPickerView(self, titleForRow: row, forComponent: component)
     }
 
-    func attributedTitleForRow(_ row: Int, component: Int) -> NSAttributedString? {
+    public func attributedTitleForRow(_ row: Int, component: Int) -> NSAttributedString? {
         return delegate?.ipPickerView(self, attributedTitleForRow: row, forComponent: component)
     }
 
-    func rowHeightForComponent(_ component: Int) -> CGFloat? {
+    public func rowHeightForComponent(_ component: Int) -> CGFloat? {
         return delegate?.ipPickerView(self, rowHeightForComponent: component)
     }
 
-    func didSelectRow(_ row: Int, component: Int) {
+    public func didSelectRow(_ row: Int, component: Int) {
         delegate?.ipPickerView(self, didSelectRow: row, forComponent: component)
     }
 }
