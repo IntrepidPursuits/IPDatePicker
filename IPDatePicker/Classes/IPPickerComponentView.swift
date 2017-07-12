@@ -63,6 +63,7 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
         tableView.tableFooterView = UIView()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.backgroundColor = UIColor.clear
 
         addSubview(tableView)
         tableView.autoPinEdgesToSuperviewEdges()
@@ -88,6 +89,9 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         let previousItemView = (cell as? IPTablePickerCell)?.itemView
+
+        cell.backgroundColor = UIColor.clear
+        cell.contentView.backgroundColor = UIColor.clear
 
         let itemView: UIView
 
