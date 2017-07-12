@@ -91,6 +91,7 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
             itemView = providedItemView
         } else {
             let label = UILabel()
+            label.textAlignment = .center
 
             if let attributedTitle = delegate?.attributedTitleForRow(indexPath.row, component: component) {
                 label.attributedText = attributedTitle
