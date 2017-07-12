@@ -18,6 +18,7 @@ public protocol IPPickerComponentViewDelegate: class {
     func rowHeightForComponent(_ component: Int) -> CGFloat?
 
     func didSelectRow(_ row: Int, component: Int)
+    func didScrollItemView(_ itemView: UIView, row: Int, component: Int, toOffsetFromCenter offset: CGFloat)
 }
 
 public protocol IPPickerComponentView: class {
@@ -115,6 +116,21 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
         return cell
     }
 
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard
+            let delegate = delegate,
+            let itemView = (cell as? IPTablePickerCell)?.itemView
+        else {
+            return
+        }
+
+        let centerOffset = tableView.contentOffset.y + tableView.bounds.height / 2.0
+        let itemCenter = tableView.rectForRow(at: indexPath).ip_center.y
+        let offset = itemCenter - centerOffset
+
+        delegate.didScrollItemView(itemView, row: indexPath.row, component: component, toOffsetFromCenter: offset)
+    }
+
     // MARK: - UITableViewDelegate
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -139,7 +155,53 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
         tableView.contentInset = UIEdgeInsets(top: inset, left: 0.0, bottom: inset, right: 0.0)
     }
 
+    // MARK: - Scroll Handler
+
+    private var cachedBounds: CGRect?
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        let boundsChanged: Bool
+        if let cached = cachedBounds {
+            boundsChanged = (cached != tableView.bounds)
+        } else {
+            boundsChanged = true
+        }
+
+        if boundsChanged {
+            triggerScollHandlers()
+            cachedBounds = tableView.bounds
+        }
+    }
+
+    private func triggerScollHandlers() {
+        guard let delegate = delegate else {
+            return
+        }
+
+        let centerOffset = tableView.contentOffset.y + tableView.bounds.height / 2.0
+
+        tableView.indexPathsForVisibleRows?.forEach { indexPath in
+            guard
+                let cell = tableView.cellForRow(at: indexPath) as? IPTablePickerCell,
+                let itemView = cell.itemView
+                else {
+                    return
+            }
+
+            let itemCenter = tableView.rectForRow(at: indexPath).ip_center.y
+            let offset = itemCenter - centerOffset
+
+            delegate.didScrollItemView(itemView, row: indexPath.row, component: component, toOffsetFromCenter: offset)
+        }
+    }
+
     // MARK: - UIScrollViewDelegate
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        triggerScollHandlers()
+    }
 
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         guard let tableView = scrollView as? UITableView else {

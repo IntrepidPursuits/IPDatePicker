@@ -27,6 +27,15 @@ public protocol IPDatePickerDelegate: class {
         componentViewForDatePickerComponent datePickerComponent: IPDatePickerComponent,
         component: Int
     ) -> UIView?
+
+    // For now this doesn't work if you override the component view
+    func datePicker(
+        _ datePicker: IPDatePicker,
+        didScrollItemView itemView: UIView,
+        forComponent component: IPDatePickerComponent,
+        forRow row: Int,
+        toOffsetFromCenter offset: CGFloat
+    )
 }
 
 public extension IPDatePickerDelegate {
@@ -68,5 +77,14 @@ public extension IPDatePickerDelegate {
         component: Int
     ) -> UIView? {
         return nil
+    }
+
+    func datePicker(
+        _ datePicker: IPDatePicker,
+        didScrollItemView itemView: UIView,
+        forComponent component: IPDatePickerComponent,
+        forRow row: Int,
+        toOffsetFromCenter offset: CGFloat
+    ) {
     }
 }

@@ -153,36 +153,8 @@ open class IPPickerView: UIView, IPPickerViewProtocol, IPPickerComponentViewDele
     public func didSelectRow(_ row: Int, component: Int) {
         delegate?.ipPickerView(self, didSelectRow: row, forComponent: component)
     }
-}
 
-private class DatePickerViewCell: UITableViewCell {
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-
-        selectionStyle = .none
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    var itemView: UIView? = nil {
-        willSet {
-            if itemView != newValue {
-                itemView?.removeFromSuperview()
-            }
-        }
-        didSet {
-            setupItemView()
-        }
-    }
-
-    private func setupItemView() {
-        guard let itemView = itemView else {
-            return
-        }
-
-        contentView.addSubview(itemView)
-        itemView.autoPinEdgesToSuperviewEdges()
+    public func didScrollItemView(_ itemView: UIView, row: Int, component: Int, toOffsetFromCenter offset: CGFloat) {
+        delegate?.ipPickerView(self, didScrollItemView: itemView, forComponent: component, forRow: row, toOffsetFromCenter: offset)
     }
 }
