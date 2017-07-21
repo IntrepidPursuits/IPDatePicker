@@ -18,5 +18,13 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "IPDatePicker/Classes/**/*"
+  "source_files": "IPDatePicker/Classes/**/*",
+  "dependencies": {
+    "PureLayout": [
+
+    ],
+    "Intrepid": [
+
+    ]
+  }
 }

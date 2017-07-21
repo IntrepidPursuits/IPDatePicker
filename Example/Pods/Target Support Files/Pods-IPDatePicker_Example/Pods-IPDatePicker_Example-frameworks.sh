@@ -89,10 +89,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/IP-UIKit-Wisdom/IP_UIKit_Wisdom.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IPDatePicker/IPDatePicker.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Intrepid/Intrepid.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/PureLayout/PureLayout.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/IP-UIKit-Wisdom/IP_UIKit_Wisdom.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IPDatePicker/IPDatePicker.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Intrepid/Intrepid.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/PureLayout/PureLayout.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
