@@ -61,23 +61,24 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
     }
 
     func setupPickerComponentsFromDateComponents(_ dateComponents: DateComponents) {
-        let possibleComponents: [IPDatePickerComponentViewModel] = [
-            TwelveHourComponentViewModel(dateComponents: dateComponents, locale: locale),
-            TwentyFourHourComponentViewModel(dateComponents: dateComponents, locale: locale),
-            MinutesComponentViewModel(dateComponents: dateComponents, locale: locale),
-            AmPmComponentViewModel(dateComponents: dateComponents, locale: locale)
-        ]
+        let possibleUnits = IPDatePickerComponent.Unit.all()
 
-        componentViewModels = possibleComponents.flatMap { (component: IPDatePickerComponentViewModel) -> (component: IPDatePickerComponentViewModel, position: String.Index)? in
-            guard let position = formatString.range(of: component.formatSymbol())?.lowerBound else {
+        let components = possibleUnits.flatMap { (unit: IPDatePickerComponent.Unit) -> (unit: IPDatePickerComponent.Unit, position: String.Index)? in
+            guard let position = formatString.range(of: unit.formatSymbol)?.lowerBound else {
                 return nil
             }
 
-            return (component: component, position: position)
+            return (unit: unit, position: position)
         }.sorted {
             return $0.position < $1.position
         }.map {
-            return $0.component
+            return $0.unit
+        }.enumerated().map { (index, unit) in
+            return IPDatePickerComponent(unit: unit, index: index)
+        }
+
+        componentViewModels = components.map { component in
+            return IPDatePickerComponentViewModel.viewModel(for: component, dateAsComponents: dateComponents, locale: locale)
         }
     }
 
@@ -332,10 +333,7 @@ extension IPDatePickerViewModel: IPPickerViewDelegate {
             return nil
         }
 
-        return delegate.datePicker(picker,
-            componentViewForDatePickerComponent: componentViewModel.component(),
-            component: component
-        )
+        return delegate.datePicker(picker, componentViewForComponent: componentViewModel.component())
     }
 
     func ipPickerView(_ pickerView: IPPickerView, didScrollItemView itemView: UIView, forComponent component: Int, forRow row: Int, toOffsetFromCenter offset: CGFloat) {

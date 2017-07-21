@@ -65,7 +65,7 @@ class ViewController: UIViewController, IPDatePickerDelegate {
     // MARK: - IPDatePickerDelegate
 
     func datePicker(_ datePicker: IPDatePicker, attributedSymbolForComponent component: IPDatePickerComponent, row: Int, suggestedSymbol: String) -> NSAttributedString? {
-        guard component == .amPm else {
+        guard component.unit == .amPm else {
             return nil
         }
 
@@ -76,7 +76,7 @@ class ViewController: UIViewController, IPDatePickerDelegate {
     }
 
     func datePicker(_ datePicker: IPDatePicker, viewForSpacingBetweenComponent leftComponent: IPDatePickerComponent, and rightComponent: IPDatePickerComponent) -> UIView? {
-        switch (leftComponent, rightComponent) {
+        switch (leftComponent.unit, rightComponent.unit) {
         case (.hour12, .minute), (.hour24, .minute), (.minute, .hour12), (.minute, .hour24):
             return hourMinuteSpacer()
         default:
@@ -85,7 +85,7 @@ class ViewController: UIViewController, IPDatePickerDelegate {
     }
 
     func datePicker(_ datePicker: IPDatePicker, widthOfViewForSpacingBetweenComponent leftComponent: IPDatePickerComponent, and rightComponent: IPDatePickerComponent) -> CGFloat? {
-        switch (leftComponent, rightComponent) {
+        switch (leftComponent.unit, rightComponent.unit) {
         case (.hour12, .minute), (.hour24, .minute), (.minute, .hour12), (.minute, .hour24):
             return 20.0
         default:

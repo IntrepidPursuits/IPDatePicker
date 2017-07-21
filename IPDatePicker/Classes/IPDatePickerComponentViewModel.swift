@@ -8,48 +8,64 @@
 
 import Foundation
 
-public enum IPDatePickerComponent: String {
-    case hour12 = "h"
-    case hour24 = "H"
-    case minute = "m"
-    case amPm = "a"
+public struct IPDatePickerComponent {
+    public enum Unit: String {
+        case hour12 = "h"
+        case hour24 = "H"
+        case minute = "m"
+        case amPm = "a"
 
-    var formatSymbol: String {
-        return rawValue
-    }
+        var formatSymbol: String {
+            return rawValue
+        }
 
-    var calendarComponent: Calendar.Component? {
-        switch self {
-        case .hour12, .hour24:
-            return .hour
-        case .minute:
-            return .minute
-        default:
-            return nil
+        var calendarComponent: Calendar.Component? {
+            switch self {
+            case .hour12, .hour24:
+                return .hour
+            case .minute:
+                return .minute
+            default:
+                return nil
+            }
+        }
+
+        static func all() -> [Unit] {
+            return [.hour12, .hour24, .minute, .amPm]
         }
     }
+
+    public let unit: Unit
+    public let index: Int
 }
 
 class IPDatePickerComponentViewModel {
     var titles = [String]()
 
+    private(set) var index: Int
     var selection: Int = 0
 
-    init(dateComponents: DateComponents, locale: Locale = Locale.current) {
+    init(index: Int, dateAsComponents: DateComponents, locale: Locale = Locale.current) {
+        self.index = index
+
         setupTitlesFromLocale(locale)
-        setSelectionFromDateComponents(dateComponents)
+        setSelectionFromDateComponents(dateAsComponents)
     }
 
-    func component() -> IPDatePickerComponent {
+    func unit() -> IPDatePickerComponent.Unit {
         preconditionFailure("Function unimplemented")
     }
 
+    func component() -> IPDatePickerComponent {
+        return IPDatePickerComponent(unit: unit(), index: index)
+    }
+
     func calendarComponent() -> Calendar.Component? {
-        return component().calendarComponent
+        return unit().calendarComponent
     }
 
     func formatSymbol() -> String {
-        return component().rawValue
+        return unit().formatSymbol
     }
 
     func setupTitlesFromLocale(_ locale: Locale) {
@@ -65,8 +81,29 @@ class IPDatePickerComponentViewModel {
     }
 }
 
+// Factory
+
+extension IPDatePickerComponentViewModel {
+    class func viewModel(
+        for component: IPDatePickerComponent,
+        dateAsComponents: DateComponents,
+        locale: Locale = Locale.current
+    ) -> IPDatePickerComponentViewModel {
+        switch component.unit {
+        case .hour12:
+            return TwelveHourComponentViewModel(index: component.index, dateAsComponents: dateAsComponents, locale: locale)
+        case .hour24:
+            return TwentyFourHourComponentViewModel(index: component.index, dateAsComponents: dateAsComponents, locale: locale)
+        case .minute:
+            return MinutesComponentViewModel(index: component.index, dateAsComponents: dateAsComponents, locale: locale)
+        case .amPm:
+            return AmPmComponentViewModel(index: component.index, dateAsComponents: dateAsComponents, locale: locale)
+        }
+    }
+}
+
 final class TwelveHourComponentViewModel: IPDatePickerComponentViewModel {
-    override func component() -> IPDatePickerComponent {
+    override func unit() -> IPDatePickerComponent.Unit {
         return .hour12
     }
 
@@ -86,7 +123,7 @@ final class TwelveHourComponentViewModel: IPDatePickerComponentViewModel {
 }
 
 final class TwentyFourHourComponentViewModel: IPDatePickerComponentViewModel {
-    override func component() -> IPDatePickerComponent {
+    override func unit() -> IPDatePickerComponent.Unit {
         return .hour24
     }
 
@@ -104,7 +141,7 @@ final class TwentyFourHourComponentViewModel: IPDatePickerComponentViewModel {
 }
 
 final class AmPmComponentViewModel: IPDatePickerComponentViewModel {
-    override func component() -> IPDatePickerComponent {
+    override func unit() -> IPDatePickerComponent.Unit {
         return .amPm
     }
 
@@ -124,7 +161,7 @@ final class AmPmComponentViewModel: IPDatePickerComponentViewModel {
 }
 
 final class MinutesComponentViewModel: IPDatePickerComponentViewModel {
-    override func component() -> IPDatePickerComponent {
+    override func unit() -> IPDatePickerComponent.Unit {
         return .minute
     }
 
