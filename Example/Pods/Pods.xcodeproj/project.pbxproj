@@ -98,6 +98,7 @@
 		ABB05876737996B7F5BFD0E7184C0198 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3BE1B7EFFC751520097011597E7BD5 /* Foundation.framework */; };
 		AE181ED4B5104176F187A98F3C0009D4 /* String+Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5DDF5B9D51D4EB3E4B092D252AFE0C /* String+Numbers.swift */; };
 		AEA6D743324EF7242BA63EC055A79FCA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47EF9C963C7594133619DEBA5AA64ADE /* UIKit.framework */; };
+		AF434DB21F5B30B30015CB86 /* InfiniteTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF434DB11F5B30B30015CB86 /* InfiniteTableView.swift */; };
 		B27DFD6025D94758785918F1D6F6C060 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC9A449307D1D0940332CBC2EF70FF7 /* QuartzCore.framework */; };
 		B33BA66264039E0303D3BE38F4C3989F /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349FD8D0DE2E1C948ABDDFCD3558BCB9 /* UIView+Nib.swift */; };
 		B43FF03CB8848668CEB53A8A303FDC0A /* TimeOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC831D764A85888259BEB6F89509C292 /* TimeOfDay.swift */; };
@@ -211,10 +212,10 @@
 		0BBAB1489F4BEB358D6D519457C4EA2F /* IP-UIKit-Wisdom-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IP-UIKit-Wisdom-umbrella.h"; sourceTree = "<group>"; };
 		10B23F8887F0AD5321921F0A35F8412C /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		10D564A060154772172B6733EBA03E7F /* IPPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IPPickerView.swift; sourceTree = "<group>"; };
-		13660C47C166247A08D538E505E948FB /* IP_UIKit_Wisdom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IP_UIKit_Wisdom.framework; path = "IP-UIKit-Wisdom.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13660C47C166247A08D538E505E948FB /* IP_UIKit_Wisdom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IP_UIKit_Wisdom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EE62507D1AD33A173D418BA62A741D /* IP-UIKit-Wisdom.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "IP-UIKit-Wisdom.xcconfig"; sourceTree = "<group>"; };
 		18C845EAE0294C87A423F875B71B129B /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
-		1BBEAB7C04BBA60EF729C4731DD72DA7 /* IPDatePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IPDatePicker.framework; path = IPDatePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BBEAB7C04BBA60EF729C4731DD72DA7 /* IPDatePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IPDatePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CC9A449307D1D0940332CBC2EF70FF7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		1DE9AA28C456D6A0CF6905A67237AA3F /* UIView+IPAncestry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+IPAncestry.m"; path = "src/UIView/UIView+IPAncestry.m"; sourceTree = "<group>"; };
 		1E981EF0961F71D4636E64F2CD65D719 /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
@@ -227,7 +228,7 @@
 		29B6C4ECB748044A2FEC1F6691B187DF /* RawRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RawRepresentable.swift; path = SwiftWisdom/Core/StandardLibrary/RawRepresentable/RawRepresentable.swift; sourceTree = "<group>"; };
 		2BC38262106174E983F38F3FAE1639AA /* IP-UIKit-Wisdom-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IP-UIKit-Wisdom-dummy.m"; sourceTree = "<group>"; };
 		2F09F0F20B5F65936863336DFA1A7D1F /* Intrepid-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Intrepid-dummy.m"; sourceTree = "<group>"; };
-		33C0E9A38CEF93DDDF69362EC87A4517 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PureLayout.framework; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C0E9A38CEF93DDDF69362EC87A4517 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3457D84C648FD90456FF0B450DB5B185 /* PureLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-umbrella.h"; sourceTree = "<group>"; };
 		349FD8D0DE2E1C948ABDDFCD3558BCB9 /* UIView+Nib.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Nib.swift"; path = "SwiftWisdom/Core/UIKit/UIView+Nib.swift"; sourceTree = "<group>"; };
 		37E2F812B4036F5E1E4DA59A1EC9A014 /* UIButton+IPUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+IPUtils.h"; path = "src/UIButton/UIButton+IPUtils.h"; sourceTree = "<group>"; };
@@ -247,7 +248,7 @@
 		49F34B6ADA4A69AAF0F4F51D465A18F0 /* UIView+IPAncestry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+IPAncestry.h"; path = "src/UIView/UIView+IPAncestry.h"; sourceTree = "<group>"; };
 		4A7CD59E4767153FE455E4B561E32E8D /* NSMutableAttributedString+Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSMutableAttributedString+Format.swift"; path = "SwiftWisdom/Core/Foundation/NSAttributedString/NSMutableAttributedString+Format.swift"; sourceTree = "<group>"; };
 		4F32CCA4B6C2DE8F54F1B39A022819B9 /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
-		539245262720EDCB831873A773F09881 /* IPDatePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = IPDatePicker.modulemap; sourceTree = "<group>"; };
+		539245262720EDCB831873A773F09881 /* IPDatePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = IPDatePicker.modulemap; sourceTree = "<group>"; };
 		53F7F9A535A070D0EE995006C93B50A0 /* String+Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Validation.swift"; path = "SwiftWisdom/Core/StandardLibrary/String/String+Validation.swift"; sourceTree = "<group>"; };
 		54A23588C4BED5DF91BDECAE0FBE4742 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 		54D6454A37650D46FD6E50E901C861DA /* IPPickerComponentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IPPickerComponentView.swift; sourceTree = "<group>"; };
@@ -267,9 +268,9 @@
 		6AC2D72B66F0811C18C6A6F6ED774D17 /* Pods-IPDatePicker_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IPDatePicker_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		6B6D39744850E08865C41BE283FD086F /* IP_UIKit_Wisdom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IP_UIKit_Wisdom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BD198B0A217061D8878960B558BA676 /* CellConfiguring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CellConfiguring.swift; path = SwiftWisdom/Core/UIKit/CellConfiguring.swift; sourceTree = "<group>"; };
-		6D963A32F44E251E28DD75878DF83B75 /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PureLayout.modulemap; sourceTree = "<group>"; };
+		6D963A32F44E251E28DD75878DF83B75 /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PureLayout.modulemap; sourceTree = "<group>"; };
 		6F3BE1B7EFFC751520097011597E7BD5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7327D7FB20890A0FFF89E79644751D50 /* Pods_IPDatePicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IPDatePicker_Example.framework; path = "Pods-IPDatePicker_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7327D7FB20890A0FFF89E79644751D50 /* Pods_IPDatePicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IPDatePicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7330644FD9ED992B893D6E66254FF689 /* UIViewController+Nibs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Nibs.swift"; path = "SwiftWisdom/Core/UIKit/UIViewController+Nibs.swift"; sourceTree = "<group>"; };
 		73504C0C0C39ACCC5047AC556D5C2AA0 /* UIView+IPFrameUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+IPFrameUtils.h"; path = "src/UIView/UIView+IPFrameUtils.h"; sourceTree = "<group>"; };
 		737E28D98D376208184E673D780963D0 /* IPDatePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IPDatePicker.swift; sourceTree = "<group>"; };
@@ -282,7 +283,7 @@
 		7FDD20D9CCB878E13490CF3F44ADA3F8 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
 		80B1CB5D806920BFA10DD636C551F0FA /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		81680699E19BA211BABD7CE78627A809 /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
-		82308198DACDCDB4FD8C6FA62261EFE3 /* Pods-IPDatePicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-IPDatePicker_Tests.modulemap"; sourceTree = "<group>"; };
+		82308198DACDCDB4FD8C6FA62261EFE3 /* Pods-IPDatePicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-IPDatePicker_Tests.modulemap"; sourceTree = "<group>"; };
 		83028ACF162E65745BDCDA23CE24DFD8 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Extensions.swift"; path = "SwiftWisdom/Core/UIKit/UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		83F8323B86B270F541765D63DF6CEF0A /* DirectoryManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DirectoryManager.swift; path = SwiftWisdom/Core/DirectoryManager/DirectoryManager.swift; sourceTree = "<group>"; };
 		8519D5CE0889FC1F1FB88F69FC2FA3B7 /* IPDatePickerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IPDatePickerDelegate.swift; sourceTree = "<group>"; };
@@ -293,25 +294,26 @@
 		8EE1A621F36118130D3CA27C6F319D5B /* After.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = After.swift; path = SwiftWisdom/Core/Async/After/After.swift; sourceTree = "<group>"; };
 		916E29A778F9573AAAAC83816F84AFD9 /* VideoPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoPlayer.swift; path = SwiftWisdom/Core/Controls/VideoPlayer.swift; sourceTree = "<group>"; };
 		923B39F2F44574BEC3C1BE629BBF1DC8 /* Pods-IPDatePicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IPDatePicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94D87BA5795AC3CAB4A203B1AFB79D9C /* Pods-IPDatePicker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IPDatePicker_Tests-umbrella.h"; sourceTree = "<group>"; };
-		95434A73F58D97948EBEEF7C4C1F5C5B /* Pods-IPDatePicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-IPDatePicker_Example.modulemap"; sourceTree = "<group>"; };
+		95434A73F58D97948EBEEF7C4C1F5C5B /* Pods-IPDatePicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-IPDatePicker_Example.modulemap"; sourceTree = "<group>"; };
 		968069B6DD9F7A13C6251388FA77AD44 /* Intrepid-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Intrepid-umbrella.h"; sourceTree = "<group>"; };
 		9B51B4C4C77FCBC7BF23CAC3E539DF9E /* BasicVerticalGradientLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BasicVerticalGradientLayer.swift; path = SwiftWisdom/Core/UIKit/CoreAnimation/BasicVerticalGradientLayer.swift; sourceTree = "<group>"; };
-		9BD855D6D049BB36C104B21897CC5CED /* Pods_IPDatePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IPDatePicker_Tests.framework; path = "Pods-IPDatePicker_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A03D1291E0110D1889EC5BACFF42B78C /* Intrepid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Intrepid.framework; path = Intrepid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD855D6D049BB36C104B21897CC5CED /* Pods_IPDatePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IPDatePicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A03D1291E0110D1889EC5BACFF42B78C /* Intrepid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Intrepid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A132957EEF14D9CACDAA87F2E9CA8397 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A38509176E8186F0A0E2B2A2981392FD /* IP-UIKit-Wisdom-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IP-UIKit-Wisdom-prefix.pch"; sourceTree = "<group>"; };
 		A42C62833BF77CE9EF1D1565B74E7880 /* Mathable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mathable.swift; path = SwiftWisdom/Core/StandardLibrary/Numbers/Mathable.swift; sourceTree = "<group>"; };
 		A4A0D4DC297395975C34489C2E4A6031 /* Synchronize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Synchronize.swift; path = SwiftWisdom/Core/Foundation/Synchronize.swift; sourceTree = "<group>"; };
 		A7F5B4DEFAECBC461D01B4D4490533D0 /* Pods-IPDatePicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IPDatePicker_Example-umbrella.h"; sourceTree = "<group>"; };
 		AA20DE7E5DEE9A28267FB20E7DACE1CE /* NSLock+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSLock+Extensions.swift"; path = "SwiftWisdom/Core/Async/NSLock/NSLock+Extensions.swift"; sourceTree = "<group>"; };
-		AA5749BD16058796144A22BF51E50D8D /* Intrepid.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Intrepid.modulemap; sourceTree = "<group>"; };
+		AA5749BD16058796144A22BF51E50D8D /* Intrepid.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Intrepid.modulemap; sourceTree = "<group>"; };
 		AA6C16377D23E751B29EA14450E36057 /* Comparables.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Comparables.swift; path = SwiftWisdom/Core/Foundation/Comparables.swift; sourceTree = "<group>"; };
 		AB288E97FEA5F4598425976FD6380435 /* Pods-IPDatePicker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IPDatePicker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		AB29385CD239FF0B8B86E806782719B0 /* String+Localization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Localization.swift"; path = "SwiftWisdom/Core/StandardLibrary/String/String+Localization.swift"; sourceTree = "<group>"; };
 		AC69D3B2471E4E691AD2DE44325D4CC3 /* UnsignedInteger+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UnsignedInteger+Extensions.swift"; path = "SwiftWisdom/Core/StandardLibrary/Numbers/UnsignedInteger+Extensions.swift"; sourceTree = "<group>"; };
 		AE0A744966FB1B830CC29DA0B3773ADE /* IPDatePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IPDatePicker-dummy.m"; sourceTree = "<group>"; };
+		AF434DB11F5B30B30015CB86 /* InfiniteTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteTableView.swift; sourceTree = "<group>"; };
 		B08F715658B0EE3A6E28D67C6D2A2D6E /* UIView+IPFrameUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+IPFrameUtils.m"; path = "src/UIView/UIView+IPFrameUtils.m"; sourceTree = "<group>"; };
 		B1A6D9CBEE7E0E292198129DDC509E00 /* UIColor+IPRandomColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+IPRandomColor.m"; path = "src/UIColor/UIColor+IPRandomColor.m"; sourceTree = "<group>"; };
 		B1F886C13B6203A97B9695ED55B5AF3E /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
@@ -327,17 +329,17 @@
 		BEFBB89D47C63B806F0FC1C8E55A0072 /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
 		C044125F25E12BC7F3A63D4A42BD629A /* String+Empty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Empty.swift"; path = "SwiftWisdom/Core/StandardLibrary/String/String+Empty.swift"; sourceTree = "<group>"; };
 		C38FD6E209CEE60864FB7C22289447A3 /* String+Indexing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Indexing.swift"; path = "SwiftWisdom/Core/StandardLibrary/String/String+Indexing.swift"; sourceTree = "<group>"; };
-		C3AEA77E1ADDF23C0F14437C347A59B2 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3AEA77E1ADDF23C0F14437C347A59B2 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F16D4C349FE9C90407009A9D2BC513 /* IPDatePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IPDatePicker-prefix.pch"; sourceTree = "<group>"; };
 		C491D81591D58218E33CEC74263B86F6 /* UILabel+Typography.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Typography.swift"; path = "SwiftWisdom/Core/UIKit/UILabel+Typography.swift"; sourceTree = "<group>"; };
 		C63369B6576E1EA5BD6DE4C512D1E91D /* Defaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Defaults.swift; path = SwiftWisdom/Core/Foundation/Defaults.swift; sourceTree = "<group>"; };
-		C848B098E47B1B50E36E8AAD8EE33FBA /* IP-UIKit-Wisdom.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "IP-UIKit-Wisdom.modulemap"; sourceTree = "<group>"; };
+		C848B098E47B1B50E36E8AAD8EE33FBA /* IP-UIKit-Wisdom.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "IP-UIKit-Wisdom.modulemap"; sourceTree = "<group>"; };
 		C86B718624FDFA879F7E6FD7A9E158FD /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
 		C99CAF01B0C1D839E9B957DABCF35CF2 /* CAGradientLayer+IPGradients.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CAGradientLayer+IPGradients.m"; path = "src/CAGradientLayer/CAGradientLayer+IPGradients.m"; sourceTree = "<group>"; };
 		C9A74FA79C06B80BDAE25787055CBE89 /* Downloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Downloader.swift; path = SwiftWisdom/Core/Downloader/Downloader.swift; sourceTree = "<group>"; };
 		CC51D586F30B83D7444973957D26BE2F /* Double+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Double+Extensions.swift"; path = "SwiftWisdom/Core/StandardLibrary/Numbers/Double+Extensions.swift"; sourceTree = "<group>"; };
 		CC6105470D041D327025FBF0F3AE1CED /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = SwiftWisdom/Core/CommonTypes/Result.swift; sourceTree = "<group>"; };
-		CFDE11CD66BEE503620CD0721C06B316 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
+		CFDE11CD66BEE503620CD0721C06B316 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		D438D568005C6B9A2D6BF6D2AB192A28 /* Integer+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Integer+Extensions.swift"; path = "SwiftWisdom/Core/StandardLibrary/Numbers/Integer+Extensions.swift"; sourceTree = "<group>"; };
 		D4AC02D26E07B4500C44FEC703560472 /* IPDatePicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IPDatePicker.xcconfig; sourceTree = "<group>"; };
 		D7B1BDC49294C448052BCE1E30641B4F /* PercentAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PercentAnimator.swift; path = SwiftWisdom/Core/UIKit/PercentAnimator/PercentAnimator.swift; sourceTree = "<group>"; };
@@ -452,7 +454,6 @@
 				A47C75784C2E970987D7D9C92C2D347E /* Core */,
 				18D6C3AE2D79244422262D6D8248CFCA /* Support Files */,
 			);
-			name = Intrepid;
 			path = Intrepid;
 			sourceTree = "<group>";
 		};
@@ -589,7 +590,6 @@
 				BEFBB89D47C63B806F0FC1C8E55A0072 /* PureLayoutDefines.h */,
 				FDBC9CB08BEF7417570E2DB756C2DD86 /* Support Files */,
 			);
-			name = PureLayout;
 			path = PureLayout;
 			sourceTree = "<group>";
 		};
@@ -618,7 +618,6 @@
 				7FD22426CE4B668A949B51DEE4605E1E /* UIViewController+Containment.m */,
 				B66401D4332C6984CA230971E279DF66 /* Support Files */,
 			);
-			name = "IP-UIKit-Wisdom";
 			path = "IP-UIKit-Wisdom";
 			sourceTree = "<group>";
 		};
@@ -697,7 +696,6 @@
 				2210F4304830411A7DC820BC7ABD9A8A /* Support Files */,
 				DF491EC6204BC1D94C926F379BA7098E /* SwiftSupport */,
 			);
-			name = FBSnapshotTestCase;
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
@@ -770,8 +768,8 @@
 				10D564A060154772172B6733EBA03E7F /* IPPickerView.swift */,
 				0BAFA685AEDAE7210BC494ADBF83226D /* IPPickerViewProtocol.swift */,
 				4377B961948BB68EB82D08684BEDF4DE /* UIDate+Extensions.swift */,
+				AF434DB11F5B30B30015CB86 /* InfiniteTableView.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -788,7 +786,6 @@
 			children = (
 				D50028B7DDDB309C1829BE2560A10BC0 /* Classes */,
 			);
-			name = IPDatePicker;
 			path = IPDatePicker;
 			sourceTree = "<group>";
 		};
@@ -1157,6 +1154,7 @@
 				0882EF381281493134C0A38B71A8676E /* IPDatePickerViewModel.swift in Sources */,
 				059580751E52E05D074C8DA2FCA22EB3 /* IPPickerComponentView.swift in Sources */,
 				265A880292351FF0E51ABC05674E713D /* IPPickerView.swift in Sources */,
+				AF434DB21F5B30B30015CB86 /* InfiniteTableView.swift in Sources */,
 				C99C0683F61BE46D277F4664CB93C467 /* IPPickerViewProtocol.swift in Sources */,
 				B76ED5DBD20F906D339F8A0F67899687 /* UIDate+Extensions.swift in Sources */,
 			);
