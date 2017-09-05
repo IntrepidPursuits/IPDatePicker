@@ -331,7 +331,11 @@ extension IPDatePickerViewModel: IPPickerViewDelegate {
             return nil
         }
 
-        return delegate.datePicker(picker, componentViewForComponent: componentViewModel.component())
+        if let view = delegate.datePicker(picker, componentViewForComponent: componentViewModel.component()) {
+            return view
+        }
+
+        return componentViewModel.defaultComponentView()
     }
 
     func ipPickerView(_ pickerView: IPPickerView, didScrollItemView itemView: UIView, forComponent component: Int, forItem item: Int, toOffsetFromCenter offset: CGFloat) {
@@ -344,5 +348,15 @@ extension IPDatePickerViewModel: IPPickerViewDelegate {
         }
 
         delegate.datePicker(picker, didScrollItemView: itemView, forComponent: componentViewModel.component(), forItem: item, toOffsetFromCenter: offset)
+    }
+
+    // MARK: - Default Component View
+
+    private func defaultViewForComponent(component: Int) -> UIView? {
+        guard let componentViewModel = componentViewModels[ip_safe: component] else {
+            return nil
+        }
+
+        return componentViewModel.defaultComponentView()
     }
 }

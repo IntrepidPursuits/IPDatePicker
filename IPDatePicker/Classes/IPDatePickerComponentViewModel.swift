@@ -79,6 +79,10 @@ class IPDatePickerComponentViewModel {
     func selectedDateComponents() -> DateComponents {
         preconditionFailure("Function unimplemented")
     }
+
+    func defaultComponentView() -> UIView? {
+        return IPTablePickerComponentView(component: index, scrollMode: .infinite)
+    }
 }
 
 // Factory
@@ -157,6 +161,10 @@ final class AmPmComponentViewModel: IPDatePickerComponentViewModel {
 
     override func selectedDateComponents() -> DateComponents {
         return DateComponents(hour: selection * 12, minute: 0)
+    }
+
+    override func defaultComponentView() -> UIView? {
+        return IPTablePickerComponentView(component: index, scrollMode: .finite)
     }
 }
 

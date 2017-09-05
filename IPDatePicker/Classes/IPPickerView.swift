@@ -111,7 +111,7 @@ open class IPPickerView: UIView, IPPickerViewProtocol, IPPickerComponentViewDele
     }
 
     open func viewForComponent(_ component: Int) -> UIView {
-        return IPTablePickerComponentView(component: component)
+        return IPTablePickerComponentView(component: component, scrollMode: .finite)
     }
 
     open override var intrinsicContentSize: CGSize {
