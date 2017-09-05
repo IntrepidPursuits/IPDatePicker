@@ -24,14 +24,14 @@ open class IPPickerView: UIView, IPPickerViewProtocol, IPPickerComponentViewDele
         }
     }
 
-    open func selectRow(_ row: Int, inComponent component: Int, animated: Bool) {
-        selections[component] = row
+    open func selectItem(_ item: Int, inComponent component: Int, animated: Bool) {
+        selections[component] = item
 
         guard let view = componentViews[ip_safe: component] else {
             return
         }
 
-        view.setSelectedRow(row, animated: animated)
+        view.setSelectedItem(item, animated: animated)
     }
 
     open func reloadAllComponents() {
@@ -92,8 +92,8 @@ open class IPPickerView: UIView, IPPickerViewProtocol, IPPickerComponentViewDele
             stack.addArrangedSubview(view)
             view.autoSetDimension(.width, toSize: componentWidth)
 
-            if let selectedRow = selections[component] {
-                componentView.setSelectedRow(selectedRow, animated: false)
+            if let selectedItem = selections[component] {
+                componentView.setSelectedItem(selectedItem, animated: false)
             }
 
             if component < numberOfComponents - 1 {
@@ -123,30 +123,30 @@ open class IPPickerView: UIView, IPPickerViewProtocol, IPPickerComponentViewDele
     // MARK: - IPDatePickerComponentViewDelegate
 
     public func numberOfItemsForComponent(_ component: Int) -> Int {
-        return delegate?.ipPickerView(self, numberOfRowsInComponent: component) ?? 0
+        return delegate?.ipPickerView(self, numberOfItemsInComponent: component) ?? 0
     }
 
-    public func viewForRow(_ row: Int, component: Int, reusing view: UIView?) -> UIView? {
-        return delegate?.ipPickerView(self, viewForRow: row, forComponent: component, reusing: view)
+    public func viewForItem(_ item: Int, component: Int, reusing view: UIView?) -> UIView? {
+        return delegate?.ipPickerView(self, viewForItem: item, forComponent: component, reusing: view)
     }
 
-    public func titleForRow(_ row: Int, component: Int) -> String? {
-        return delegate?.ipPickerView(self, titleForRow: row, forComponent: component)
+    public func titleForItem(_ item: Int, component: Int) -> String? {
+        return delegate?.ipPickerView(self, titleForItem: item, forComponent: component)
     }
 
-    public func attributedTitleForRow(_ row: Int, component: Int) -> NSAttributedString? {
-        return delegate?.ipPickerView(self, attributedTitleForRow: row, forComponent: component)
+    public func attributedTitleForItem(_ item: Int, component: Int) -> NSAttributedString? {
+        return delegate?.ipPickerView(self, attributedTitleForItem: item, forComponent: component)
     }
 
-    public func rowHeightForComponent(_ component: Int) -> CGFloat? {
-        return delegate?.ipPickerView(self, rowHeightForComponent: component)
+    public func itemHeightForComponent(_ component: Int) -> CGFloat? {
+        return delegate?.ipPickerView(self, itemHeightForComponent: component)
     }
 
-    public func didSelectRow(_ row: Int, component: Int) {
-        delegate?.ipPickerView(self, didSelectRow: row, forComponent: component)
+    public func didSelectItem(_ item: Int, component: Int) {
+        delegate?.ipPickerView(self, didSelectItem: item, forComponent: component)
     }
 
-    public func didScrollItemView(_ itemView: UIView, row: Int, component: Int, toOffsetFromCenter offset: CGFloat) {
-        delegate?.ipPickerView(self, didScrollItemView: itemView, forComponent: component, forRow: row, toOffsetFromCenter: offset)
+    public func didScrollItemView(_ itemView: UIView, item: Int, component: Int, toOffsetFromCenter offset: CGFloat) {
+        delegate?.ipPickerView(self, didScrollItemView: itemView, forComponent: component, forItem: item, toOffsetFromCenter: offset)
     }
 }

@@ -23,7 +23,7 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
         }
     }
 
-    func setSelectionsFromDate(_ date: Date) -> [(component: Int, row: Int)] {
+    func setSelectionsFromDate(_ date: Date) -> [(component: Int, item: Int)] {
         let dateComponents = Calendar.current.dateComponents(calendarComponents, from: date)
         return setSelectionsFromDateComponents(dateComponents: dateComponents)
     }
@@ -82,22 +82,22 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
         }
     }
 
-    func selections() -> [(component: Int, row: Int)] {
+    func selections() -> [(component: Int, item: Int)] {
         return componentViewModels.enumerated().map { (index, viewModel) in
-            return (component: index, row: viewModel.selection)
+            return (component: index, item: viewModel.selection)
         }
     }
 
     // Returns the selections that have changed
-    func setSelectionsFromDateComponents(dateComponents: DateComponents) -> [(component: Int, row: Int)] {
-        var changes = [(component: Int, row: Int)]()
+    func setSelectionsFromDateComponents(dateComponents: DateComponents) -> [(component: Int, item: Int)] {
+        var changes = [(component: Int, item: Int)]()
 
         componentViewModels.enumerated().forEach { (component, viewModel) in
             let oldSelection = viewModel.selection
             viewModel.setSelectionFromDateComponents(dateComponents)
             let newSelection = viewModel.selection
             if oldSelection != newSelection {
-                changes.append((component: component, row: newSelection))
+                changes.append((component: component, item: newSelection))
             }
         }
 
@@ -124,7 +124,7 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
         return componentViewModels.count
     }
 
-    fileprivate func numberOfRowsInComponent(_ component: Int) -> Int {
+    fileprivate func numberOfItemsInComponent(_ component: Int) -> Int {
         return componentViewModels[ip_safe: component]?.titles.count ?? 0
     }
 
@@ -140,11 +140,11 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
         return width
     }
 
-    fileprivate func rowHeightForComponent(_ component: Int) -> CGFloat {
+    fileprivate func itemHeightForComponent(_ component: Int) -> CGFloat {
         guard
             let componentViewModel = componentViewModels[ip_safe: component],
             let picker = picker,
-            let height = delegate?.datePicker(picker, rowHeightForComponent: componentViewModel.component())
+            let height = delegate?.datePicker(picker, itemHeightForComponent: componentViewModel.component())
             else {
                 return 44.0
         }
@@ -152,7 +152,7 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
         return height
     }
 
-    fileprivate func attributedTitleForRow(_ row: Int, forComponent component: Int) -> NSAttributedString? {
+    fileprivate func attributedTitleForItem(_ item: Int, forComponent component: Int) -> NSAttributedString? {
         guard
             let picker = picker,
             let componentViewModel = componentViewModels[ip_safe: component]
@@ -161,17 +161,17 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
         }
 
         let pickerComponent = componentViewModel.component()
-        let suggestedSymbol = componentViewModel.titles[ip_safe: row] ?? ""
+        let suggestedSymbol = componentViewModel.titles[ip_safe: item] ?? ""
 
         return delegate?.datePicker(
             picker,
             attributedSymbolForComponent: pickerComponent,
-            row: row,
+            item: item,
             suggestedSymbol: suggestedSymbol
         )
     }
 
-    fileprivate func titleForRow(_ row: Int, forComponent component: Int) -> String {
+    fileprivate func titleForItem(_ item: Int, forComponent component: Int) -> String {
         guard
             let picker = picker,
             let componentViewModel = componentViewModels[ip_safe: component]
@@ -180,17 +180,17 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
         }
 
         let pickerComponent = componentViewModel.component()
-        let suggestedSymbol = componentViewModel.titles[ip_safe: row] ?? ""
+        let suggestedSymbol = componentViewModel.titles[ip_safe: item] ?? ""
 
         return delegate?.datePicker(
             picker,
             symbolForComponent: pickerComponent,
-            row: row,
+            item: item,
             suggestedSymbol: suggestedSymbol
         ) ?? suggestedSymbol
     }
 
-    fileprivate func viewForRow(_ row: Int, forComponent component: Int, reusing view: UIView?) -> UIView? {
+    fileprivate func viewForItem(_ item: Int, forComponent component: Int, reusing view: UIView?) -> UIView? {
         guard
             let picker = picker,
             let componentViewModel = componentViewModels[ip_safe: component]
@@ -199,29 +199,29 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
         }
 
         let pickerComponent = componentViewModel.component()
-        let suggestedSymbol = componentViewModel.titles[ip_safe: row] ?? ""
+        let suggestedSymbol = componentViewModel.titles[ip_safe: item] ?? ""
 
         return delegate?.datePicker(
             picker,
             viewForItemForComponent: pickerComponent,
-            row: row,
+            item: item,
             suggestedSymbol: suggestedSymbol,
             reusing: view
         )
     }
 
-    fileprivate func didSelectRow(_ row: Int, inComponent component: Int) {
+    fileprivate func didSelectItem(_ item: Int, inComponent component: Int) {
         guard let componentViewModel = componentViewModels[ip_safe: component] else {
             return
         }
 
-        componentViewModel.selection = row
+        componentViewModel.selection = item
 
         guard let picker = picker, let delegate = delegate else {
             return
         }
 
-        delegate.datePicker(picker, didSelectRow: row, inComponent: componentViewModel.component())
+        delegate.datePicker(picker, didSelectItem: item, inComponent: componentViewModel.component())
         delegate.datePicker(picker, didSelectDate: date)
     }
 
@@ -232,7 +232,7 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return numberOfRowsInComponent(component)
+        return numberOfItemsInComponent(component)
     }
 
     // MARK: UIPickerViewDelegate
@@ -242,64 +242,62 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
     }
 
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return rowHeightForComponent(component)
+        return itemHeightForComponent(component)
     }
 
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        if let view = viewForRow(row, forComponent: component, reusing: view) {
+        if let view = viewForItem(row, forComponent: component, reusing: view) {
             return view
         }
 
         let label = UILabel()
         label.textAlignment = .center
 
-        if let attributedTitle = attributedTitleForRow(row, forComponent: component) {
+        if let attributedTitle = attributedTitleForItem(row, forComponent: component) {
             label.attributedText = attributedTitle
         } else {
-            label.text = titleForRow(row, forComponent: component)
+            label.text = titleForItem(row, forComponent: component)
         }
 
         return label
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        didSelectRow(row, inComponent: component)
-    }
-
-    // MARK: - IPPickerViewDelegate
-
-    func numberOfComponentsInIPPickerView(_ pickerView: IPPickerView) -> Int {
-        return numberOfComponents()
+        didSelectItem(row, inComponent: component)
     }
 }
 
 extension IPDatePickerViewModel: IPPickerViewDelegate {
-    func ipPickerView(_ pickerView: IPPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return numberOfRowsInComponent(component)
+    func numberOfComponentsInIPPickerView(_ pickerView: IPPickerView) -> Int {
+        return numberOfComponents()
+    }
+
+    func ipPickerView(_ pickerView: IPPickerView, numberOfItemsInComponent component: Int) -> Int {
+        return numberOfItemsInComponent(component)
     }
 
     func ipPickerView(_ pickerView: IPPickerView, widthForComponent component: Int) -> CGFloat? {
         return widthForComponent(component)
     }
 
-    func ipPickerView(_ pickerView: IPPickerView, rowHeightForComponent component: Int) -> CGFloat? {
-        return rowHeightForComponent(component)
+    func ipPickerView(_ pickerView: IPPickerView, itemHeightForComponent component: Int) -> CGFloat? {
+        return itemHeightForComponent(component)
     }
 
-    func ipPickerView(_ pickerView: IPPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView? {
-        return viewForRow(row, forComponent: component, reusing: view)
+    func ipPickerView(_ pickerView: IPPickerView, viewForItem item: Int, forComponent component: Int, reusing view: UIView?) -> UIView? {
+        return viewForItem(item, forComponent: component, reusing: view)
     }
 
-    func ipPickerView(_ pickerView: IPPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return titleForRow(row, forComponent: component)
+    func ipPickerView(_ pickerView: IPPickerView, titleForItem item: Int, forComponent component: Int) -> String? {
+        return titleForItem(item, forComponent: component)
     }
 
-    func ipPickerView(_ pickerView: IPPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        return attributedTitleForRow(row, forComponent: component)
+    func ipPickerView(_ pickerView: IPPickerView, attributedTitleForItem item: Int, forComponent component: Int) -> NSAttributedString? {
+        return attributedTitleForItem(item, forComponent: component)
     }
 
-    func ipPickerView(_ pickerView: IPPickerView, didSelectRow row: Int, forComponent component: Int) {
-        didSelectRow(row, inComponent: component)
+    func ipPickerView(_ pickerView: IPPickerView, didSelectItem item: Int, forComponent component: Int) {
+        didSelectItem(item, inComponent: component)
     }
 
     func ipPickerView(_ pickerView: IPPickerView, viewForSpacingBetweenComponent leftComponent: Int, and rightComponent: Int) -> UIView? {
@@ -336,7 +334,7 @@ extension IPDatePickerViewModel: IPPickerViewDelegate {
         return delegate.datePicker(picker, componentViewForComponent: componentViewModel.component())
     }
 
-    func ipPickerView(_ pickerView: IPPickerView, didScrollItemView itemView: UIView, forComponent component: Int, forRow row: Int, toOffsetFromCenter offset: CGFloat) {
+    func ipPickerView(_ pickerView: IPPickerView, didScrollItemView itemView: UIView, forComponent component: Int, forItem item: Int, toOffsetFromCenter offset: CGFloat) {
         guard
             let componentViewModel = componentViewModels[ip_safe: component],
             let delegate = delegate,
@@ -345,6 +343,6 @@ extension IPDatePickerViewModel: IPPickerViewDelegate {
             return
         }
 
-        delegate.datePicker(picker, didScrollItemView: itemView, forComponent: componentViewModel.component(), forRow: row, toOffsetFromCenter: offset)
+        delegate.datePicker(picker, didScrollItemView: itemView, forComponent: componentViewModel.component(), forItem: item, toOffsetFromCenter: offset)
     }
 }

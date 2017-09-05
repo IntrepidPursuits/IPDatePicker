@@ -11,35 +11,33 @@ import PureLayout
 
 public protocol IPPickerComponentViewDelegate: class {
     func numberOfItemsForComponent(_ component: Int) -> Int
-    func viewForRow(_ row: Int, component: Int, reusing view: UIView?) -> UIView?
-    func titleForRow(_ row: Int, component: Int) -> String?
-    func attributedTitleForRow(_ row: Int, component: Int) -> NSAttributedString?
+    func viewForItem(_ item: Int, component: Int, reusing view: UIView?) -> UIView?
+    func titleForItem(_ item: Int, component: Int) -> String?
+    func attributedTitleForItem(_ item: Int, component: Int) -> NSAttributedString?
 
-    func rowHeightForComponent(_ component: Int) -> CGFloat?
+    func itemHeightForComponent(_ component: Int) -> CGFloat?
 
-    func didSelectRow(_ row: Int, component: Int)
-    func didScrollItemView(_ itemView: UIView, row: Int, component: Int, toOffsetFromCenter offset: CGFloat)
+    func didSelectItem(_ item: Int, component: Int)
+    func didScrollItemView(_ itemView: UIView, item: Int, component: Int, toOffsetFromCenter offset: CGFloat)
 }
 
 public protocol IPPickerComponentView: class {
-    init(component: Int)
-
     var component: Int { get }
     var delegate: IPPickerComponentViewDelegate? { get set }
 
-    var selectedRow: Int { get }
-    func setSelectedRow(_ row: Int, animated: Bool)
+    var selectedItem: Int { get }
+    func setSelectedItem(_ item: Int, animated: Bool)
 }
 
 final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableViewDataSource, UITableViewDelegate {
     private let tableView = UITableView()
 
     private(set) var component: Int
-    private(set) var selectedRow: Int = 0
+    private(set) var selectedItem: Int = 0
 
     weak var delegate: IPPickerComponentViewDelegate? {
         didSet {
-            tableView.rowHeight = delegate?.rowHeightForComponent(component) ?? 44.0
+            tableView.rowHeight = delegate?.itemHeightForComponent(component) ?? 44.0
             tableView.reloadData()
         }
     }
@@ -58,7 +56,7 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
 
     private func setup() {
         tableView.register(IPTablePickerCell.self, forCellReuseIdentifier: cellIdentifier)
-        tableView.rowHeight = delegate?.rowHeightForComponent(component) ?? 44.0
+        tableView.rowHeight = delegate?.itemHeightForComponent(component) ?? 44.0
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.tableFooterView = UIView()
@@ -74,9 +72,9 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
 
     // MARK: - Selection
 
-    func setSelectedRow(_ row: Int, animated: Bool) {
-        selectedRow = row
-        centerOnRow(row, animated: animated)
+    func setSelectedItem(_ item: Int, animated: Bool) {
+        selectedItem = item
+        centerOnItem(item, animated: animated)
     }
 
     // MARK: - UITableViewDataSource
@@ -96,15 +94,16 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
 
         let itemView: UIView
 
-        if let providedItemView = delegate?.viewForRow(indexPath.row, component: component, reusing: previousItemView) {
+        let item = indexPath.row
+        if let providedItemView = delegate?.viewForItem(item, component: component, reusing: previousItemView) {
             itemView = providedItemView
         } else {
             let label = UILabel()
             label.textAlignment = .center
 
-            if let attributedTitle = delegate?.attributedTitleForRow(indexPath.row, component: component) {
+            if let attributedTitle = delegate?.attributedTitleForItem(item, component: component) {
                 label.attributedText = attributedTitle
-            } else if let title = delegate?.titleForRow(indexPath.row, component: component) {
+            } else if let title = delegate?.titleForItem(item, component: component) {
                 label.text = title
             }
 
@@ -128,14 +127,16 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
         let itemCenter = tableView.rectForRow(at: indexPath).ip_center.y
         let offset = itemCenter - centerOffset
 
-        delegate.didScrollItemView(itemView, row: indexPath.row, component: component, toOffsetFromCenter: offset)
+        let item = indexPath.row
+        delegate.didScrollItemView(itemView, item: item, component: component, toOffsetFromCenter: offset)
     }
 
     // MARK: - UITableViewDelegate
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        setSelectedRow(indexPath.row, animated: true)
-        delegate?.didSelectRow(indexPath.row, component: component)
+        let item = indexPath.row
+        setSelectedItem(item, animated: true)
+        delegate?.didSelectItem(indexPath.item, component: component)
     }
 
     // MARK: - Table Inset
@@ -144,7 +145,7 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
         didSet {
             if bounds != oldValue {
                 updateTableInsets()
-                centerOnRow(selectedRow, animated: false)
+                centerOnItem(selectedItem, animated: false)
             }
         }
     }
@@ -193,7 +194,8 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
             let itemCenter = tableView.rectForRow(at: indexPath).ip_center.y
             let offset = itemCenter - centerOffset
 
-            delegate.didScrollItemView(itemView, row: indexPath.row, component: component, toOffsetFromCenter: offset)
+            let item = indexPath.row
+            delegate.didScrollItemView(itemView, item: item, component: component, toOffsetFromCenter: offset)
         }
     }
 
@@ -224,12 +226,12 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
         let adjustedOffsetY = (row + 0.5) * rowHeight - tableHalfHeight
         targetContentOffset.pointee.y = adjustedOffsetY
 
-        selectedRow = Int(row)
-        delegate?.didSelectRow(selectedRow, component: component)
+        selectedItem = Int(row)
+        delegate?.didSelectItem(selectedItem, component: component)
     }
 
-    private func centerOnRow(_ row: Int, animated: Bool) {
-        let offset = contentOffsetForCenteringRow(row)
+    private func centerOnItem(_ item: Int, animated: Bool) {
+        let offset = contentOffsetForCenteringRow(item)
         tableView.setContentOffset(offset, animated: animated)
     }
 
