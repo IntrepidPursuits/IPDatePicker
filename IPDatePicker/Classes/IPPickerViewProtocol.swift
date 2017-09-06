@@ -10,16 +10,16 @@ import UIKit
 
 public protocol IPPickerViewDelegate: class {
     func numberOfComponentsInIPPickerView(_ pickerView: IPPickerView) -> Int
-    func ipPickerView(_ pickerView: IPPickerView, numberOfRowsInComponent component: Int) -> Int
+    func ipPickerView(_ pickerView: IPPickerView, numberOfItemsInComponent component: Int) -> Int
 
-    func ipPickerView(_ pickerView: IPPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView?
-    func ipPickerView(_ pickerView: IPPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString?
-    func ipPickerView(_ pickerView: IPPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+    func ipPickerView(_ pickerView: IPPickerView, viewForItem item: Int, forComponent component: Int, reusing view: UIView?) -> UIView?
+    func ipPickerView(_ pickerView: IPPickerView, attributedTitleForItem item: Int, forComponent component: Int) -> NSAttributedString?
+    func ipPickerView(_ pickerView: IPPickerView, titleForItem item: Int, forComponent component: Int) -> String?
 
     func ipPickerView(_ pickerView: IPPickerView, widthForComponent component: Int) -> CGFloat?
-    func ipPickerView(_ pickerView: IPPickerView, rowHeightForComponent component: Int) -> CGFloat?
+    func ipPickerView(_ pickerView: IPPickerView, itemHeightForComponent component: Int) -> CGFloat?
 
-    func ipPickerView(_ pickerView: IPPickerView, didSelectRow row: Int, forComponent component: Int)
+    func ipPickerView(_ pickerView: IPPickerView, didSelectItem item: Int, forComponent component: Int)
 
     func ipPickerView(_ pickerView: IPPickerView, viewForSpacingBetweenComponent leftComponent: Int, and rightComponent: Int) -> UIView?
     func ipPickerView(_ pickerView: IPPickerView, widthOfViewForSpacingBetweenComponent leftComponent: Int, and rightComponent: Int) -> CGFloat?
@@ -31,21 +31,21 @@ public protocol IPPickerViewDelegate: class {
         _ pickerView: IPPickerView,
         didScrollItemView itemView: UIView,
         forComponent component: Int,
-        forRow row: Int,
+        forItem item: Int,
         toOffsetFromCenter offset: CGFloat
     )
 }
 
 extension IPPickerViewDelegate {
-    func ipPickerView(_ pickerView: IPPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView? {
+    func ipPickerView(_ pickerView: IPPickerView, viewForItem item: Int, forComponent component: Int, reusing view: UIView?) -> UIView? {
         return nil
     }
 
-    func ipPickerView(_ pickerView: IPPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+    func ipPickerView(_ pickerView: IPPickerView, attributedTitleForItem item: Int, forComponent component: Int) -> NSAttributedString? {
         return nil
     }
 
-    func ipPickerView(_ pickerView: IPPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func ipPickerView(_ pickerView: IPPickerView, titleForItem item: Int, forComponent component: Int) -> String? {
         return nil
     }
 
@@ -53,11 +53,11 @@ extension IPPickerViewDelegate {
         return nil
     }
 
-    func ipPickerView(_ pickerView: IPPickerView, rowHeightForComponent component: Int) -> CGFloat? {
+    func ipPickerView(_ pickerView: IPPickerView, itemHeightForComponent component: Int) -> CGFloat? {
         return nil
     }
 
-    func ipPickerView(_ pickerView: IPPickerView, didSelectRow row: Int, forComponent component: Int) {
+    func ipPickerView(_ pickerView: IPPickerView, didSelectItem item: Int, forComponent component: Int) {
     }
 
     func ipPickerView(_ pickerView: IPPickerView, viewForSpacingBetweenComponent leftComponent: Int, and rightComponent: Int) -> UIView? {
@@ -77,7 +77,7 @@ extension IPPickerViewDelegate {
         _ pickerView: IPPickerView,
         didScrollItemView itemView: UIView,
         forComponent component: Int,
-        forRow row: Int,
+        forItem item: Int,
         toOffsetFromCenter offset: CGFloat
     ) {
     }
@@ -87,5 +87,5 @@ public protocol IPPickerViewProtocol: class {
     var delegate: IPPickerViewDelegate? { get set }
 
     func reloadAllComponents()
-    func selectRow(_ row: Int, inComponent component: Int, animated: Bool)
+    func selectItem(_ item: Int, inComponent component: Int, animated: Bool)
 }

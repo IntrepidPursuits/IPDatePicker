@@ -86,12 +86,12 @@ public class IPDatePicker {
         setViewSelections(changedSelections, animated: animated)
     }
 
-    private func setViewSelections(_ selections: [(component: Int, row: Int)], animated: Bool) {
-        selections.forEach { (component: Int, row: Int) in
+    private func setViewSelections(_ selections: [(component: Int, item: Int)], animated: Bool) {
+        selections.forEach { (component: Int, item: Int) in
             if let pickerView = pickerView {
-                pickerView.selectRow(row, inComponent: component, animated: animated)
+                pickerView.selectRow(item, inComponent: component, animated: animated)
             } else {
-                ipPickerView?.selectRow(row, inComponent: component, animated: animated)
+                ipPickerView?.selectItem(item, inComponent: component, animated: animated)
             }
         }
     }

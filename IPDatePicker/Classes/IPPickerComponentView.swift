@@ -11,41 +11,42 @@ import PureLayout
 
 public protocol IPPickerComponentViewDelegate: class {
     func numberOfItemsForComponent(_ component: Int) -> Int
-    func viewForRow(_ row: Int, component: Int, reusing view: UIView?) -> UIView?
-    func titleForRow(_ row: Int, component: Int) -> String?
-    func attributedTitleForRow(_ row: Int, component: Int) -> NSAttributedString?
+    func viewForItem(_ item: Int, component: Int, reusing view: UIView?) -> UIView?
+    func titleForItem(_ item: Int, component: Int) -> String?
+    func attributedTitleForItem(_ item: Int, component: Int) -> NSAttributedString?
 
-    func rowHeightForComponent(_ component: Int) -> CGFloat?
+    func itemHeightForComponent(_ component: Int) -> CGFloat?
 
-    func didSelectRow(_ row: Int, component: Int)
-    func didScrollItemView(_ itemView: UIView, row: Int, component: Int, toOffsetFromCenter offset: CGFloat)
+    func didSelectItem(_ item: Int, component: Int)
+    func didScrollItemView(_ itemView: UIView, item: Int, component: Int, toOffsetFromCenter offset: CGFloat)
 }
 
 public protocol IPPickerComponentView: class {
-    init(component: Int)
-
     var component: Int { get }
     var delegate: IPPickerComponentViewDelegate? { get set }
 
-    var selectedRow: Int { get }
-    func setSelectedRow(_ row: Int, animated: Bool)
+    var selectedItem: Int { get }
+    func setSelectedItem(_ item: Int, animated: Bool)
 }
 
-final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableViewDataSource, UITableViewDelegate {
-    private let tableView = UITableView()
+final class IPTablePickerComponentView: UIView, IPPickerComponentView, InfiniteTableViewDataSource, InfiniteTableViewDelegate {
+    private let scrollMode: InfiniteTableView.ScrollMode
+    private let tableView: InfiniteTableView
 
     private(set) var component: Int
-    private(set) var selectedRow: Int = 0
+    private(set) var selectedItem: Int = 0
 
     weak var delegate: IPPickerComponentViewDelegate? {
         didSet {
-            tableView.rowHeight = delegate?.rowHeightForComponent(component) ?? 44.0
+            tableView.rowHeight = delegate?.itemHeightForComponent(component) ?? 44.0
             tableView.reloadData()
         }
     }
 
-    init(component: Int) {
+    init(component: Int, scrollMode: InfiniteTableView.ScrollMode) {
         self.component = component
+        self.scrollMode = scrollMode
+        self.tableView = InfiniteTableView(scrollMode: scrollMode)
 
         super.init(frame: .zero)
 
@@ -58,7 +59,7 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
 
     private func setup() {
         tableView.register(IPTablePickerCell.self, forCellReuseIdentifier: cellIdentifier)
-        tableView.rowHeight = delegate?.rowHeightForComponent(component) ?? 44.0
+        tableView.rowHeight = delegate?.itemHeightForComponent(component) ?? 44.0
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.tableFooterView = UIView()
@@ -74,21 +75,21 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
 
     // MARK: - Selection
 
-    func setSelectedRow(_ row: Int, animated: Bool) {
-        selectedRow = row
-        centerOnRow(row, animated: animated)
+    func setSelectedItem(_ item: Int, animated: Bool) {
+        selectedItem = item
+        centerOnItem(item, animated: animated)
     }
 
-    // MARK: - UITableViewDataSource
+    // MARK: - InfiniteTableViewDataSource
 
     private let cellIdentifier = "cellIdentifier"
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfItems(in infiniteTableView: InfiniteTableView) -> Int {
         return delegate?.numberOfItemsForComponent(component) ?? 0
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+    func infiniteTableView(_ infiniteTableView: InfiniteTableView, cellForItem item: Int, row: Int) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, forRow: row)
         let previousItemView = (cell as? IPTablePickerCell)?.itemView
 
         cell.backgroundColor = UIColor.clear
@@ -96,15 +97,15 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
 
         let itemView: UIView
 
-        if let providedItemView = delegate?.viewForRow(indexPath.row, component: component, reusing: previousItemView) {
+        if let providedItemView = delegate?.viewForItem(item, component: component, reusing: previousItemView) {
             itemView = providedItemView
         } else {
             let label = UILabel()
             label.textAlignment = .center
 
-            if let attributedTitle = delegate?.attributedTitleForRow(indexPath.row, component: component) {
+            if let attributedTitle = delegate?.attributedTitleForItem(item, component: component) {
                 label.attributedText = attributedTitle
-            } else if let title = delegate?.titleForRow(indexPath.row, component: component) {
+            } else if let title = delegate?.titleForItem(item, component: component) {
                 label.text = title
             }
 
@@ -116,7 +117,9 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
         return cell
     }
 
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    // MARK: - InfiniteTableViewDelegate
+
+    func infiniteTableView(_ infiniteTableView: InfiniteTableView, willDisplay cell: UITableViewCell, forItem item: Int, at row: Int) {
         guard
             let delegate = delegate,
             let itemView = (cell as? IPTablePickerCell)?.itemView
@@ -125,29 +128,19 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
         }
 
         let centerOffset = tableView.contentOffset.y + tableView.bounds.height / 2.0
-        let itemCenter = tableView.rectForRow(at: indexPath).ip_center.y
+        let itemCenter = tableView.rectForRow(row).ip_center.y
         let offset = itemCenter - centerOffset
 
-        delegate.didScrollItemView(itemView, row: indexPath.row, component: component, toOffsetFromCenter: offset)
+        delegate.didScrollItemView(itemView, item: item, component: component, toOffsetFromCenter: offset)
     }
 
-    // MARK: - UITableViewDelegate
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        setSelectedRow(indexPath.row, animated: true)
-        delegate?.didSelectRow(indexPath.row, component: component)
+    func infiniteTableView(_ infiniteTableView: InfiniteTableView, didSelectItem item: Int, at row: Int) {
+        selectedItem = item
+        tableView.scrollToRow(at: row, at: .middle, animated: true)
+        delegate?.didSelectItem(item, component: component)
     }
 
     // MARK: - Table Inset
-
-    override var bounds: CGRect {
-        didSet {
-            if bounds != oldValue {
-                updateTableInsets()
-                centerOnRow(selectedRow, animated: false)
-            }
-        }
-    }
 
     private func updateTableInsets() {
         let halfHeight = bounds.height * 0.5
@@ -170,6 +163,10 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
         }
 
         if boundsChanged {
+            if scrollMode == .finite {
+                updateTableInsets()
+            }
+            centerOnItem(selectedItem, animated: false)
             triggerScollHandlers()
             cachedBounds = tableView.bounds
         }
@@ -182,33 +179,30 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
 
         let centerOffset = tableView.contentOffset.y + tableView.bounds.height / 2.0
 
-        tableView.indexPathsForVisibleRows?.forEach { indexPath in
+        tableView.visibleRows().forEach { row in
             guard
-                let cell = tableView.cellForRow(at: indexPath) as? IPTablePickerCell,
+                let cell = tableView.cellForRow(row) as? IPTablePickerCell,
                 let itemView = cell.itemView
                 else {
                     return
             }
 
-            let itemCenter = tableView.rectForRow(at: indexPath).ip_center.y
+            let itemCenter = tableView.rectForRow(row).ip_center.y
             let offset = itemCenter - centerOffset
+            let item = tableView.itemAtRow(row)
 
-            delegate.didScrollItemView(itemView, row: indexPath.row, component: component, toOffsetFromCenter: offset)
+            delegate.didScrollItemView(itemView, item: item, component: component, toOffsetFromCenter: offset)
         }
     }
 
     // MARK: - UIScrollViewDelegate
 
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    func infiniteTableViewDidScroll(_ infiniteTableView: InfiniteTableView) {
         triggerScollHandlers()
     }
 
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        guard let tableView = scrollView as? UITableView else {
-            return
-        }
-
-        let lastRow = tableView.numberOfRows(inSection: 0) - 1
+    func infiniteTableViewWillEndDragging(_ infiniteTableView: InfiniteTableView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let lastRow = tableView.numberOfRows() - 1
 
         guard lastRow >= 0 else {
             return
@@ -224,23 +218,13 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, UITableVi
         let adjustedOffsetY = (row + 0.5) * rowHeight - tableHalfHeight
         targetContentOffset.pointee.y = adjustedOffsetY
 
-        selectedRow = Int(row)
-        delegate?.didSelectRow(selectedRow, component: component)
+        let item = infiniteTableView.itemAtRow(Int(row))
+        selectedItem = item
+        delegate?.didSelectItem(selectedItem, component: component)
     }
 
-    private func centerOnRow(_ row: Int, animated: Bool) {
-        let offset = contentOffsetForCenteringRow(row)
-        tableView.setContentOffset(offset, animated: animated)
-    }
-
-    private func contentOffsetForCenteringRow(_ row: Int) -> CGPoint {
-        // Note: We use our bounds here instead of the table's individual bounds, because under some conditions the table
-        // might not have yet layed out it's bounds.
-        let tableHalfHeight = bounds.height * 0.5
-        let rowHeight = tableView.rowHeight
-        let rowCenterY = (CGFloat(row) + 0.5) * rowHeight
-
-        return CGPoint(x: 0.0, y: rowCenterY - tableHalfHeight)
+    private func centerOnItem(_ item: Int, animated: Bool) {
+        tableView.centerOnItem(item, animated: animated)
     }
 }
 

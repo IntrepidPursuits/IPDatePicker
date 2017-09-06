@@ -64,7 +64,7 @@ class ViewController: UIViewController, IPDatePickerDelegate {
 
     // MARK: - IPDatePickerDelegate
 
-    func datePicker(_ datePicker: IPDatePicker, attributedSymbolForComponent component: IPDatePickerComponent, row: Int, suggestedSymbol: String) -> NSAttributedString? {
+    func datePicker(_ datePicker: IPDatePicker, attributedSymbolForComponent component: IPDatePickerComponent, item: Int, suggestedSymbol: String) -> NSAttributedString? {
         guard component.unit == .amPm else {
             return nil
         }
