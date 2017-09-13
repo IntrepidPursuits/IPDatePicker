@@ -12,13 +12,13 @@ public extension UIView {
     public class func ip_fromNib(_ nibNameOrNil: String? = nil) -> Self {
         return ip_fromNib(nibNameOrNil, type: self)
     }
-    
-    public class func ip_fromNib<T : UIView>(_ nibNameOrNil: String? = nil, type: T.Type) -> T {
+
+    public class func ip_fromNib<T: UIView>(_ nibNameOrNil: String? = nil, type: T.Type) -> T {
         let v: T? = ip_fromNib(nibNameOrNil, type: T.self)
         return v!
     }
-    
-    public class func ip_fromNib<T : UIView>(_ nibNameOrNil: String? = nil, type: T.Type) -> T? {
+
+    public class func ip_fromNib<T: UIView>(_ nibNameOrNil: String? = nil, type: T.Type) -> T? {
         var view: T?
         let name: String
         if let nibName = nibNameOrNil {
@@ -41,11 +41,10 @@ public extension UIView {
         return name
     }
     public class var ip_nib: UINib? {
-        if let _ = Bundle.main.path(forResource: ip_nibName, ofType: "nib") {
+        if Bundle.main.path(forResource: ip_nibName, ofType: "nib") != nil {
             return UINib(nibName: ip_nibName, bundle: nil)
         } else {
             return nil
         }
     }
 }
-

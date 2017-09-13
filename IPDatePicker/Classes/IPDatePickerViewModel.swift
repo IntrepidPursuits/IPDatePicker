@@ -125,12 +125,12 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
     }
 
     fileprivate func numberOfItemsInComponent(_ component: Int) -> Int {
-        return componentViewModels[ip_safe: component]?.titles.count ?? 0
+        return componentViewModels[ip_safely: component]?.titles.count ?? 0
     }
 
     fileprivate func widthForComponent(_ component: Int) -> CGFloat {
         guard
-            let componentViewModel = componentViewModels[ip_safe: component],
+            let componentViewModel = componentViewModels[ip_safely: component],
             let picker = picker,
             let width = delegate?.datePicker(picker, widthForComponent: componentViewModel.component())
             else {
@@ -142,7 +142,7 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
 
     fileprivate func itemHeightForComponent(_ component: Int) -> CGFloat {
         guard
-            let componentViewModel = componentViewModels[ip_safe: component],
+            let componentViewModel = componentViewModels[ip_safely: component],
             let picker = picker,
             let height = delegate?.datePicker(picker, itemHeightForComponent: componentViewModel.component())
             else {
@@ -155,13 +155,13 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
     fileprivate func attributedTitleForItem(_ item: Int, forComponent component: Int) -> NSAttributedString? {
         guard
             let picker = picker,
-            let componentViewModel = componentViewModels[ip_safe: component]
+            let componentViewModel = componentViewModels[ip_safely: component]
         else {
             return nil
         }
 
         let pickerComponent = componentViewModel.component()
-        let suggestedSymbol = componentViewModel.titles[ip_safe: item] ?? ""
+        let suggestedSymbol = componentViewModel.titles[ip_safely: item] ?? ""
 
         return delegate?.datePicker(
             picker,
@@ -174,13 +174,13 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
     fileprivate func titleForItem(_ item: Int, forComponent component: Int) -> String {
         guard
             let picker = picker,
-            let componentViewModel = componentViewModels[ip_safe: component]
+            let componentViewModel = componentViewModels[ip_safely: component]
         else {
             return ""
         }
 
         let pickerComponent = componentViewModel.component()
-        let suggestedSymbol = componentViewModel.titles[ip_safe: item] ?? ""
+        let suggestedSymbol = componentViewModel.titles[ip_safely: item] ?? ""
 
         return delegate?.datePicker(
             picker,
@@ -193,13 +193,13 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
     fileprivate func viewForItem(_ item: Int, forComponent component: Int, reusing view: UIView?) -> UIView? {
         guard
             let picker = picker,
-            let componentViewModel = componentViewModels[ip_safe: component]
+            let componentViewModel = componentViewModels[ip_safely: component]
         else {
             return nil
         }
 
         let pickerComponent = componentViewModel.component()
-        let suggestedSymbol = componentViewModel.titles[ip_safe: item] ?? ""
+        let suggestedSymbol = componentViewModel.titles[ip_safely: item] ?? ""
 
         return delegate?.datePicker(
             picker,
@@ -211,7 +211,7 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
     }
 
     fileprivate func didSelectItem(_ item: Int, inComponent component: Int) {
-        guard let componentViewModel = componentViewModels[ip_safe: component] else {
+        guard let componentViewModel = componentViewModels[ip_safely: component] else {
             return
         }
 
@@ -303,8 +303,8 @@ extension IPDatePickerViewModel: IPPickerViewDelegate {
     func ipPickerView(_ pickerView: IPPickerView, viewForSpacingBetweenComponent leftComponent: Int, and rightComponent: Int) -> UIView? {
         guard
             let picker = picker,
-            let leftDateComponent = componentViewModels[ip_safe: leftComponent]?.component(),
-            let rightDateComponent = componentViewModels[ip_safe: rightComponent]?.component()
+            let leftDateComponent = componentViewModels[ip_safely: leftComponent]?.component(),
+            let rightDateComponent = componentViewModels[ip_safely: rightComponent]?.component()
         else {
             return nil
         }
@@ -314,8 +314,8 @@ extension IPDatePickerViewModel: IPPickerViewDelegate {
     func ipPickerView(_ pickerView: IPPickerView, widthOfViewForSpacingBetweenComponent leftComponent: Int, and rightComponent: Int) -> CGFloat? {
         guard
             let picker = picker,
-            let leftDateComponent = componentViewModels[ip_safe: leftComponent]?.component(),
-            let rightDateComponent = componentViewModels[ip_safe: rightComponent]?.component()
+            let leftDateComponent = componentViewModels[ip_safely: leftComponent]?.component(),
+            let rightDateComponent = componentViewModels[ip_safely: rightComponent]?.component()
             else {
                 return nil
         }
@@ -324,7 +324,7 @@ extension IPDatePickerViewModel: IPPickerViewDelegate {
 
     func ipPickerView(_ pickerView: IPPickerView, componentViewForComponent component: Int) -> UIView? {
         guard
-            let componentViewModel = componentViewModels[ip_safe: component],
+            let componentViewModel = componentViewModels[ip_safely: component],
             let delegate = delegate,
             let picker = picker
         else {
@@ -340,7 +340,7 @@ extension IPDatePickerViewModel: IPPickerViewDelegate {
 
     func ipPickerView(_ pickerView: IPPickerView, didScrollItemView itemView: UIView, forComponent component: Int, forItem item: Int, toOffsetFromCenter offset: CGFloat) {
         guard
-            let componentViewModel = componentViewModels[ip_safe: component],
+            let componentViewModel = componentViewModels[ip_safely: component],
             let delegate = delegate,
             let picker = picker
         else {
@@ -353,7 +353,7 @@ extension IPDatePickerViewModel: IPPickerViewDelegate {
     // MARK: - Default Component View
 
     private func defaultViewForComponent(component: Int) -> UIView? {
-        guard let componentViewModel = componentViewModels[ip_safe: component] else {
+        guard let componentViewModel = componentViewModels[ip_safely: component] else {
             return nil
         }
 

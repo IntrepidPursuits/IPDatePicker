@@ -1,6 +1,6 @@
 public extension Set {
     public func ip_toArray() -> [Element] {
-        return Array<Element>(self)
+        return [Element](self)
     }
 
     // TODO: Review - this is also implemented in Array+Utilities, could be implemented in generic super class
@@ -12,7 +12,7 @@ public extension Set {
         }
         return false
     }
-    
+
     public func ip_filter(_ include: (Element) -> Bool) -> Set<Element> {
         var filtered = Set<Element>()
         for ob in self {

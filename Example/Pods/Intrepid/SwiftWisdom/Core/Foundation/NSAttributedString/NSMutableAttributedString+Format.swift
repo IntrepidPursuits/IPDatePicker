@@ -1,6 +1,6 @@
 //
 //  NSAttributedString+Format.swift
-//  bose-connect-ios
+//  SwiftWisdom
 //
 //  Created by Paul Rolfe on 1/16/16.
 //  Copyright © 2016 Intrepid-Pursuits. All rights reserved.
@@ -9,7 +9,7 @@
 import Foundation
 
 public extension NSMutableAttributedString {
-    
+
     /**
      Create a mutable attributed string with the attributes applied to all arguments.
      
@@ -19,13 +19,27 @@ public extension NSMutableAttributedString {
      
      - returns: NSMutableAttributedString with the attributes applied to argument strings.
      */
-
     convenience init(formatString: String, attributes: [String : AnyObject], arguments: String...) {
         let arguments = arguments.map { NSAttributedString(string: $0, attributes: attributes) }
         self.init(string: formatString)
         ip_format(withArguments: arguments)
     }
-    
+
+    /**
+     Create a mutable attributed string with the attributes applied to all arguments.
+
+     - parameter string:     formatted string where `%@` represents an argument
+     - parameter attributes: attributes dictionary to use on arguments
+     - parameter args:       array of attributed strings
+
+     - returns: NSMutableAttributedString with the attributes applied to argument strings.
+     */
+    convenience init(formatString string: String, attributes: [String : AnyObject]?, arguments: [NSAttributedString]) {
+        let mutable = NSMutableAttributedString(string: string, attributes: attributes)
+        mutable.ip_format(withArguments: arguments)
+        self.init(attributedString: mutable)
+    }
+
     /**
      Create a mutable attributed string with the given list of NSAttributedString
      
@@ -38,7 +52,7 @@ public extension NSMutableAttributedString {
         self.init(string: formatString)
         ip_format(withArguments: arguments)
     }
-    
+
     /**
      Create a mutable attributed string with the given collection of NSAttributedString
      
@@ -71,7 +85,7 @@ public extension NSMutableAttributedString {
         arguments.reversed().forEach { arg in
             guard insertRange.location != NSNotFound else { return }
             replaceCharacters(in: insertRange, with: arg)
-            rangeLimit = NSMakeRange(0, insertRange.location)
+            rangeLimit = NSRange(location: 0, length: insertRange.location)
             insertRange = str.range(of: "%@", options: .backwards, range: rangeLimit)
         }
     }
