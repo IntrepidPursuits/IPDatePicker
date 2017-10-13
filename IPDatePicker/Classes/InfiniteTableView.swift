@@ -94,6 +94,7 @@ final class InfiniteTableView: UIView, UITableViewDataSource, UITableViewDelegat
     private func setup() {
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.estimatedRowHeight = 0.0
 
         addSubview(tableView)
         tableView.autoPinEdgesToSuperviewEdges()
