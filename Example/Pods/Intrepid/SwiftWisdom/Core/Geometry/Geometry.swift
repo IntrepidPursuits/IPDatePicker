@@ -11,18 +11,23 @@ public extension Int {
         return CGFloat(self).ip_radians
     }
 }
+
 public extension CGFloat {
     public var ip_radians: CGFloat {
         return CGFloat(Double(self) * (.pi / 180))
     }
+
     public var ip_degrees: CGFloat {
         return self * CGFloat(180.0 / .pi)
     }
-}
 
-public extension CGFloat {
     public var ip_squared: CGFloat {
         return self * self
+    }
+
+    /// Provides the complement of the percentage. Ex: 35% -> 0.65 returned
+    public var ip_complementOfPercentage: CGFloat {
+        return 1 - self
     }
 }
 
@@ -37,7 +42,7 @@ public extension CGPoint {
         }
         return bearingDegrees
     }
-    
+
     public func ip_distance(to point: CGPoint) -> CGFloat {
         let distX = point.x - self.x
         let distY = point.y - self.y
@@ -47,7 +52,7 @@ public extension CGPoint {
 }
 
 public func circumferenceForRadius(_ radius: CGFloat) -> CGFloat {
-    return radius * CGFloat.pi * 2
+    return radius * .pi * 2
 }
 
 public func lengthOfArcForDegrees(_ degrees: CGFloat, radius: CGFloat) -> CGFloat {
@@ -77,7 +82,7 @@ public extension CGRect {
             size.width = width
         }
     }
-    
+
     public var ip_halfWidth: CGFloat {
         get {
             return ip_width / 2.0
@@ -86,7 +91,7 @@ public extension CGRect {
             ip_width = newValue * 2
         }
     }
-    
+
     public var ip_height: CGFloat {
         get {
             return self.height
@@ -95,7 +100,7 @@ public extension CGRect {
             size.height = height
         }
     }
-    
+
     public var ip_halfHeight: CGFloat {
         get {
             return ip_height / 2.0
@@ -104,7 +109,7 @@ public extension CGRect {
             ip_height = newValue * 2
         }
     }
-    
+
     public var ip_center: CGPoint {
         get {
             return CGPoint(x: ip_midX, y: ip_midY)
@@ -114,7 +119,7 @@ public extension CGRect {
             ip_midY = newValue.y
         }
     }
-    
+
     public var ip_midX: CGFloat {
         get {
             return self.midX
@@ -123,7 +128,7 @@ public extension CGRect {
             origin.x = newValue - ip_halfWidth
         }
     }
-    
+
     public var ip_midY: CGFloat {
         get {
             return self.midY
@@ -132,11 +137,11 @@ public extension CGRect {
             origin.y = newValue - ip_halfHeight
         }
     }
-    
+
     public var ip_shortestEdge: CGFloat {
         return min(width, height)
     }
-    
+
     public var ip_longestEdge: CGFloat {
         return max(width, height)
     }
@@ -147,7 +152,7 @@ extension CGSize {
         let scale = height / width
         return fixedWidth * scale
     }
-    
+
     public func ip_scaledWidth(keepingHeight fixedHeight: CGFloat) -> CGFloat {
         let scale = width / height
         return fixedHeight * scale
@@ -159,7 +164,7 @@ extension CGRect {
     public var ip_topRight: CGPoint { return CGPoint(x: maxX, y: minY) }
     public var ip_bottomRight: CGPoint { return CGPoint(x: maxX, y: maxY) }
     public var ip_bottomLeft: CGPoint { return CGPoint(x: minX, y: maxY) }
-    
+
     public var ip_leftMiddle: CGPoint { return CGPoint(x: minX, y: midY) }
     public var ip_topMiddle: CGPoint { return CGPoint(x: midX, y: minY) }
     public var ip_rightMiddle: CGPoint { return CGPoint(x: maxX, y: midY) }

@@ -27,7 +27,7 @@ open class IPPickerView: UIView, IPPickerViewProtocol, IPPickerComponentViewDele
     open func selectItem(_ item: Int, inComponent component: Int, animated: Bool) {
         selections[component] = item
 
-        guard let view = componentViews[ip_safe: component] else {
+        guard let view = componentViews[ip_safely: component] else {
             return
         }
 
