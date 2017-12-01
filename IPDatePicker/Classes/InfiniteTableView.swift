@@ -174,6 +174,16 @@ final class InfiniteTableView: UIView, UITableViewDataSource, UITableViewDelegat
     // MARK: - Centering
 
     func centerOnItem(_ item: Int, animated: Bool) {
+        // TODO: Refactor this to better handle the finite case (or remove that completely)
+        // There is also an issue where this condition is met more often than expected.
+        // It is not having any obvious adverse effects so we will leave it as-is
+        if scrollMode == .finite {
+            let offsetY = (CGFloat(item) + 0.5) * rowHeight - bounds.height * 0.5
+            setContentOffset(CGPoint(x: 0.0, y: offsetY), animated: animated)
+
+            return
+        }
+
         resetCurrentOffsetToPrimary()
         if animated {
             layoutIfNeeded()
