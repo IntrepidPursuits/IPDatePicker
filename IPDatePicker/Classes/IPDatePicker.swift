@@ -36,7 +36,7 @@ public class IPDatePicker {
         view: UIView = UIPickerView(),
         date: Date = Date(),
         locale: Locale = Locale.current,
-        formatString: String = "h:mm a"
+        formatString: String = LocaleAgnosticDateFormat.time.formatString
     ) {
         guard (view as? UIPickerView) != nil || (view as? IPPickerViewProtocol) != nil else {
             fatalError("IPDatePicker view must either be a UIPickerView or conform to IPPickerViewProtocol")
