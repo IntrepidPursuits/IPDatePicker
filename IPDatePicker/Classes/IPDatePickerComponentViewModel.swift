@@ -10,6 +10,8 @@ import Foundation
 
 public struct IPDatePickerComponent {
     public enum Unit: String {
+        case hour12Offset = "K"
+        case hour24Offset = "k"
         case hour12 = "h"
         case hour24 = "H"
         case minute = "m"
@@ -21,7 +23,7 @@ public struct IPDatePickerComponent {
 
         var calendarComponent: Calendar.Component? {
             switch self {
-            case .hour12, .hour24:
+            case .hour12, .hour24, .hour12Offset, .hour24Offset:
                 return .hour
             case .minute:
                 return .minute
@@ -31,7 +33,7 @@ public struct IPDatePickerComponent {
         }
 
         static func all() -> [Unit] {
-            return [.hour12, .hour24, .minute, .amPm]
+            return [.hour12, .hour24, .hour12Offset, .hour24Offset, .minute, .amPm]
         }
     }
 
@@ -94,8 +96,12 @@ extension IPDatePickerComponentViewModel {
         locale: Locale = Locale.current
     ) -> IPDatePickerComponentViewModel {
         switch component.unit {
+        case .hour12Offset:
+            return TwelveHourOffsetComponentViewModel(index: component.index, dateAsComponents: dateAsComponents, locale: locale)
         case .hour12:
             return TwelveHourComponentViewModel(index: component.index, dateAsComponents: dateAsComponents, locale: locale)
+        case .hour24Offset:
+            return TwentyFourHourOffsetComponentViewModel(index: component.index, dateAsComponents: dateAsComponents, locale: locale)
         case .hour24:
             return TwentyFourHourComponentViewModel(index: component.index, dateAsComponents: dateAsComponents, locale: locale)
         case .minute:
@@ -103,6 +109,26 @@ extension IPDatePickerComponentViewModel {
         case .amPm:
             return AmPmComponentViewModel(index: component.index, dateAsComponents: dateAsComponents, locale: locale)
         }
+    }
+}
+
+final class TwelveHourOffsetComponentViewModel: IPDatePickerComponentViewModel {
+    override func unit() -> IPDatePickerComponent.Unit {
+        return .hour12Offset
+    }
+
+    override func setupTitlesFromLocale(_ locale: Locale) {
+        titles = (0...11).map { "\($0)" }
+    }
+
+    override func setSelectionFromDateComponents(_ dateComponents: DateComponents) {
+        selection = (dateComponents.hour ?? 0) % 12
+    }
+
+    override func selectedDateComponents() -> DateComponents {
+        let hours = selection % 12
+
+        return DateComponents(hour: hours, minute: 0)
     }
 }
 
@@ -123,6 +149,24 @@ final class TwelveHourComponentViewModel: IPDatePickerComponentViewModel {
         let hours = (selection + 1) % 12
 
         return DateComponents(hour: hours, minute: 0)
+    }
+}
+
+final class TwentyFourHourOffsetComponentViewModel: IPDatePickerComponentViewModel {
+    override func unit() -> IPDatePickerComponent.Unit {
+        return .hour24Offset
+    }
+
+    override func setupTitlesFromLocale(_ locale: Locale) {
+        titles = (1...24).map { String(format: "%02d", $0) }
+    }
+
+    override func setSelectionFromDateComponents(_ dateComponents: DateComponents) {
+        selection = ((dateComponents.hour ?? 0) + 23) % 24
+    }
+
+    override func selectedDateComponents() -> DateComponents {
+        return DateComponents(hour: (selection + 1) % 24, minute: 0)
     }
 }
 

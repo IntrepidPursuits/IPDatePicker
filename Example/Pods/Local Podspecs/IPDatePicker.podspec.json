@@ -1,6 +1,6 @@
 {
   "name": "IPDatePicker",
-  "version": "0.4.0",
+  "version": "0.6.0",
   "summary": "A customizable alternative to UIDatePicker.",
   "description": "IPDatePicker is an alternative to Apple's UIDatePicker control. It aims to provide the same level of out-of-the-box localization as UIDatePicker, but while also allowing for complete customization of the UI.",
   "homepage": "https://github.com/IntrepidPursuits/IPDatePicker",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/IntrepidPursuits/IPDatePicker.git",
-    "tag": "0.4.0"
+    "tag": "0.6.0"
   },
   "platforms": {
     "ios": "9.0"
