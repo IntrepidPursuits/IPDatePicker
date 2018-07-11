@@ -162,11 +162,11 @@ final class TwentyFourHourOffsetComponentViewModel: IPDatePickerComponentViewMod
     }
 
     override func setSelectionFromDateComponents(_ dateComponents: DateComponents) {
-        selection = (dateComponents.hour ?? 0) + 1
+        selection = ((dateComponents.hour ?? 0) + 23) % 24
     }
 
     override func selectedDateComponents() -> DateComponents {
-        return DateComponents(hour: (selection - 1), minute: 0)
+        return DateComponents(hour: (selection + 1) % 24, minute: 0)
     }
 }
 
