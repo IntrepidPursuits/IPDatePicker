@@ -8,7 +8,8 @@
 
 import Foundation
 
-extension RawRepresentable where RawValue: Integer {
+extension RawRepresentable where RawValue: BinaryInteger {
+    @available(*, deprecated, message: "Conform to CaseIterable and use allCases instead.")
     public static var ip_allCases: [Self] {
         var caseIndex: RawValue = 0
         let generator: () -> Self? = {

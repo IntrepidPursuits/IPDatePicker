@@ -229,7 +229,7 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, InfiniteT
 }
 
 private class IPTablePickerCell: UITableViewCell {
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         selectionStyle = .none

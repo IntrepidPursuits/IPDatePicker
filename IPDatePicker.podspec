@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IPDatePicker'
-  s.version          = '0.6.0'
+  s.version          = '0.7.0'
   s.summary          = 'A customizable alternative to UIDatePicker.'
 
   s.description      = <<-DESC
@@ -20,10 +20,10 @@ Pod::Spec.new do |s|
   s.author           = { 'Andrew Dolce' => 'andrew@intrepid.io' }
   s.source           = { :git => 'https://github.com/IntrepidPursuits/IPDatePicker.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'IPDatePicker/Classes/**/*'
-  
+
   s.dependency 'PureLayout'
   s.dependency 'Intrepid'
 end

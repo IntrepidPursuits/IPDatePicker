@@ -33,7 +33,7 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
     weak var delegate: IPDatePickerDelegate?
 
     private var calendarComponents: Set<Calendar.Component> {
-        return Set(componentViewModels.flatMap { $0.calendarComponent() })
+        return Set(componentViewModels.compactMap { $0.calendarComponent() })
     }
 
     private var dateComponents: DateComponents {
@@ -63,7 +63,7 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
     func setupPickerComponentsFromDateComponents(_ dateComponents: DateComponents) {
         let possibleUnits = IPDatePickerComponent.Unit.all()
 
-        let components = possibleUnits.flatMap { (unit: IPDatePickerComponent.Unit) -> (unit: IPDatePickerComponent.Unit, position: String.Index)? in
+        let components = possibleUnits.compactMap { (unit: IPDatePickerComponent.Unit) -> (unit: IPDatePickerComponent.Unit, position: String.Index)? in
             guard let position = formatString.range(of: unit.formatSymbol)?.lowerBound else {
                 return nil
             }
