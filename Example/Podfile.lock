@@ -1,27 +1,20 @@
 PODS:
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
-  - Intrepid (0.8.4):
-    - Intrepid/Core (= 0.8.4)
-  - Intrepid/Core (0.8.4):
+  - Intrepid (0.12.0):
+    - Intrepid/Core (= 0.12.0)
+  - Intrepid/Core (0.12.0):
     - IP-UIKit-Wisdom (= 0.0.10)
   - IP-UIKit-Wisdom (0.0.10)
-  - IPDatePicker (0.6.0):
+  - IPDatePicker (0.7.0):
     - Intrepid
     - PureLayout
-  - PureLayout (3.0.2)
+  - PureLayout (3.1.4)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase
-  - Intrepid (~> 0.8)
+  - Intrepid (~> 0.12)
   - IPDatePicker (from `../`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - FBSnapshotTestCase
+  https://github.com/cocoapods/specs.git:
     - Intrepid
     - IP-UIKit-Wisdom
     - PureLayout
@@ -31,12 +24,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  Intrepid: e40c48e968728cf2e04beb4bd811a03173e86172
+  Intrepid: 07fd9de542a68b98f24b0a20c6e59be5f21ce9dd
   IP-UIKit-Wisdom: b395a065344071b33659e5f6b918043a97c48a44
-  IPDatePicker: 3ec22d0fd101505359626464730f2edf9d1bd10e
-  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  IPDatePicker: 4de3babf2a0c7d53e8de627526b91c3bb9ffcfb8
+  PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
 
-PODFILE CHECKSUM: 4c1193e4c5eed1ac79c4edeb0f482415ccb15877
+PODFILE CHECKSUM: aa932f6be0726423dd6b6592018d236cf5d9088e
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.6.1

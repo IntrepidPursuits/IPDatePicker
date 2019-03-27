@@ -49,15 +49,15 @@ class ViewController: UIViewController, IPDatePickerDelegate {
         simplifiedChineseButton.addTarget(self, action: #selector(didPressSimplifiedChinese), for: .touchUpInside)
 
         view.addSubview(stack)
-        stack.autoPinEdgesToSuperviewEdges(with: UIEdgeInsetsMake(0.0, 40.0, 40.0, 40.0), excludingEdge: .top)
+        stack.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 0.0, left: 40.0, bottom: 40.0, right: 40.0), excludingEdge: .top)
     }
 
-    private dynamic func didPressEnglish() {
+    @objc private func didPressEnglish() {
         let locale = Locale(identifier: "en")
         setupPickerWithLocale(locale)
     }
 
-    private dynamic func didPressSimplifiedChinese() {
+    @objc private func didPressSimplifiedChinese() {
         let locale = Locale(identifier: "zh")
         setupPickerWithLocale(locale)
     }
@@ -70,7 +70,7 @@ class ViewController: UIViewController, IPDatePickerDelegate {
         }
 
         let attributes = [
-            NSForegroundColorAttributeName: UIColor.blue
+            NSAttributedString.Key.foregroundColor: UIColor.blue
         ]
         return NSAttributedString(string: suggestedSymbol, attributes: attributes)
     }

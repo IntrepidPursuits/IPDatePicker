@@ -8,7 +8,14 @@ target 'IPDatePicker_Example' do
   target 'IPDatePicker_Tests' do
     inherit! :search_paths
 
-    pod 'FBSnapshotTestCase'
-    pod 'Intrepid', '~> 0.8'
+    pod 'Intrepid', '~> 0.12'
+  end
+end
+
+post_install do |installer_representation|
+  installer_representation.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '10.0'
+    end
   end
 end

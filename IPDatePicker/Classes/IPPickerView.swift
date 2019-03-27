@@ -77,7 +77,7 @@ open class IPPickerView: UIView, IPPickerViewProtocol, IPPickerComponentViewDele
             $0.removeFromSuperview()
         }
 
-        componentViews = (0..<numberOfComponents).flatMap { component in
+        componentViews = (0..<numberOfComponents).compactMap { component in
 
             let componentWidth = delegate.ipPickerView(self, widthForComponent: component) ?? 80.0
             let view = delegate.ipPickerView(self, componentViewForComponent: component) ?? viewForComponent(component)

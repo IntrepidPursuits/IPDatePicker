@@ -271,7 +271,7 @@ final class InfiniteTableView: UIView, UITableViewDataSource, UITableViewDelegat
         }
     }
 
-    var separatorStyle: UITableViewCellSeparatorStyle {
+    var separatorStyle: UITableViewCell.SeparatorStyle {
         get {
             return tableView.separatorStyle
         }
@@ -328,7 +328,7 @@ final class InfiniteTableView: UIView, UITableViewDataSource, UITableViewDelegat
         return tableView.cellForRow(at: IndexPath(row: row, section: 0))
     }
 
-    func scrollToRow(at row: Int, at position: UITableViewScrollPosition, animated: Bool) {
+    func scrollToRow(at row: Int, at position: UITableView.ScrollPosition, animated: Bool) {
         tableView.scrollToRow(at: IndexPath(row: row, section: 0), at: position, animated: animated)
     }
 
