@@ -208,7 +208,7 @@
 		036E23D64D9B8ECC57BE780DE1589484 /* Sequence+Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Sequence+Utilities.swift"; path = "SwiftWisdom/Core/StandardLibrary/Array/Sequence+Utilities.swift"; sourceTree = "<group>"; };
 		09A5BAC47AF605F7993AEDB14F51261C /* CellConfiguring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CellConfiguring.swift; path = SwiftWisdom/Core/UIKit/CellConfiguring.swift; sourceTree = "<group>"; };
 		0AD4005929A720BC73010D4E2C8556AB /* Intrepid.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Intrepid.xcconfig; sourceTree = "<group>"; };
-		0BB6E429E077D96685AC6DEB0C48C076 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PureLayout.framework; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BB6E429E077D96685AC6DEB0C48C076 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DCD03189B30C8B71E02C1E18986C9EA /* UIButton+IPUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+IPUtils.h"; path = "src/UIButton/UIButton+IPUtils.h"; sourceTree = "<group>"; };
 		0E8BD40F5CA387421B0FF714CC0111DF /* UITableView+Utils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+Utils.m"; path = "src/UITableView/UITableView+Utils.m"; sourceTree = "<group>"; };
 		0FCD0A0BB142F387147EDC996B91FE0F /* Pods-IPDatePicker_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IPDatePicker_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 		2AEDFE41E1040F57F9E8175D7C5758A4 /* UIColor+IPRandomColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+IPRandomColor.m"; path = "src/UIColor/UIColor+IPRandomColor.m"; sourceTree = "<group>"; };
 		2BDF1473EC526D34659E7F8415FB8BCC /* Multicast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Multicast.swift; path = SwiftWisdom/Core/CommonTypes/Multicast.swift; sourceTree = "<group>"; };
 		2E108D95F849DC82B381858DBA4B69D9 /* UIView+Constraints.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Constraints.h"; path = "src/UIView/UIView+Constraints.h"; sourceTree = "<group>"; };
-		337DD910C96556BA6379D0ABB795C109 /* Pods_IPDatePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IPDatePicker_Tests.framework; path = "Pods-IPDatePicker_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		337DD910C96556BA6379D0ABB795C109 /* Pods_IPDatePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IPDatePicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		345A5E6D61A581AA0677E2BBDE76A5A5 /* Version.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Version.swift; path = SwiftWisdom/Core/Version/Version.swift; sourceTree = "<group>"; };
 		35C65E3D903FFDFA911016746F124624 /* Intrepid.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Intrepid.modulemap; sourceTree = "<group>"; };
 		35DAC4F92725E1CFE57B35CD8E0B84F2 /* IPDatePicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IPDatePicker-Info.plist"; sourceTree = "<group>"; };
@@ -240,7 +240,7 @@
 		3DAF2EF30E366E33E45750CEA7742943 /* Geometry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Geometry.swift; path = SwiftWisdom/Core/Geometry/Geometry.swift; sourceTree = "<group>"; };
 		3DE698CB879ED67F43BD65FE0C440E89 /* Pods-IPDatePicker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IPDatePicker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3E8552E969BE5EDEBD7694E2392DA692 /* UIView+Geometry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Geometry.swift"; path = "SwiftWisdom/Core/UIKit/UIView+Geometry.swift"; sourceTree = "<group>"; };
-		4146ED66F7B8B6B1CD619E213D88623C /* IP_UIKit_Wisdom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IP_UIKit_Wisdom.framework; path = "IP-UIKit-Wisdom.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4146ED66F7B8B6B1CD619E213D88623C /* IP_UIKit_Wisdom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IP_UIKit_Wisdom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		415B19E226724024DA17C6FBDE99332A /* IPDatePicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IPDatePicker.xcconfig; sourceTree = "<group>"; };
 		41AAC5DAC08CCD44746AF75586C4032A /* UIView+Nib.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Nib.swift"; path = "SwiftWisdom/Core/UIKit/UIView+Nib.swift"; sourceTree = "<group>"; };
 		41F41779EC7F23ED8922E19D0D165E1E /* UIView+IPAncestry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+IPAncestry.h"; path = "src/UIView/UIView+IPAncestry.h"; sourceTree = "<group>"; };
@@ -267,14 +267,14 @@
 		63E527FB57691261E98B7951BE2CEA2A /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "SwiftWisdom/Core/UIKit/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		64535266766E1DF235930A0E8E28585B /* String+Attributed.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Attributed.swift"; path = "SwiftWisdom/Core/StandardLibrary/String/String+Attributed.swift"; sourceTree = "<group>"; };
 		64A96602B5DF5F79404D3AAD6EC19252 /* SoundFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoundFile.swift; path = SwiftWisdom/Core/Sounds/SoundFile.swift; sourceTree = "<group>"; };
-		686E91057E004B1D0DA3C912734EEECA /* IPDatePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IPDatePicker.framework; path = IPDatePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		686E91057E004B1D0DA3C912734EEECA /* IPDatePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IPDatePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69C13D0A4338FCD1680B61CE5BF97D6F /* NSMutableAttributedString+Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSMutableAttributedString+Format.swift"; path = "SwiftWisdom/Core/Foundation/NSAttributedString/NSMutableAttributedString+Format.swift"; sourceTree = "<group>"; };
 		6F99541082BC562AB70D9A8ED3B46ED4 /* NSDate+Comparable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDate+Comparable.swift"; path = "SwiftWisdom/Core/Foundation/Time/NSDate+Comparable.swift"; sourceTree = "<group>"; };
 		7099B826AC7D52852F70D0A41BCD624F /* DataConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataConvertible.swift; path = SwiftWisdom/Core/Foundation/Data/DataConvertible.swift; sourceTree = "<group>"; };
 		71A1599892641356C512BDFF66B0DB10 /* IP-UIKit-Wisdom-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IP-UIKit-Wisdom-umbrella.h"; sourceTree = "<group>"; };
 		71A3D5EF1202B118F6DBF4346932C6E7 /* Pods-IPDatePicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IPDatePicker_Example-frameworks.sh"; sourceTree = "<group>"; };
 		723F0409B22AB4936BB0D196C5292133 /* Dictionary+Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+Utilities.swift"; path = "SwiftWisdom/Core/StandardLibrary/Dictionary/Dictionary+Utilities.swift"; sourceTree = "<group>"; };
-		73680EC3CA9AC9B904A155A9F923EEA8 /* Intrepid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Intrepid.framework; path = Intrepid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73680EC3CA9AC9B904A155A9F923EEA8 /* Intrepid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Intrepid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A32CF745CDBC61241B93B7CA5FD4AB /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
 		74A805BFA67F51F624526B2B7FB82CA1 /* UIView+IPFrameUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+IPFrameUtils.m"; path = "src/UIView/UIView+IPFrameUtils.m"; sourceTree = "<group>"; };
 		74B3297FF2620C7E9DF8867105DC7A21 /* Measurement+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Measurement+Extensions.swift"; path = "SwiftWisdom/Core/Foundation/Time/Measurement+Extensions.swift"; sourceTree = "<group>"; };
@@ -296,13 +296,13 @@
 		8FB76ABED6D688BDBD11D7CB8B010C53 /* UIColor+Hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "SwiftWisdom/Core/UIKit/UIColor+Hex.swift"; sourceTree = "<group>"; };
 		91D592E38101A55DC6310CCF182E554B /* UICollectionView+FlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+FlowLayout.swift"; path = "SwiftWisdom/Core/UIKit/UICollectionView+FlowLayout.swift"; sourceTree = "<group>"; };
 		91D7D0087FA58807062C47D1E486CB54 /* Pods-IPDatePicker_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IPDatePicker_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		9589448A8C30BCEC769F1ED896E43667 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9589448A8C30BCEC769F1ED896E43667 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		97BF67FF0D5EB60CA74CDE799A7479A4 /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
 		98B99714DC959405CEE1680A898611F0 /* Date+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Extensions.swift"; path = "SwiftWisdom/Core/Foundation/Time/Date+Extensions.swift"; sourceTree = "<group>"; };
 		98F7DE4CFF352B9FA0587B9A9216407D /* Intrepid-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Intrepid-dummy.m"; sourceTree = "<group>"; };
 		9BA5C28FCD54ECA612275F8E16EF9680 /* Intrepid-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Intrepid-umbrella.h"; sourceTree = "<group>"; };
-		9C3911CC72C2F86E0A521A81B0F89881 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9C3911CC72C2F86E0A521A81B0F89881 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DD0CC2E04E426690B1C108D678CD07F /* UIDate+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDate+Extensions.swift"; path = "IPDatePicker/Classes/UIDate+Extensions.swift"; sourceTree = "<group>"; };
 		9F15DE40FF4D0AC22F4B0592E6CACDA4 /* UIButton+AttributedTitle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+AttributedTitle.swift"; path = "SwiftWisdom/Core/UIKit/UIButton+AttributedTitle.swift"; sourceTree = "<group>"; };
 		9F4E05B566C7812F993C0DBE6C212EFC /* Intrepid-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Intrepid-Info.plist"; sourceTree = "<group>"; };
@@ -354,8 +354,8 @@
 		F5C9C7CCFF4DF6585671B56853F67E98 /* Set+Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Set+Utilities.swift"; path = "SwiftWisdom/Core/StandardLibrary/Set/Set+Utilities.swift"; sourceTree = "<group>"; };
 		F790E8490FF908C55203CAA65850631F /* InfiniteTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InfiniteTableView.swift; path = IPDatePicker/Classes/InfiniteTableView.swift; sourceTree = "<group>"; };
 		F86CFD1FE4A19CEDE9A9E3E0FADD6400 /* IPPickerComponentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IPPickerComponentView.swift; path = IPDatePicker/Classes/IPPickerComponentView.swift; sourceTree = "<group>"; };
-		FA1C1A5F9057F14FB4AE508F99F8DA4B /* Pods_IPDatePicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IPDatePicker_Example.framework; path = "Pods-IPDatePicker_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCB2324A532B3BB246E1620379EC8F68 /* IPDatePicker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = IPDatePicker.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FA1C1A5F9057F14FB4AE508F99F8DA4B /* Pods_IPDatePicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IPDatePicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCB2324A532B3BB246E1620379EC8F68 /* IPDatePicker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = IPDatePicker.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FCF817E83B43AE1E5341F70AE785777C /* TimeOfDay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeOfDay.swift; path = SwiftWisdom/Core/Foundation/Time/TimeOfDay.swift; sourceTree = "<group>"; };
 		FE71DD8D52265469E83DC82E044711B4 /* UIView+NibInitable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+NibInitable.m"; path = "src/UIView/UIView+NibInitable.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -478,7 +478,6 @@
 				01B47DF8279A5FE4B2847951F5190716 /* UIViewController+Containment.m */,
 				04F45A4BB63A7AAC3ACD816669042F16 /* Support Files */,
 			);
-			name = "IP-UIKit-Wisdom";
 			path = "IP-UIKit-Wisdom";
 			sourceTree = "<group>";
 		};
@@ -589,7 +588,6 @@
 				FCD3359ACECE3E9FE574FC2537990EF6 /* Core */,
 				D7632DB90AC4A0A33973123908808350 /* Support Files */,
 			);
-			name = Intrepid;
 			path = Intrepid;
 			sourceTree = "<group>";
 		};
@@ -727,7 +725,6 @@
 				73A32CF745CDBC61241B93B7CA5FD4AB /* PureLayoutDefines.h */,
 				C3F6618951E8B509FAE48C6A952E50E9 /* Support Files */,
 			);
-			name = PureLayout;
 			path = PureLayout;
 			sourceTree = "<group>";
 		};
@@ -926,13 +923,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
+				TargetAttributes = {
+					2D12BFBC2F63BC54A0FA0998A443206E = {
+						LastSwiftMigration = 1020;
+					};
+					9E6BE1CC9393BE9AF5D901AAC354BDD2 = {
+						LastSwiftMigration = 1020;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -1314,7 +1320,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1325,6 +1331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1374,8 +1381,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1406,7 +1412,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1484,6 +1490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1603,7 +1610,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1671,7 +1678,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
