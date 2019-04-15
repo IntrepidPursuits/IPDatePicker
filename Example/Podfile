@@ -8,7 +8,7 @@ target 'IPDatePicker_Example' do
   target 'IPDatePicker_Tests' do
     inherit! :search_paths
 
-    pod 'Intrepid', '~> 0.12'
+    pod 'Intrepid', '~> 0.13.1'
   end
 end
 
