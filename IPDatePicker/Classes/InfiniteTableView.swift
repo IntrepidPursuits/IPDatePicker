@@ -18,7 +18,7 @@ protocol InfiniteTableViewDelegate: class {
     func infiniteTableView(_ infiniteTableView: InfiniteTableView, didSelectItem item: Int, at row: Int)
     func infiniteTableView(_ infiniteTableView: InfiniteTableView, willDisplay cell: UITableViewCell, forItem item: Int, at row: Int)
 
-    func infiniteTableViewWillEndDragging(_ infiniteTableView: InfiniteTableView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
+    func infiniteTableViewWillEndDragging(_ infiniteTableView: InfiniteTableView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>, direction: ScrollDirection)
     func infiniteTableViewDidScroll(_ infiniteTableView: InfiniteTableView)
 }
 
@@ -132,7 +132,8 @@ final class InfiniteTableView: UIView, UITableViewDataSource, UITableViewDelegat
     }
 
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        delegate?.infiniteTableViewWillEndDragging(self, withVelocity: velocity, targetContentOffset: targetContentOffset)
+        let scrollDirection = checkScrollDirection(scrollView)
+        delegate?.infiniteTableViewWillEndDragging(self, withVelocity: velocity, targetContentOffset: targetContentOffset, direction: scrollDirection)
     }
 
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -169,6 +170,10 @@ final class InfiniteTableView: UIView, UITableViewDataSource, UITableViewDelegat
 
     private func itemAtIndexPath(_ indexPath: IndexPath) -> Int {
         return itemAtRow(indexPath.row)
+    }
+
+    private func checkScrollDirection(_ scrollView: UIScrollView) -> ScrollDirection {
+        return scrollView.panGestureRecognizer.translation(in: scrollView.superview).y > 0 ? .up : .down
     }
 
     // MARK: - Centering

@@ -142,8 +142,8 @@ open class IPPickerView: UIView, IPPickerViewProtocol, IPPickerComponentViewDele
         return delegate?.ipPickerView(self, itemHeightForComponent: component)
     }
 
-    public func didSelectItem(_ item: Int, component: Int) {
-        delegate?.ipPickerView(self, didSelectItem: item, forComponent: component)
+    public func didSelectItem(_ item: Int, component: Int, direction: ScrollDirection) {
+        delegate?.ipPickerView(self, didSelectItem: item, forComponent: component, inDirection: direction)
     }
 
     public func didScrollItemView(_ itemView: UIView, item: Int, component: Int, toOffsetFromCenter offset: CGFloat) {
