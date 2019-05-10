@@ -57,7 +57,7 @@ extension IPPickerViewDelegate {
         return nil
     }
 
-    func ipPickerView(_ pickerView: IPPickerView, didSelectItem item: Int, forComponent component: Int) {
+    func ipPickerView(_ pickerView: IPPickerView, didSelectItem item: Int, forComponent component: Int, inDirection: ScrollDirection) {
     }
 
     func ipPickerView(_ pickerView: IPPickerView, viewForSpacingBetweenComponent leftComponent: Int, and rightComponent: Int) -> UIView? {
