@@ -17,7 +17,7 @@ public protocol IPPickerComponentViewDelegate: class {
 
     func itemHeightForComponent(_ component: Int) -> CGFloat?
 
-    func didSelectItem(_ item: Int, component: Int)
+    func didSelectItem(_ item: Int, component: Int, direction: ScrollDirection)
     func didScrollItemView(_ itemView: UIView, item: Int, component: Int, toOffsetFromCenter offset: CGFloat)
 }
 
@@ -137,7 +137,12 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, InfiniteT
     func infiniteTableView(_ infiniteTableView: InfiniteTableView, didSelectItem item: Int, at row: Int) {
         selectedItem = item
         tableView.scrollToRow(at: row, at: .middle, animated: true)
-        delegate?.didSelectItem(item, component: component)
+
+        let centerOffset = tableView.contentOffset.y + tableView.bounds.height / 2.0
+        let itemCenter = tableView.rectForRow(row).ip_center.y
+        let direction: ScrollDirection = itemCenter < centerOffset ? .up : .down
+
+        delegate?.didSelectItem(item, component: component, direction: direction)
     }
 
     // MARK: - Table Inset
@@ -201,7 +206,7 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, InfiniteT
         triggerScollHandlers()
     }
 
-    func infiniteTableViewWillEndDragging(_ infiniteTableView: InfiniteTableView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    func infiniteTableViewWillEndDragging(_ infiniteTableView: InfiniteTableView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>, direction: ScrollDirection) {
         let lastRow = tableView.numberOfRows() - 1
 
         guard lastRow >= 0 else {
@@ -220,7 +225,7 @@ final class IPTablePickerComponentView: UIView, IPPickerComponentView, InfiniteT
 
         let item = infiniteTableView.itemAtRow(Int(row))
         selectedItem = item
-        delegate?.didSelectItem(selectedItem, component: component)
+        delegate?.didSelectItem(selectedItem, component: component, direction: direction)
     }
 
     private func centerOnItem(_ item: Int, animated: Bool) {

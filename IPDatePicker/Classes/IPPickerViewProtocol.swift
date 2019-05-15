@@ -19,7 +19,7 @@ public protocol IPPickerViewDelegate: class {
     func ipPickerView(_ pickerView: IPPickerView, widthForComponent component: Int) -> CGFloat?
     func ipPickerView(_ pickerView: IPPickerView, itemHeightForComponent component: Int) -> CGFloat?
 
-    func ipPickerView(_ pickerView: IPPickerView, didSelectItem item: Int, forComponent component: Int)
+    func ipPickerView(_ pickerView: IPPickerView, didSelectItem item: Int, forComponent component: Int, inDirection: ScrollDirection)
 
     func ipPickerView(_ pickerView: IPPickerView, viewForSpacingBetweenComponent leftComponent: Int, and rightComponent: Int) -> UIView?
     func ipPickerView(_ pickerView: IPPickerView, widthOfViewForSpacingBetweenComponent leftComponent: Int, and rightComponent: Int) -> CGFloat?
@@ -57,7 +57,7 @@ extension IPPickerViewDelegate {
         return nil
     }
 
-    func ipPickerView(_ pickerView: IPPickerView, didSelectItem item: Int, forComponent component: Int) {
+    func ipPickerView(_ pickerView: IPPickerView, didSelectItem item: Int, forComponent component: Int, inDirection: ScrollDirection) {
     }
 
     func ipPickerView(_ pickerView: IPPickerView, viewForSpacingBetweenComponent leftComponent: Int, and rightComponent: Int) -> UIView? {

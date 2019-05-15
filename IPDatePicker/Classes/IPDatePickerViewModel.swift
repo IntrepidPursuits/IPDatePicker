@@ -118,6 +118,38 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
         return selectedTime
     }
 
+    fileprivate func updateAmPmComponentForChange(from previousDate: Date, inDirection direction: ScrollDirection) {
+        var needsAdjustment = false
+        let componentViewModel = componentViewModels.filter { $0.unit() == .hour12 || $0.unit() == .hour12Offset }.first
+        var dateComponentsToAdjust = dateComponents
+        var newHour = Calendar.current.component(.hour, from: date)
+        
+        if componentViewModel != nil, direction != .none {
+            let previousHour = Calendar.current.component(.hour, from: previousDate)
+            
+            switch direction {
+            case .down:
+                if newHour < previousHour {
+                    needsAdjustment = true
+                    newHour += 12
+                }
+            case .up:
+                if newHour > previousHour {
+                    needsAdjustment = true
+                    newHour -= 12
+                }
+            default:
+                break
+            }
+        }
+        
+        if needsAdjustment {
+            dateComponentsToAdjust.hour = newHour
+            let adjustedDate = Calendar.current.date(from: dateComponentsToAdjust) ?? Date()
+            picker?.setDate(adjustedDate, animated: true)
+        }
+    }
+
     // MARK: Data Source and Delegate Helpers
 
     fileprivate func numberOfComponents() -> Int {
@@ -210,16 +242,22 @@ final class IPDatePickerViewModel: NSObject, UIPickerViewDataSource, UIPickerVie
         )
     }
 
-    fileprivate func didSelectItem(_ item: Int, inComponent component: Int) {
+    fileprivate func didSelectItem(_ item: Int, inComponent component: Int, inDirection direction: ScrollDirection = .none) {
         guard let componentViewModel = componentViewModels[ip_safely: component] else {
             return
         }
+
+        // Get previous time
+        let oldDate = date
 
         componentViewModel.selection = item
 
         guard let picker = picker, let delegate = delegate else {
             return
         }
+
+        // Update ampm selection if required
+        updateAmPmComponentForChange(from: oldDate, inDirection: direction)
 
         delegate.datePicker(picker, didSelectItem: item, inComponent: componentViewModel.component())
         delegate.datePicker(picker, didSelectDate: date)
@@ -296,8 +334,8 @@ extension IPDatePickerViewModel: IPPickerViewDelegate {
         return attributedTitleForItem(item, forComponent: component)
     }
 
-    func ipPickerView(_ pickerView: IPPickerView, didSelectItem item: Int, forComponent component: Int) {
-        didSelectItem(item, inComponent: component)
+    func ipPickerView(_ pickerView: IPPickerView, didSelectItem item: Int, forComponent component: Int, inDirection direction: ScrollDirection) {
+        didSelectItem(item, inComponent: component, inDirection: direction)
     }
 
     func ipPickerView(_ pickerView: IPPickerView, viewForSpacingBetweenComponent leftComponent: Int, and rightComponent: Int) -> UIView? {

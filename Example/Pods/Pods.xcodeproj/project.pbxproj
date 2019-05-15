@@ -37,6 +37,7 @@
 		3B6A11F2362778BED84A08EB7435268B /* Synchronize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2338D47154FF953DCEC9CB33D0D3C6C /* Synchronize.swift */; };
 		3C3FF012E32A8FF1F1736359BFCFFFD5 /* String+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAEB6F33F0870524AEFBB7CE1ECF6E0 /* String+Empty.swift */; };
 		41F86880230F4297497C9E1F0F09E853 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6FDE206E18B52A7EB23E62E9573414 /* TimeInterval+Extensions.swift */; };
+		43E608CE228444B2008C9359 /* ScrollDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E608CD228444B1008C9359 /* ScrollDirection.swift */; };
 		446B7C134D9578BB6634E3DA1F44E4DC /* Intrepid-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F7DE4CFF352B9FA0587B9A9216407D /* Intrepid-dummy.m */; };
 		463A85888BE8A02C8E5158BC8B4624BC /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A5E6D61A581AA0677E2BBDE76A5A5 /* Version.swift */; };
 		47F195D2CBADE23AB7A55932DE08AB65 /* BasicVerticalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822C8C7C131371E9480EFEDB455FEA86 /* BasicVerticalGradientLayer.swift */; };
@@ -244,6 +245,7 @@
 		415B19E226724024DA17C6FBDE99332A /* IPDatePicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IPDatePicker.xcconfig; sourceTree = "<group>"; };
 		41AAC5DAC08CCD44746AF75586C4032A /* UIView+Nib.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Nib.swift"; path = "SwiftWisdom/Core/UIKit/UIView+Nib.swift"; sourceTree = "<group>"; };
 		41F41779EC7F23ED8922E19D0D165E1E /* UIView+IPAncestry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+IPAncestry.h"; path = "src/UIView/UIView+IPAncestry.h"; sourceTree = "<group>"; };
+		43E608CD228444B1008C9359 /* ScrollDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollDirection.swift; path = IPDatePicker/Classes/ScrollDirection.swift; sourceTree = "<group>"; };
 		44708F259DFBF177948ACFA79EB4711A /* IPDatePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IPDatePicker-umbrella.h"; sourceTree = "<group>"; };
 		46EE1C9186F57879B4ACD989FA6EBE40 /* Pods-IPDatePicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IPDatePicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		470FBC86B5811D449E4D3150D29EB339 /* NSLock+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSLock+Extensions.swift"; path = "SwiftWisdom/Core/Async/NSLock/NSLock+Extensions.swift"; sourceTree = "<group>"; };
@@ -548,6 +550,7 @@
 				B633A33E15C7DEB1B98944AFF1F5C365 /* IPPickerViewProtocol.swift */,
 				B85C9D041A8A37890AD0C727977B00B2 /* LocaleAgnosticDateFormat.swift */,
 				9DD0CC2E04E426690B1C108D678CD07F /* UIDate+Extensions.swift */,
+				43E608CD228444B1008C9359 /* ScrollDirection.swift */,
 				37987506946E344AE01F3C7D5EF75439 /* Pod */,
 				057D4784F35D7A74868E46260440DB17 /* Support Files */,
 			);
@@ -1014,6 +1017,7 @@
 				523AD59673E65940831DEE6D98B01806 /* IPDatePickerViewModel.swift in Sources */,
 				235522839B486E0FE1502E059095A075 /* IPPickerComponentView.swift in Sources */,
 				0DCE0BCBF37A5E2F23D7C8F3CF83F5E9 /* IPPickerView.swift in Sources */,
+				43E608CE228444B2008C9359 /* ScrollDirection.swift in Sources */,
 				2BF9A5EB054E39710BEE7EA99867EE2B /* IPPickerViewProtocol.swift in Sources */,
 				B61EDE8CB40D1EAB15DCF0F1C02D8C33 /* LocaleAgnosticDateFormat.swift in Sources */,
 				E0230D88983E85A39D9F1C9788B51C1A /* UIDate+Extensions.swift in Sources */,
