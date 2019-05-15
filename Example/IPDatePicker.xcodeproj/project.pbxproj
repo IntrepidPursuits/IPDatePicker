@@ -45,7 +45,7 @@
 		7F50086B4DFAB499A848FAFC /* Pods_IPDatePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IPDatePicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2BBBDBDBDA1CA07BF05777 /* Pods-IPDatePicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPDatePicker_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IPDatePicker_Tests/Pods-IPDatePicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C91E985E6F22AE8BE913C001 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		F618CF197FC6B070D685A98D /* IPDatePicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IPDatePicker.podspec; path = ../IPDatePicker.podspec; sourceTree = "<group>"; };
+		F618CF197FC6B070D685A98D /* IPDatePicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IPDatePicker.podspec; path = ../IPDatePicker.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FABDD0EEAF1AE418294C835C /* Pods-IPDatePicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPDatePicker_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IPDatePicker_Example/Pods-IPDatePicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

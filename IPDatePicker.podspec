@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IPDatePicker'
-  s.version          = '0.8.0'
+  s.version          = '0.9.0'
   s.summary          = 'A customizable alternative to UIDatePicker.'
 
   s.description      = <<-DESC
