@@ -4,7 +4,7 @@ PODS:
   - Intrepid/Core (0.13.1):
     - IP-UIKit-Wisdom (= 0.0.10)
   - IP-UIKit-Wisdom (0.0.10)
-  - IPDatePicker (0.7.0):
+  - IPDatePicker (0.9.1):
     - Intrepid
     - PureLayout
   - PureLayout (3.1.4)
@@ -26,7 +26,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Intrepid: 22a3e21c042151c9c78cc4026250c02c0baf6729
   IP-UIKit-Wisdom: b395a065344071b33659e5f6b918043a97c48a44
-  IPDatePicker: 4de3babf2a0c7d53e8de627526b91c3bb9ffcfb8
+  IPDatePicker: da1cf034c132b891e397b945f477c85e2f3ef054
   PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
 
 PODFILE CHECKSUM: b7225e66cbd133b785473e546307f5f20420579c
